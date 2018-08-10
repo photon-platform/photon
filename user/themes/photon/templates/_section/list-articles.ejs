@@ -1,0 +1,12 @@
+<%#
+requires articles to be passed as an argument
+@params
+
+%>
+<% articles.each( article => { -%>
+  <%_ if ( format != ''){ -%>
+    <%- partial( '_articles/article-' + format, { article: article } ) -%>
+  <% } else { -%>
+    <%- partial( '_articles/article', { article: article, format: format } ) -%>
+  <% }  -%>
+<% }) -%>

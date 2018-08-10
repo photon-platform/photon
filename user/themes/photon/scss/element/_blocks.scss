@@ -1,0 +1,10 @@
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+p, div,
+dd, dt,
+details, summary {
+
+  display: block;
+
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+}

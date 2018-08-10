@@ -1,0 +1,23 @@
+{% extends 'default.html.twig' %}
+{% use "default/components/pagination.html.twig" %}
+{% block body_template_classes %}{{ parent() }} collection{% endblock body_template_classes %}
+
+    {% block content %}
+
+      {{ parent() }}
+
+      {% block list -%}
+      <p>page count: {{ page.children.count() }}</p>
+
+      {% for p in page.children -%}
+        {% if not (p.url == page.url) -%}
+        {% include "_section/_articles/article-excerpt.html.twig" with { 'page': p } %}
+
+        {% endif %}
+
+      {% endfor -%}
+      {%- endblock list %}
+
+      {{ block('pagination') }}
+
+    {% endblock content %}

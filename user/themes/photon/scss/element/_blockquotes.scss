@@ -1,0 +1,46 @@
+blockquote {
+
+  display: block;
+
+  margin: 1em auto;
+  // padding: 1em;
+
+  font-size: 1.2em;
+
+  &::before {
+    content: '';
+    display: block;
+
+    height: 100%;
+    width: .1em;
+
+    background-color: $color-neutral-darker;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  //nested blockquote
+  > blockquote {
+
+    margin: 0;
+    padding-bottom: 0;
+    font-style: italic;
+
+    &::before {
+      content: '• ';
+      padding-top: 1em;
+      display: inline;
+      color: $color-neutral-darker;
+      background-color: inherit;
+    }
+  }
+
+  p {
+
+    margin-bottom: 0;
+    position: relative;
+    overflow: visible;
+
+  }
+}

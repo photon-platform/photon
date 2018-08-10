@@ -1,0 +1,4 @@
+// color variable helper
+@function palette($color) {
+    @return map-get($palettes, $color);
+};

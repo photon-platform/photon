@@ -1,0 +1,55 @@
+<section class="module showcase">
+
+  <div id="carousel-showcase" class="carousel slide carousel-fullscreen  carousel-fade" data-ride="carousel" data-interval="5000" data-pause="null">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-showcase" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-showcase" data-slide-to="1"></li>
+      <li data-target="#carousel-showcase" data-slide-to="2"></li>
+      <li data-target="#carousel-showcase" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      {% for slide in header.slides %}
+        <div class="item " style="background-image: url('{{ slide.bgimage }}');">
+          <div class="overlay"></div>
+          <div class="carousel-caption">
+            <h1 class="super-heading">{{ slide.title }}</h1>
+            <p class="super-paragraph">{{ slide.lead }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="item " style="background-image: url('/user/images/export/06.g001.png');">
+        <div class="carousel-caption">
+          <h1>The Divine Proportion</h1>
+          <p>The Golden Ratio defined along with Algebraic Analysis</p>
+        </div>
+      </div>
+
+      <div class="item " style="background-image: url('/user/images/export/36.a2.png');">
+        <div class="carousel-caption">
+          <h1>Golden Sections</h1>
+          <p>explore geometric instances of the Golden Ratio as in antiquity, with only with straightedge and compass</p>
+        </div>
+      </div>
+
+      <div class="item " style="background-image: url('/user/images/export/base2/small/all.png');">
+        <div class="carousel-caption">
+          <h1>Harmonic Resonances</h1>
+          <p>articles on Golden Ratio, Geometry and other Grand Mysteries</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-showcase" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-showcase" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</section>

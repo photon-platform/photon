@@ -1,0 +1,18 @@
+<figure>
+  <% if ( article.figure ) { -%>
+  <img
+  <% if ( article.layout == 'page' || article.layout == 'about' ){ /* no path for image */ -%>
+    src="<%-  article.figure.image  %>"
+  <% } else { -%>
+    <% if ( format != 'excerpt' && format != 'listing' ) { -%>
+      src="<%- url_for( article.path + 'wb_' + article.figure.image ) %>"
+    <% } else { -%>
+      src="<%- url_for( article.path + 'th_' + article.figure.image ) %>"
+    <% } -%>
+  <% } -%>
+  alt="<%- article.figure.caption %>">
+    <% if ( article.figure.caption ) { -%>
+    <figcaption><%- markdown(article.figure.caption) %></figcaption>
+    <% } -%>
+  <% } -%>
+</figure>

@@ -1,0 +1,23 @@
+{% block article_gallery -%}
+{% if page.header.show_gallery == 1 %}
+      <div class="article-gallery">
+        {% for image in page.media.images -%}
+        <!-- <div >
+          <div >
+            {{ image.lightbox().cropZoom(200,200).html('Sample Image') }}
+          </div>
+        </div> -->
+        <a href="{{ image.url }}"
+          rel="gallery_{{ image.url }}"
+          data-fancybox="gallery_{{ image.url }}"
+          data-caption="" >
+          <figure>
+          <img src="{{ image.url }}" >
+          <figcaption>{{ image.caption }}</figcaption>
+          </figure>
+        </a>
+        {% endfor -%}
+
+      </div>
+{%- endif  %}
+{%- endblock %}

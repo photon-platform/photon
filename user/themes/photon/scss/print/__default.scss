@@ -1,0 +1,69 @@
+@page {
+  size: 8.5in 11in;
+  margin: .75in;
+
+  // @top-center {
+  //  content: "photon";
+  // }
+  //
+  // @bottom-center {
+  //  content: counter(page);
+  // }
+}
+
+@media print {
+  html {
+    font-size: 12pt;
+    width: 8.5in;
+    display: block;
+  }
+
+  body {
+    width: 8.5in;
+//     height: 11in;
+
+    grid-template-columns: 1fr;
+    display: block;
+
+    > header {
+      width: 100%;
+      flex-direction: row;
+      // justify-content: center;
+      align-content: center;
+      > h1 {
+        font-size: 1.1em;
+      }
+      > nav {
+        display: none;
+      }
+      img {
+        width: 5em;
+      }
+    }
+    > footer,
+    > .asides {
+      display: none;
+  	}
+
+    article {
+      > figure {
+//         width: 80%;
+//         padding: 5em;
+      }
+
+      > footer {
+        > .article-share {
+          display: none;
+        }
+        > nav.sibling {
+          display: none;
+        }
+      }
+
+      > nav {
+        display: none;
+      }
+    }
+  }
+
+}

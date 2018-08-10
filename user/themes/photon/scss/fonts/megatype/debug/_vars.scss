@@ -1,0 +1,25 @@
+// ===================================
+// Debugging
+// ===================================
+
+// debug grid columns, grid, type baseline, & breakpoints
+$debug-grid: true !default;
+$debug-type: true !default;
+$debug-breakpoints: true !default;
+
+// makes type debugging show on hover instead of all the time
+$debug-hover: true !default;
+
+// debug colors
+$debug-base: #f54848 !default;
+$debug-cap: yellow !default;
+$debug-spacing: turquoise !default;
+
+// size of debug text
+$debug-size: 12px !default;
+
+// grid opacity, for debugging max-width
+$debug-opacity: 0.3 !default;
+
+// limit where baseline will report warnings
+$debug-tolerance: 1px;

@@ -1,0 +1,8 @@
+{% block article_main -%}
+        <main>
+          <div>
+            {{ page.summary }}
+          </div>
+          {{ page.content | slice(page.summary | length) }}
+        </main>
+{%- endblock %}

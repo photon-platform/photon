@@ -1,0 +1,29 @@
+// type shorthand helpers
+// get font family
+@function font-family-of($type) {
+    @return unquote(map-get($type, font-family));
+}
+
+@function font-family-fallback-of($type) {
+    @return unquote(map-get($type, font-family-fallback));
+}
+
+// get bold weight
+@function bold-of($type) {
+    @return map-get($type, bold);
+}
+
+// get regular weight
+@function regular-of($type) {
+    @return map-get($type, regular);
+}
+
+// get cap-height
+@function cap-height-of($type) {
+    @return map-get($type, cap-height);
+}
+
+// get cap-height weight
+@function italic-of($type) {
+    @return map-get($type, italic);
+}

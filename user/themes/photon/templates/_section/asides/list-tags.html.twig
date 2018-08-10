@@ -1,0 +1,16 @@
+{% if config.plugins.taxonomylist.enabled -%}
+      <aside class="tags">
+        <h1>Tags</h1>
+        {% set taxonomy = "tag" -%}
+        {% set taxlist = taxonomylist.get() -%}
+        {% if taxlist -%}
+          {% for tax, value in taxlist[taxonomy] -%}
+            {% set active = uri.param(taxonomy) == tax
+              ? ' active'
+              : '' -%}
+        <a class="{{ active }}" href="/search/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }}</a>
+          {% endfor %}
+        {% endif %}
+
+      </aside>
+{%- endif %}

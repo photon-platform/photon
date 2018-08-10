@@ -1,0 +1,16 @@
+<% if ( article.gallery && article.gallery.length ){ -%>
+<div class="article-gallery">
+  <% article.gallery.forEach( item => { -%>
+    <a href="<%- url_for( article.path + 'wb_' + item.image ) %>"
+      rel="gallery_<%= article._id %>"
+      data-fancybox="gallery_<%= article._id %>"
+      data-caption="<%- markdown(item.caption) %>"
+      >
+      <figure>
+      <img src="<%- url_for(article.path + 'th_' + item.image ) %>" itemprop="item">
+      <figcaption><%- markdown(item.caption) %></figcaption>
+      </figure>
+    </a>
+  <% }) -%>
+</div>
+<% } -%>

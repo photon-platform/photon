@@ -1,0 +1,10 @@
+{% set options = { items: {'@root.descendants': '/'}, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
+{% set recent_pages = page.collection(options) -%}
+      <aside class="recent">
+        <h1>Recent</h1>
+        {% for p in recent_pages -%}
+
+        <a  href="{{ p.url }}">{{ p.title }}</a>
+        {% endfor %}
+        
+      </aside>

@@ -1,0 +1,36 @@
+// break points spaced at 18em intervals
+// using min-width for
+
+// breakpoint map for mobile first breaks
+$bp-map: (
+  // first breakpoint is the default
+  // styles should be set in the root element
+  0: (
+    minwidth:     0,
+    rootsize:    14px
+  ),
+  1: (
+    minwidth:    36em, // 576px
+    rootsize:    16px
+  ),
+  2: (
+    minwidth:    54em, //864px
+    rootsize:    16px
+  ),
+  3: (
+    minwidth:    72em, // 1152px
+    rootsize:    16px
+  ),
+  4: (
+    minwidth:    90em, // 1440px
+    rootsize:    16px
+  ),
+  5: (
+    minwidth:   108em, // 1728px
+    rootsize:    16px
+  ),
+  6: (
+    minwidth:   126em, // 2016px
+    rootsize:    16px
+  )
+) !default;

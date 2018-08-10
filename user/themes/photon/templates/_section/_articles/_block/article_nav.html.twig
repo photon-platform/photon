@@ -1,0 +1,14 @@
+{% block article_nav -%}
+  {% if not page.isFirst or not page.isLast -%}
+        <nav class="sibling">
+          {% if not page.isFirst -%}
+          <a href="{{ page.nextSibling.url }}" class="prev">Prev</a>
+          {%- endif %}
+
+          {% if not page.isLast -%}
+            <a href="{{ page.prevSibling.url }}" class="next">Next</a>
+          {%- endif %}
+
+        </nav>
+  {% endif %}
+{%- endblock %}

@@ -1,0 +1,118 @@
+<%
+function unflatten(arr) {
+  var tree = [],
+      mappedArr = {},
+      arrElem,
+      mappedElem;
+
+      // First map the nodes of the array to an object -> create a hash table.
+  site.categories.each( category => {
+    mappedArr[category._id] = category;
+    mappedArr[category._id]['children'] = [];
+
+  } );
+
+
+      // for (var id in mappedArr) {
+        // if ( mappedArr[id] ) {
+      //     mappedElem = mappedArr[id];
+      //     // If the element is not at the root level, add it to its parent array of children.
+      //     if (mappedElem.parent) {
+      //       mappedArr[mappedElem['parent']]['children'].push(mappedElem);
+      //     }
+      //     // If the element is at the root level, add it to first level elements array.
+      //     else {
+      //       tree.push(mappedElem);
+      //     }
+        // }
+      // }
+
+  return mappedArr;
+}
+
+function showAttributes(obj) {
+  for(var key in obj) { -%>
+       <%= key %>: <%= typeof obj[key] %>
+  <% }
+}
+
+function getChildren(category, level) {
+  var spacer = "\t"
+  -%>
+<%- spacer.repeat(level) + category.name %>
+  <%
+
+}
+
+%>
+<body >
+  <main>
+  <pre>
+  page
+  ============================
+        title: <%- page.title %>
+        layout: <%= page.layout %>
+
+         date: <%= page.date %>
+    published: <%= page.published %>
+      updated: <%= page.updated %>
+
+       source: <%= page.source %>
+  full_source: <%= page.full_source %>
+
+         path: <%= page.path %>
+    permalink: <%= page.permalink %>
+    canonical: <%= page.canonical_path %>
+         slug: <%= page.slug %>
+    asset_dir: <%= page.asset_dir %>
+
+    <% if ( page.figure ) { -%>
+       figure:
+         image: <%= page.figure.image %>
+         asset: <%= page.figure.asset %>
+         caption: <%= page.figure.caption %>
+    <% } -%>
+    <% if ( page.gallery ) { -%>
+      gallery: <%= page.gallery.length %>
+    <% } -%>
+
+         tags: <%= page.tags ? page.tags.count() : '' %>
+   categories: <%= page.categories ? page.categories.count() : '' %>
+     comments: <%= page.comments %>
+         lang: <%= page.lang %>
+
+         raw: <%#= page.raw.length %>
+     content: <%#= page.content.length %>
+
+  // ======== page objects properties
+  <%# showAttributes(page); %>
+
+  // -------- site.categories tree
+
+  <% if ( site.categories ) { -%>
+
+    <% var tree = unflatten(site.categories) -%>
+    <% for (var category in tree ) %>
+
+      // -------- site.categories list
+      cat count: <%= site.categories.count() %>
+      cat size: <%= site.categories.size() %>
+
+      <%  site.categories.each( category => { %>
+        - <%= category.name %>
+               count: <%= category.posts.count() %>
+                 _id: <%= category._id %>
+              parent: <%= category.parent %>
+                path: <%= category.path %>
+           permalink: <%= category.permalink %>
+               posts: <%= category.posts.count() %>
+                slug: <%= category.slug %>
+      <% } ) %>
+
+  <% } %>
+
+
+  </pre>
+</main>
+
+</body>

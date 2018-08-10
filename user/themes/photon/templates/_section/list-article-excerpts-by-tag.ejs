@@ -1,0 +1,9 @@
+<section class="<%= tag %>">
+<h1><%= tag %></h1>
+<% var articles = site.tags.findOne( {name: tag } ); -%>
+<% if (articles) { -%>
+  <% articles.posts.sort('date', 1).forEach( article => { -%>
+    <%-  partial('_articles/article-excerpt', { article: article, context: 'excerpt' } ) %>
+  <% } ) -%>
+<% } -%>
+</section>

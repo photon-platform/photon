@@ -1,0 +1,19 @@
+{# https://gist.github.com/rhukster/76a4087c39a7965ed5fd #}
+{% macro loop(page) %}
+    {% for p in page.children %}
+        {% if p.visible %}
+        <li>
+            <a href="{{ p.url }}">{{ p.menu }}</a>
+            {% if p.children.count > 0 %}
+            <ul>
+                {{ _self.loop(p) }}
+            </ul>
+            {% endif %}
+        </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+<ul class="topics">
+    {{ _self.loop(pages) }}
+</ul>

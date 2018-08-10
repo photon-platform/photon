@@ -1,0 +1,22 @@
+.asides {
+
+  @extend %section-default;
+
+  padding: .5em;
+
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  > aside {
+    // flex-grow: 1;
+  }
+
+  @include media-bp(3) {
+    flex-direction: column;
+
+    > aside {
+      // flex-shrink: 1;
+      // flex-grow: 0;
+    }
+  }
+}

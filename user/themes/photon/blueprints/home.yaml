@@ -1,0 +1,17 @@
+title: Home
+@extends:
+    type: articles
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        home:
+          type: tab
+          title: Home Collection
+          fields:
+            header.content.items:
+              type: text
+              label: Collection
+              default: '@root.children'

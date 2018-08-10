@@ -1,0 +1,53 @@
+@mixin article-card() {
+
+  // display: grid;
+  // grid-template-areas:
+  //   ' figure '
+  //   ' header'
+  //   ' main '
+  //   ' footer ';
+
+  // grid-template-columns:  1fr;
+  grid-template-rows: min-content min-content auto;
+
+
+  > figure {
+    height: 18em;
+  }
+
+  > header {
+    text-align: center;
+  }
+
+  > main {
+    align-content: flex-start;
+
+    text-align: center;
+
+    .more {
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  > footer {
+    flex-flow: row nowrap;
+    > aside {
+      padding: 0;
+      > h1 {
+        display: none;
+      }
+      ul, li {
+        display: inline;
+      }
+    }
+
+    > nav {
+      text-align: right;
+      padding: 0;
+      align-self: flex-end;
+      justify-content: right;
+    }
+  }
+}

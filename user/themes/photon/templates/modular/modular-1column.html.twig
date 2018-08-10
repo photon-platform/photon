@@ -1,0 +1,24 @@
+<section class="bar bg-cover no-mb color-white text-center" style="background-image: url('/user/images/export/base/all.02.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;" >
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="icon icon-lg">
+                    <i class="fa fa-stop"></i>
+                </div>
+                <h2 class="text-uppercase">{{ page.title }}</h2>
+                <p class="lead">{{ header.lead }}</p>
+
+                {{ content }}
+
+                <div class="text-center">
+                    <a href="{{ header.link }}" class="btn btn-template-transparent-black btn-lg">{{ header.link_text }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

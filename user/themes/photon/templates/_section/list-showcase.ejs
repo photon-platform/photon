@@ -1,0 +1,4 @@
+<section class="showcase">
+  <% var tag = site.tags.findOne( { name: 'showcase' } ); -%>
+  <%- partial('_section/list-articles',  { articles: tag.posts, format: 'showcase' } ) %>
+</section>

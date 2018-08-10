@@ -1,0 +1,43 @@
+@mixin article-banner() {
+
+  > figure {
+    margin-right: 1em;
+  }
+  > header, > main, > main > div {
+    text-align: left;
+  }
+
+  // display: grid;
+
+  > footer {
+    align-items: flex-end;
+    align-content: center;
+    flex-flow: row wrap;
+    > aside {
+      padding: 0;
+      > h1 {
+        display: none;
+      }
+      ul, li {
+//         display: inline-block;
+      }
+    }
+
+    > nav {
+      padding: 0;
+      // align-self: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
+  @include media-bp(2) {
+    // grid-template-columns: 1fr 16em   52em   1fr;
+    grid-template-areas:
+      ' figure header'
+      ' figure main '
+      ' figure footer ';
+
+    grid-template-columns:  10em 1fr;
+    grid-template-rows:  auto 1fr auto;
+  }
+}

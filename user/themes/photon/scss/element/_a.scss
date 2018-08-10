@@ -1,0 +1,38 @@
+// default anchor tag styling
+a {
+
+  background-color: transparent;
+  background: none;
+  text-decoration: none;
+  color: $color-key;
+
+  &:link {
+    color: $color-key;
+  }
+
+  &:visited {
+    color: $color-key;
+  }
+
+  &:hover {
+    background-color: $color-1;
+    // text-shadow: 2px 2px #000000;
+  }
+
+  &:active {
+    color: $color-2-dark;
+  }
+
+  &.active {
+    
+    // text-decoration: underline;
+    font-weight: 700;
+
+    &::before, &::after {
+      content: '•';
+      margin: 0;
+      padding: 0 .5em;
+    }
+  }
+
+}

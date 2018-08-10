@@ -1,0 +1,9 @@
+main {
+
+  @extend %section-default;
+
+  flex-flow: column nowrap;
+  // justify-content: center;
+  // align-content: center;
+
+}

@@ -1,0 +1,27 @@
+@mixin media-bp($key: 0) {
+  @if map-has-key($bp-map, $key) {
+    $min: bp-get($key, minwidth);
+    @media (min-width: #{$min}) {
+      @content;
+    }
+  }
+  //TODO: @warn if no key
+}
+
+// TODO: convert rootsize to percent
+@mixin media-bp-rootsize($key: 0) {
+  @if map-has-key($bp-map, $key) {
+    $min: bp-get($key, minwidth);
+    $rootsize: bp-get($key, rootsize);
+    // if key is zero - place style in element without @media
+    // this will be the mobile first styling
+    @if $key==0 {
+      font-size: #{$rootsize};
+    } @else {
+      @media (min-width: #{$min}) {
+        font-size: #{$rootsize};
+      }
+    }
+  }
+  //TODO: @warn if no key
+}

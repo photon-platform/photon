@@ -1,0 +1,11 @@
+email: phi@illumiphi.com
+fullname: Phi
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$6EZy3pEZvgIZeEPOE4WhUekSaVx.1AGWYqEP3DCfzGQMO2OE9HUY6

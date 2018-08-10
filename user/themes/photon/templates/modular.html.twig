@@ -1,0 +1,23 @@
+{% extends 'default.html.twig' %}
+{% use "_section/_articles/article.html.twig" %}
+{% use "_section/breadcrumbs.html.twig" %}
+
+{% set blog = page.parent -%}
+
+{% block content %}
+  <!-- article.html.twig -->
+  {{ block('breadcrumbs') }}
+  {{ block('article') }}
+  {{ block('sidebar') }}
+{% endblock content %}
+
+{# block content %}
+  {{ page.content }}
+
+  {% for module in page.collection() %}
+
+    {{ module.content }}
+
+  {% endfor %}
+
+{% endblock #}

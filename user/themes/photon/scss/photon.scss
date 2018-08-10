@@ -1,0 +1,43 @@
+//Photon Theme Index
+@import "config";
+// set defaults from simplest to most complex
+
+
+@import 'component/__mixins/_mixins';
+/* component/article *****************************/
+@import 'component/article';
+/* component/aside *****************************/
+@import 'component/aside';
+/* component/search *****************************/
+@import 'component/search';
+
+/* section/_default *****************************/
+@import 'section/_default';
+/* section/asides *****************************/
+@import 'section/asides';
+/* section/featured *****************************/
+@import 'section/featured';
+/* section/footer *****************************/
+@import 'section/footer';
+/* section/header *****************************/
+@import 'section/header';
+/* on/main *****************************/
+@import 'section/main';
+/* section/nav *****************************/
+@import 'section/nav';
+/* section/showcase *****************************/
+@import 'section/showcase';
+/* section/welcome *****************************/
+@import 'section/welcome';
+
+/* body/_default *****************************/
+@import 'body/_default';
+/* body/index *****************************/
+@import 'body/index';
+/* body/article *****************************/
+@import 'body/article';
+/* body/archive *****************************/
+@import 'body/collection';
+
+/* Print *****************************/
+@import 'print/_default';

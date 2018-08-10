@@ -1,0 +1,20 @@
+{# iterates over the current item collection #}
+
+{# determine container #}
+
+{% block content %}
+{% set collection = page.collection() %}
+<div class="container">
+    {{ block('breadcrumbs') }}
+    {{ block('blog_content') }}
+    {% block list %}
+      {% for child in collection %}
+      {% set blog = page %}
+      {% set truncate = true %}
+      {% set page = child %}
+      {{ block('tile') }}
+      {% endfor %}
+    {% endblock list %}
+    {{ block('pagination') }}
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+title: Person
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: Person Details
+          fields:
+            header.person.first_name:
+              type: toggle
+              label: Featured Page
+              help: select this page to be featured in home pages and banners
+              highlight: 1
+              options:
+                1: yes
+                0: no
+              default: 0
+              validate:
+                type: bool
+
+            header.featured_image:
+              type: filepicker
+              label: Featured Image
+              help: Select of featured image from the items in the folder
+              folder: 'self@'
+              preview_images: true
+              acccept:
+                - .png
+                - .jpg
+                - .gif
+                - .svg
+
+            header.author:
+              type: pages
+              label: Page Author
+              help: select the author of this article
+              size: medium
+              classes: fancy
+              show_all: true
+              show_modular: false
+              show_root: false
+
+            header.first_name:
+              type: text
+              label: First Name
+              help: First name of the person
+
+            header.last_name:
+              type: text
+              label: Last Name
+              help: Last name of the person

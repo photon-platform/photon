@@ -1,0 +1,28 @@
+//Photon Theme Index
+@import 'config';
+// set defaults from simplest to most complex
+
+/* element/_default *****************************/
+@import 'element/_default';
+/* element/html *****************************/
+@import 'element/html';
+/* element/headings *****************************/
+@import 'element/headings';
+/* element/blocks *****************************/
+@import 'element/blocks';
+/* element/lists *****************************/
+@import 'element/lists';
+/* element/blockquotes *****************************/
+@import 'element/blockquotes';
+/* element/code *****************************/
+@import 'element/code';
+/* element/a *****************************/
+@import 'element/a';
+/* element/inline *****************************/
+@import 'element/inline';
+/* element/figure *****************************/
+@import 'element/figure';
+/* element/tables *****************************/
+@import 'element/tables';
+/* element/forms *****************************/
+@import 'element/forms';

@@ -1,0 +1,12 @@
+<body class="work">
+  <%- partial('_section/header',        null, {cache: true}) %>
+  <%#- partial('_section/nav',           null, {cache: true}) %>
+  <main>
+    <%- partial('_section/_articles/article', { article: page }) %>
+  </main>
+  <%- partial('_section/asides',        null, {cache: true}) %>
+  <%- partial('_section/footer',        null, {cache: true}) %>
+
+  <%- partial('_site/after-footer',     null, {cache: true}) %>
+  
+</body>

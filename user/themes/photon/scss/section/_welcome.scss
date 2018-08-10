@@ -1,0 +1,47 @@
+.welcome {
+
+  @extend %section-default;
+  padding: 2em;
+  // font-size: 1em;
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+
+  > h1 {
+    grid-column: 1 / -1;
+    letter-spacing: .25em;
+    padding-left: .25em;
+    padding-top: 1em;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  > article {
+    // text-align: center;
+    cursor: pointer;
+    text-align: left;
+
+    font-size: 1.5em;
+    > header, > main, > main > div {
+      text-align: left;
+    }
+
+    @include article-panel;
+
+    &:nth-child(even) {
+      grid-template-areas:
+        ' header figure'
+        ' main   figure '
+        ' footer figure ';
+
+      > header, > main, > main > div {
+        text-align: right;
+
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,36 @@
+<%#
+  @params
+  article: the hexo post
+-%>
+<%# var context = 'excerpt' -%>
+<article
+  class="<%= article.layout %> showcase excerpt"
+  data-url="<%- url_for(article.path) %>">
+  <%- partial('_block/figure', {article: article, format: ''}) -%>
+  <main >
+    <header>
+      <%- partial('_block/title', {link: true}) -%>
+      <% if ( theme.excerpt_date ) { -%>
+      <%- partial('_block/date', {date_format: null}) %>
+      <% } -%>
+    </header>
+
+    <div>
+    <%- article.excerpt %>
+    </div>
+  </main>
+  <% if ( theme.excerpt_footer ) { -%>
+    <footer>
+      <%#- partial('_block/tag') %>
+      <%- partial('_block/category') %>
+      <% if ( theme.shares ){ -%>
+      <%#- partial('_block/share') %>
+      <% } -%>
+      <% if ( theme.excerpt_link ) { -%>
+        <nav>
+        <a class="more" href="<%- url_for(article.path) %>"><%= theme.excerpt_link %></a>
+        </nav>
+      <% } -%>
+    </footer>
+  <% } -%>
+</article>

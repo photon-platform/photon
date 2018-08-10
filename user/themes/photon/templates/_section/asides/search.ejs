@@ -1,0 +1,11 @@
+<% if (site.tags.length){ %>
+  <aside class="search">
+    <h1><%= __('search') %></h1>
+    <section id="site_search">
+      <div class="form-group">
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('search') %>" role="search" />
+      </div>
+      <div id="local-search-result"></div>
+    </section>
+  </aside>
+  <% } %>

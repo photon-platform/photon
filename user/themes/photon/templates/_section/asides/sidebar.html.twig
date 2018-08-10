@@ -1,0 +1,128 @@
+{% block sidebar %}
+  {% set title_tag = title_tag | default('h4') %}
+  {{ block('urls') }}
+  {% set title_tag = 'h3' %}
+
+  {# {{ block('simple_search') }} #}
+  {{ block('sidebar_categories') }}
+  {{ block('sidebar_tags') }}
+  {{ block('sidebar_topictags') }}
+  {{ block('related_pages') }}
+  {#{ block('random_page') }#}
+  {{ block('archives') }}
+  {{ block('feed') }}
+{% endblock %}
+
+{% block simple_search %}
+  {% if config.plugins.simplesearch.enabled %}
+    <aside class="search">
+      <h1>Search</h1>
+      {% include 'partials/simplesearch_searchbox.html.twig' %}
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar_tags %}
+  {% if config.plugins.taxonomylist.enabled %}
+    <aside class="tags">
+      <h1>Tags</h1>
+
+      {% set taxonomy = "tag" %}
+      {% set taxlist = taxonomylist.get() %}
+      {% if taxlist %}
+        {% for tax, value in taxlist[taxonomy] %}
+          {% set active = uri.param(taxonomy) == tax
+            ? ' active'
+            : '' %}
+          <a class="{{ active }}" href="{{ blog_base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }}</a>
+        {% endfor %}
+      {% endif %}
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar_categories %}
+  {% if config.plugins.taxonomylist.enabled %}
+    <aside class="categories">
+      <h1>Categories</h1>
+      {% set taxonomy = "category" %}
+      {% set taxlist = taxonomylist.get() %}
+      {% if taxlist %}
+        {% for tax, value in taxlist[taxonomy] %}
+          {% set active = uri.param(taxonomy) == tax
+            ? ' active'
+            : '' %}
+          <a class="{{ active }}" href="{{ blog_base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }}</a>
+        {% endfor %}
+      {% endif %}
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar_topictags %}
+  {% if config.plugins.topicmenu.enabled %}
+    <aside class="topic-tags">
+      <h1>{{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.TOPIC_TAGS"|t }}</h1>
+      {% for taxlist in topics_tags %}
+        {% for count, value in taxlist %}
+          <a href="{{ blog_base_url }}/tag:{{ value }}">
+            {{ value }}
+          </a>
+        {% endfor %}
+      {% endfor %}
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block related_pages %}
+  {% if config.plugins.relatedpages.enabled and related_pages | length > 0 %}
+    <aside class="related_pages">
+      <h1>{{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.RELATED_POSTS"|t }}</h1>
+      {% include 'partials/relatedpages.html.twig' %}</aside>
+  {% endif %}
+{% endblock %}
+
+{% block random_page %}
+  {% if config.plugins.random.enabled %}
+    <aside>
+      <h1>{{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.RANDOM_ARTICLE"|t }}</h1>
+      <a class="button" href="{{ base_url_relative }}/random">
+        <i class="fa fa-retweet"></i>
+        {{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.FEEL_LUCKY"|t }}</a>
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block archives %}
+  {% if config.plugins.archives.enabled %}
+    <aside class="archives">
+      <h1>{{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.ARCHIVES"|t }}</h1>
+      <ul>
+        {% for month, items in archives_data %}
+          <li>
+            <a href="{{ blog_base_url }}/archives_month{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+              {% if archives_show_count %}
+                <span class="badge">{{ items|length }}</span>
+              {% endif %}
+              <span class="archive_date">{{ month }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
+  {% endif %}
+{% endblock %}
+
+{% block feed %}
+  {% if config.plugins.feed.enabled %}
+    <aside class="feed">
+      <h1>{{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.SYNDICATE"|t }}</h1>
+      <a href="{{ blog_feed_url }}.atom">
+        <i class="fa fa-rss-square"></i>
+        {{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.ATOM"|t }}</a>
+      <a href="{{ blog_feed_url }}.rss">
+        <i class="fa fa-rss-square"></i>
+        {{ "PLUGIN_BLOG_INJECTOR.TEMPLATES.RSS"|t }}</a>
+    </aside>
+  {% endif %}
+{% endblock %}
