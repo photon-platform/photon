@@ -1,0 +1,7 @@
+enabled: true
+generate:
+  output_url: 'http://localhost:1111'
+  output_path: /build2
+  assets: true
+  taxonomy: true
+  force: true

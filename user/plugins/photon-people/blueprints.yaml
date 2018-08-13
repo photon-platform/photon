@@ -1,0 +1,31 @@
+name: photon • People
+version: 0.1.0
+description: components for people - on the photon content development platform
+icon: plug
+author:
+  name: illumiphi
+  email: phi@illumiphi.com
+homepage: https://github.com/i-am-phi/grav-plugin-photon-people
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/i-am-phi/grav-plugin-photon-people/issues
+docs: https://github.com/i-am-phi/grav-plugin-photon-people/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_PHOTON_PEOPLE.TEXT_VARIABLE
+      help: PLUGIN_PHOTON_PEOPLE.TEXT_VARIABLE_HELP
