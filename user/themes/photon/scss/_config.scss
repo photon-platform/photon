@@ -1,11 +1,12 @@
 
 // FONTS
-@import 'fonts/_Montserrat';
+@import 'fonts/_Bree-Serif';
+@import 'fonts/_Lato';
 @import 'fonts/_photon-social';
 // @import 'fonts/_Lato';
 
-$font-display: $font-Montserrat;
-$font-root: $font-Montserrat;
+$font-display: $font-Bree-Serif;
+$font-root: $font-Lato;
 
 $form-font: $font-root;
 
@@ -22,8 +23,10 @@ $saturation: 40;
 $color-foreground: #333;
 $color-background: #FFC;
 
+$color-key: #2aabe4;
+
 // $color-key: #570961;
-// $color-1: #d3de94;
+$color-1: #e1ccb1;
 
 // BREAKPOINT
 @import 'media/var-18em';

@@ -17,7 +17,8 @@ body.home {
   grid-auto-rows: auto;
 
   > header {
-    background-color: rgba($color-background, $opacity)  ;
+    // background-color: rgba($color-background, $opacity)  ;
+    background-color: white;
     z-index: 10;
     // flex-direction: row;
     // align-items: center;

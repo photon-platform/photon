@@ -18,8 +18,7 @@ class PhotonPeoplePlugin extends Plugin
   public static function getSubscribedEvents()
   {
       return [
-          'onPluginsInitialized' => ['onPluginsInitialized', 0],
-          'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0]
+          'onPluginsInitialized' => ['onPluginsInitialized', 0]
       ];
   }
 
@@ -27,7 +26,7 @@ class PhotonPeoplePlugin extends Plugin
   {
       // If in an Admin page.
           $this->enable([
-              'onGetPageTemplates' => ['onGetPageTemplates', 0],
+              'onGetPageTemplates' => ['onGetPageTemplates', 0]
           ]);
           return;
   }

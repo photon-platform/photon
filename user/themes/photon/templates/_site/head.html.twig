@@ -1,4 +1,5 @@
 {% set page_title = header.title ~ ' | ' ~ site.title %}
+
   <head>
     {% block head -%}
     <meta charset="utf-8">
@@ -16,6 +17,16 @@
     <title>{{ page_title }}</title>
     <!-- rss -->
     <link rel="alternate" href="{{ page.url ~ '.rss' }}" title="{{ page_title }}" type="application/atom+xml">
+
+    <!-- opengraph -->
+    {% block opengraph -%}
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page.summary|striptags }}">
+    <meta property="og:image" content="{{ page.featured_image }}">
+
+    <meta property="og:url" content="{{ page.url }}">
+    <meta name="twitter:card" content="{{ page.featured_image }}">
+    {% endblock  %}
 
     {% block stylesheets -%}
         {% do assets.add('theme://css/elements.css',50) -%}

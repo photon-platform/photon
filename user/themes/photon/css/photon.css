@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,900");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i,700,900");
 @font-face {
   font-family: 'photon-social';
   src: url("../fonts/photon-social.eot?20845125");
@@ -135,13 +136,13 @@ article {
     cursor: pointer; }
     article.excerpt:hover {
       color: #FFC;
-      background-color: #534db3; }
+      background-color: #e1ccb1; }
       article.excerpt:hover .more {
-        color: #534db3;
-        background-color: #b3974d; }
+        color: #e1ccb1;
+        background-color: #2aabe4; }
       article.excerpt:hover a:hover {
-        color: #534db3;
-        background-color: #b3974d; }
+        color: #e1ccb1;
+        background-color: #2aabe4; }
     article.excerpt .more {
       align-self: flex-end; }
   @media (min-width: 90em) {
@@ -172,7 +173,7 @@ aside {
         font-weight: bold;
         padding: 0.25em;
         margin-left: .5em;
-        background-color: #534db3;
+        background-color: #e1ccb1;
         border-radius: 20% 20%; }
   aside p {
     padding-bottom: .2em; }
@@ -306,11 +307,11 @@ nav {
     text-transform: uppercase;
     font-size: .9em; }
   nav a[href^="http"] {
-    background-color: #b3974d;
+    background-color: #2aabe4;
     color: #FFC; }
     nav a[href^="http"]:hover {
-      background-color: #534db3;
-      color: #b3974d; }
+      background-color: #e1ccb1;
+      color: #2aabe4; }
   nav.breadcrumbs {
     width: auto; }
 
@@ -415,6 +416,7 @@ nav {
 /* body/_default *****************************/
 body {
   width: 100%;
+  background-color: #CCC;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr  21em  1fr;
@@ -480,7 +482,7 @@ body.home {
   justify-content: center;
   grid-auto-rows: auto; }
   body.home > header {
-    background-color: #ffffcc;
+    background-color: white;
     z-index: 10; }
   body.home > .showcase {
     grid-row: 1 / 3;
@@ -579,7 +581,7 @@ body.collection {
     body.collection > main article {
       grid-column: 1 / -1; }
       body.collection > main article > figure {
-        background-color: #b3974d; }
+        background-color: #2aabe4; }
     body.collection > main article.excerpt {
       cursor: pointer;
       grid-column: 1 / -1; }
