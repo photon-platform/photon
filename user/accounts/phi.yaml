@@ -1,6 +1,6 @@
 email: phi@illumiphi.com
-fullname: Phi
-title: Administrator
+fullname: phi
+title: architect
 state: enabled
 access:
   admin:
@@ -8,4 +8,4 @@ access:
     super: true
   site:
     login: true
-hashed_password: $2y$10$6EZy3pEZvgIZeEPOE4WhUekSaVx.1AGWYqEP3DCfzGQMO2OE9HUY6
+hashed_password: $2y$10$EpavxpIfmuDYeRrX5IAhP.3JY.4EHHHyJKwQCp0bHy5v83162cuui
