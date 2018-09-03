@@ -1,8 +1,11 @@
 export PROJECT_PORT="5630"
 export SITE="http://localhost:${PROJECT_PORT}"
+
 alias serve="php -S localhost:${PROJECT_PORT} system/router.php"
 alias site="open ${SITE}"
 alias admin="open ${SITE}/admin"
 alias swatch="cd user/themes/photon; scss --watch scss:css"
-alias sync="rsync -azP --delete user/ illumiphi.com:port-of-alsea.illumiphi.com/user/"
+alias dry-sync="rsync -auzvhP --delete --dry-run user/ illumiphi.com:port-of-alsea.illumiphi.com/user/"
+alias sync="rsync -auzvhP --delete user/ illumiphi.com:port-of-alsea.illumiphi.com/user/"
+
 source ~/.bash_prompt
