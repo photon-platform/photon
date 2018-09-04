@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 generate:
   output_url: 'http://localhost:1111'
   output_path: /build2

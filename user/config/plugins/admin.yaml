@@ -2,6 +2,7 @@ enabled: true
 route: /admin
 cache_enabled: false
 theme: grav
+logo_text: PHOTON
 content_padding: true
 twofa_enabled: true
 sidebar:
@@ -17,7 +18,7 @@ widgets:
   dashboard-feed: false
   dashboard-pages: true
 pages:
-  show_parents: both
+  show_parents: folder
 session:
   timeout: 1800
 warnings:
