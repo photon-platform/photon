@@ -1,0 +1,10 @@
+{% extends 'article.html.twig' %}
+{% block body_template_classes %}{{ parent() }} event{% endblock body_template_classes %}
+
+{% block content %}
+  {{ parent() }}
+
+	{% include 'partials/event_item.html.twig' with {'event':page.parent, 'truncate':false, 'single':true} %}
+	{% include 'partials/events_sidebar.html.twig' with {'page':page.parent} %}
+
+{% endblock %}

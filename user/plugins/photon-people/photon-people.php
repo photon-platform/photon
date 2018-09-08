@@ -16,11 +16,7 @@ use Grav\Common\Taxonomy;
  */
 class PhotonPeoplePlugin extends Plugin
 {
-  /**
-   * Subscribe to required events
-   *
-   * @return array
-   */
+
   public static function getSubscribedEvents()
   {
       return [
@@ -42,7 +38,6 @@ class PhotonPeoplePlugin extends Plugin
         return;
       }
 
-
       $this->enable([
         'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
         'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
@@ -50,6 +45,12 @@ class PhotonPeoplePlugin extends Plugin
 
       return;
 
+  }
+
+  // called when saving page in admin
+  public function onAdminSave(Event $event)
+  {
+    // placeholder
   }
 
   /**

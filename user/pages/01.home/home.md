@@ -1,9 +1,9 @@
 ---
 title: Home
-body_classes: 'title-center title-h1h2'
+body_classes:
 featured: false
 show_gallery: true
-author: /home
+author: phi
 child_type: article
 content:
     items: '@root.children'

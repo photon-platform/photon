@@ -4,60 +4,99 @@ namespace Grav\Plugin;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 
+use Grav\Common\Grav;
+use Grav\Common\Page\Collection;
+use Grav\Common\Page\Page;
+use Grav\Common\Page\Pages;
+use Grav\Common\Taxonomy;
+
 /**
  * Class PhotonOrganizationPlugin
  * @package Grav\Plugin
  */
 class PhotonOrganizationPlugin extends Plugin
 {
-    /**
-     * @return array
-     *
-     * The getSubscribedEvents() gives the core a list of events
-     *     that the plugin wants to listen to. The key of each
-     *     array section is the event that the plugin listens to
-     *     and the value (in the form of an array) contains the
-     *     callable (or function) as well as the priority. The
-     *     higher the number the higher the priority.
-     */
+
     public static function getSubscribedEvents()
     {
-        return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0]
-        ];
+      return [
+        'onPluginsInitialized' => ['onPluginsInitialized', 0],
+        'onGetPageTemplates' => ['onGetPageTemplates', 0]
+      ];
     }
 
-    /**
-     * Initialize the plugin
-     */
     public function onPluginsInitialized()
     {
-        // Don't proceed if we are in the admin plugin
-        if ($this->isAdmin()) {
-            return;
+
+      if ( $this->isAdmin() ) {
+
+        $this->enable([
+          'onAdminSave' => ['onAdminSave', 0], //from events plugin - not sure if necessary
+          // 'onGetPageTemplates' => ['onGetPageTemplates', 0]
+        ]);
+
+        return;
+      }
+
+      $this->enable([
+        'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+        'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+      ]);
+
+      return;
+
+    }
+
+    // called when saving page in admin
+    public function onAdminSave(Event $event)
+    {
+      // placeholder
+    }
+
+
+    /** Add blueprint directories for admin templates.     */
+    public function onGetPageTemplates(Event $event)
+    {
+        $types = $event->types;
+        $locator = Grav::instance()['locator'];
+        $types->scanBlueprints($locator->findResource('plugin://' . $this->name . '/blueprints'));
+        $types->scanTemplates($locator->findResource('plugin://' . $this->name . '/templates'));
+    }
+
+    /**  Add current directory to twig lookup paths     */
+    public function onTwigTemplatePaths()
+    {
+      $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
+    }
+
+
+    public function onTwigSiteVariables()
+    {
+      // setup
+      $page = 			$this->grav['page'];
+      $pages = 			$this->grav['pages'];
+      // $collection = $pages->all()->ofType('event');
+      $twig = 			$this->grav['twig'];
+      $assets = 		$this->grav['assets'];
+
+      // only load the vars if this datatype page
+      if ($page->template() == 'organization')
+      {
+
+        // styles
+        if ($this->config->get('plugins.photon-organization.built_in_css')) {
+          $css = 'plugin://photon-organization/assets/organization.css';
+          $assets->addCss($css);
         }
 
-        // Enable the main event we are interested in
-        $this->enable([
-            'onPageContentRaw' => ['onPageContentRaw', 0]
-        ]);
+        // scripts
+        if ($this->config->get('plugins.photon-organization.built_in_js')) {
+          $js = 'plugin://photon-organization/assets/organization.js';
+          $assets->addJs($js);
+        }
+
+
+      }
     }
 
-    /**
-     * Do some work for this event, full details of events can be found
-     * on the learn site: http://learn.getgrav.org/plugins/event-hooks
-     *
-     * @param Event $e
-     */
-    public function onPageContentRaw(Event $e)
-    {
-        // Get a variable from the plugin configuration
-        $text = $this->grav['config']->get('plugins.photon-organization.text_var');
-
-        // Get the current raw content
-        $content = $e['page']->getRawContent();
-
-        // Prepend the output with the custom text and set back on the page
-        $e['page']->setRawContent($text . "\n\n" . $content);
-    }
 }

@@ -9,7 +9,7 @@ form:
       fields:
         articles:
           type: tab
-          title: Articles Collection
+          title: ✴ Articles
           fields:
             # header.content.items:
             #   type: text

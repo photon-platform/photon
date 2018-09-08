@@ -1,16 +1,19 @@
-name: photon ✹ Organization
+name: photon ✴ Organization
 version: 0.1.0
-description: structure, style and logic for organizational data
-icon: certificate
+description: structure, style and logic for content about organizations
+icon: asterisk
 author:
   name: illumiphi
   email: phi@illumiphi.com
 homepage: https://github.com/i-am-phi/grav-plugin-photon-organization
-demo: http://demo.yoursite.com
-keywords: grav, plugin, etc
+demo: https://illumiphi.com
+keywords: datatype, photon
 bugs: https://github.com/i-am-phi/grav-plugin-photon-organization/issues
 docs: https://github.com/i-am-phi/grav-plugin-photon-organization/blob/develop/README.md
 license: MIT
+
+dependencies:
+    - { name: photon, version: '>=0.1.0' }
 
 form:
   validation: strict
@@ -25,7 +28,32 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
+
+    built_in_css:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_CSS
+      help: PLUGIN_PHOTON.USE_BUILTIN_CSS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    built_in_js:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_JS
+      help: PLUGIN_PHOTON.USE_BUILTIN_JS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    notes:
       type: text
-      label: PLUGIN_PHOTON_ORGANIZATION.TEXT_VARIABLE
-      help: PLUGIN_PHOTON_ORGANIZATION.TEXT_VARIABLE_HELP
+      label: PLUGIN_PHOTON.NOTES
+      help: PLUGIN_PHOTON.NOTES_HELP

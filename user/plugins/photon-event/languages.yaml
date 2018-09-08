@@ -1,0 +1,5 @@
+en:
+  PLUGIN_PHOTON_EVENT:
+
+    DESCRIPTION: description
+    DESCRIPTION_HELP: add a description for Event

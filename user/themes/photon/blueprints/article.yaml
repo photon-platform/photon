@@ -9,7 +9,7 @@ form:
       fields:
         article:
           type: tab
-          title: Article Details
+          title: ✴ Article
           fields:
             header.featured:
               type: toggle

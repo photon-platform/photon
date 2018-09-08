@@ -1,16 +1,19 @@
-name: photon ✹ Person
+name: photon ✴ Person
 version: 0.1.0
 description: structure, style and logic for representing groups of people - cards, directories, etc.
-icon: certificate
+icon: asterisk
 author:
   name: illumiphi
   email: phi@illumiphi.com
 homepage: https://github.com/0-am-phi/grav-plugin-photon-person
-demo: http://demo.yoursite.com
+demo: http://illumiphi.com
 keywords: grav, plugin, etc
 bugs: https://github.com/0-am-phi/grav-plugin-photon-person/issues
 docs: https://github.com/0-am-phi/grav-plugin-photon-person/blob/develop/README.md
 license: MIT
+
+dependencies:
+    - { name: photon, version: '>=0.1.0' }
 
 form:
   validation: strict
@@ -25,7 +28,32 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
+
+    built_in_css:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_CSS
+      help: PLUGIN_PHOTON.USE_BUILTIN_CSS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    built_in_js:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_JS
+      help: PLUGIN_PHOTON.USE_BUILTIN_JS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    notes:
       type: text
-      label: PLUGIN_PHOTON_PERSON.TEXT_VARIABLE
-      help: PLUGIN_PHOTON_PERSON.TEXT_VARIABLE_HELP
+      label: PLUGIN_PHOTON.NOTES
+      help: PLUGIN_PHOTON.NOTES_HELP

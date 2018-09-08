@@ -9,7 +9,7 @@ form:
       fields:
         features:
           type: tab
-          title: Person Details
+          title: ✴ Person
           icon: folder
           text: Enter details for this person
 

@@ -1,0 +1,4 @@
+enabled: true
+built_in_css: true
+description: 'Custom Text added by the **photon-organization** plugin (disable plugin to remove)'
+built_in_js: true

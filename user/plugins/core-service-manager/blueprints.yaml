@@ -6,7 +6,7 @@ author:
   name: TwelveTone LLC
   email: info@twelvetone.tv
 homepage: https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-core-service-manager
-xdemo: http://demo.yoursite.com
+xdemo: http://illumiphi.com
 keywords: grav, plugin, core, service, manager, osgi, twig, ajax
 bugs: https://github.com/flamenco/grav-plugin-core-service-manager/issues
 docs: https://www.twelvetone.tv/docs/developer-tools/grav-plugins/grav-core-service-manager

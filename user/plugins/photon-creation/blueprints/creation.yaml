@@ -1,0 +1,64 @@
+title: Creation
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: ✴ Creation
+          fields:
+            header.featured:
+              type: toggle
+              label: Featured Page
+              help: select this page to be featured in home pages and banners
+              highlight: 1
+              options:
+                1: yes
+                0: no
+              default: 0
+              validate:
+                type: bool
+
+
+            header.year_completed:
+              type: text
+              label: Year of Completion
+              help: year the work was completed or last performed.
+
+            header.creatives:
+              type: list
+              label: Creatives
+              fields:
+                .creator:
+                  type: pages
+                  label: Creative
+                  help: Creative of this Creation
+                  size: medium
+                  classes: fancy
+                  show_all: true
+                  show_modular: false
+                  show_root: true
+                .role:
+                  type: selectize
+                  label: Role
+
+            header.partners:
+              type: list
+              label: partners
+              fields:
+                .Partner:
+                  type: pages
+                  label: Partner
+                  help: Partner of this Creation
+                  size: medium
+                  classes: fancy
+                  show_all: true
+                  show_modular: false
+                  show_root: true
+                .role:
+                  type: selectize
+                  label: Role

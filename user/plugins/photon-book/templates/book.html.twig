@@ -1,0 +1,18 @@
+{% extends 'collection.html.twig' %}
+{% block body_template_classes %}{{ parent() }} book{% endblock body_template_classes %}
+
+
+
+{% block list -%}
+
+{% set options = { items: {'@page.descendants': '/book' }, 'limit': 0, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
+{% set book_collection = page.parent.children %}
+{% set book_collection = page.collection( options ) %}
+  <p>book pages: {{ book_collection.count }}</p>
+  {% for p in book_collection -%}
+    {% if not (p.url == page.url) -%}
+    {% include "_section/_articles/article.html.twig" with { 'page': p } %}
+
+    {% endif %}
+  {% endfor -%}
+{% endblock list -%}
