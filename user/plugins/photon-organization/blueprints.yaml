@@ -1,0 +1,31 @@
+name: photon ✹ Organization
+version: 0.1.0
+description: structure, style and logic for organizational data
+icon: certificate
+author:
+  name: illumiphi
+  email: phi@illumiphi.com
+homepage: https://github.com/i-am-phi/grav-plugin-photon-organization
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/i-am-phi/grav-plugin-photon-organization/issues
+docs: https://github.com/i-am-phi/grav-plugin-photon-organization/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_PHOTON_ORGANIZATION.TEXT_VARIABLE
+      help: PLUGIN_PHOTON_ORGANIZATION.TEXT_VARIABLE_HELP
