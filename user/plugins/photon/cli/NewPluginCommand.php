@@ -93,17 +93,19 @@ class NewPluginCommand extends PhotonCommand
 
         $helper = $this->getHelper('question');
 
+        $this->output->writeln("\n<yellow>photon ✴ </yellow><white>plugin generator</white>\n");
+
         if (!$this->options['name']) {
-            $question = new Question('Enter <yellow>Plugin Name</yellow>: ');
+            $question = new Question('enter plugin <yellow>NAME</yellow>: ');
             $question->setValidator(function ($value) {
-                return $this->validate('name', $value);
+                return $this->validate('name', "photon-" . $value);
             });
 
             $this->component['name'] = $helper->ask($this->input, $this->output, $question);
         }
 
         if (!$this->options['description']) {
-            $question = new Question('Enter <yellow>Plugin Description</yellow>: ');
+            $question = new Question('enter plugin <yellow>DESC</yellow>: ' );
             $question->setValidator(function ($value) {
                 return $this->validate('description', $value);
             });
