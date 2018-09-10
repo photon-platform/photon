@@ -6,4 +6,6 @@ show_gallery: true
 author: /home
 ---
 
-Current Port of Alsea activities and projects
+current projects and activities
+
+===
