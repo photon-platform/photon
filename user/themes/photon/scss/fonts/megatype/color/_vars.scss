@@ -1,0 +1,12 @@
+// ===================================
+// Colors
+// ===================================
+
+// colors
+$palettes: (
+    blue:           #169dbf,
+    white:          #ffffff,
+    black:          #000000
+) !default;
+
+$site-color-names: map-keys($palettes) !default;

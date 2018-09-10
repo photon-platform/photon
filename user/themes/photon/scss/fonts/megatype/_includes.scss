@@ -1,0 +1,41 @@
+/// PHOTON Theme
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @group theme
+/// @author illumiphi
+////
+
+
+
+/// MEGATYPE *****************
+
+
+// helper functions
+// must be before config so that variables can use them
+// @import "megatype/color/vars";
+// @import ';;;;;;;;;;;;;;;;;;;;;;df'"megatype/color/functions";
+
+
+// custom toolsets
+@import "megatype/animation/vars";
+
+@import "megatype/toolsets/units";
+
+// import mixins
+@import "megatype/media/vars";
+@import "megatype/media/functions";
+@import "megatype/media/mixins";
+
+@import "megatype/container";
+
+@import "megatype/type/vars";
+@import "megatype/type/functions";
+@import "megatype/type/mixins";
+
+@import "megatype/debug/vars";
+@import "megatype/debug/functions";
+@import "megatype/debug/mixins";
+@import "megatype/debug/init";
+
+@import "megatype/links/vars";
+@import "megatype/links/mixins";

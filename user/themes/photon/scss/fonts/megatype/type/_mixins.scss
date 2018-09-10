@@ -1,0 +1,363 @@
+// =====================================================
+// ------------ Megatype typography mixins -------------
+// =====================================================
+// @author Thomas Bredin-Grey <tom@studiothick.com>
+// Megatype: https://github.com/StudioThick/megatype
+// =====================================================
+
+
+
+
+
+
+// Root font-size in %, outputted in correct breakpoints.
+@mixin rootsize {
+    /*! megatype - rootsize ********************/
+    // we will want to update this value before calculating rootsize, just in case it's updated by the user
+    $sizes: ();
+    @each $break in $breaks {
+        $sizes: join($sizes, map-get(map-get($breakpoint-map, $break), rootsize));
+    }
+
+    html {
+        // list compatible key
+        $default-break-key: $default-break + 1;
+
+        // set default
+        font-size: nth($sizes, $default-break-key) / 16px * 100%;
+
+        // get default size, and next size
+        $min-size: nth($sizes, $default-break-key) * nth($sizes, 1)/nth($sizes, 2);
+        $max-size: nth($sizes, $default-break-key);
+        $min-width: break-get(nth($breaks, 2), start) / 2;
+        $max-width: break-get(nth($breaks, 2), start);
+
+        @if ($baseline-scaling == true) {
+            @if $default-break == 0 {
+                @media screen and (min-width: px-to-em(break-get(nth($breaks, 1), start) / 2)) {
+                    font-size: calc(#{$min-size} + #{no-unit($max-size) - no-unit($min-size)} * (100vw - #{$min-width}) / #{no-unit($max-width) - no-unit($min-width)});
+                }
+            } @else {
+                @warn "baseline scaling is currently only supported by mobile-first setups: please set $default-break: 0; to use this feature";
+            }
+        }
+
+        // min widths
+        // output breakpoints higher than $default-break using min-width media queries
+        @if $default-break + 1 < $breakpoint-count {
+            @for $i from $default-break-key + 1 through $breakpoint-count {
+                @include min-width($i - 1) {
+                    $min-size: nth($sizes, $i);
+                    $min-width: break-get(nth($breaks, $i), start);
+
+                    font-size: $min-size / 16px * 100%;
+
+                    @if ($baseline-scaling == true) {
+                        @if $default-break == 0 {
+                            @if $i < $breakpoint-count {
+                                $max-size: nth($sizes, $i + 1);
+                                $max-width: break-get(nth($breaks, $i + 1), start);
+                            } @else {
+                                // largest breakpoint. Keep the scaling consitent with the previous breakpoint
+                                $size-diff: nth($sizes, $i) - nth($sizes, $i - 1);
+                                $width-diff: break-get(nth($breaks, $i), start) - break-get(nth($breaks, $i - 1), start);
+                                $max-size: nth($sizes, $i) + $size-diff;
+                                $max-width: break-get(nth($breaks, $i), start) + $width-diff;
+                            }
+
+                            font-size: calc(#{$min-size} + #{no-unit($max-size) - no-unit($min-size)} * (100vw - #{$min-width}) / #{no-unit($max-width) - no-unit($min-width)});
+                        } @else {
+                            @warn "baseline scaling is currently only supported by mobile-first setups: please set $default-break: 0; to use this feature";
+                        }
+                    }
+                }
+            }
+        }
+
+        // max widths
+        // output breakpoints lower than $default-break using max-width media queries
+        @if $default-break > 0 {
+            @for $i from $default-break through 1 {
+                @include max-width($i) {
+                    $min-size: nth($sizes, $i);
+                    $min-width: break-get(nth($breaks, $i), start);
+
+                    font-size: $min-size / 16px * 100%;
+
+                    @if ($baseline-scaling == true) {
+                        @if $default-break == 0 {
+                            @if $i < $breakpoint-count {
+                                $max-size: nth($sizes, $i + 1);
+                                $max-width: break-get(nth($breaks, $i + 1), start);
+                            } @else {
+                                // largest breakpoint. Keep the scaling consitent with the previous breakpoint
+                                $size-diff: nth($sizes, $i) - nth($sizes, $i - 1);
+                                $width-diff: break-get(nth($breaks, $i), start) - break-get(nth($breaks, $i - 1), start);
+                                $max-size: nth($sizes, $i) + $size-diff;
+                                $max-width: break-get(nth($breaks, $i), start) + $width-diff;
+                            }
+
+                            font-size: calc(#{$min-size} + #{no-unit($max-size) - no-unit($min-size)} * (100vw - #{$min-width}) / #{no-unit($max-width) - no-unit($min-width)});
+                        } @else {
+                            @warn "baseline scaling is currently only supported by mobile-first setups: please set $default-break: 0; to use this feature";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    html {
+        @include debug-rootsize($sizes);
+    }
+}
+
+
+// Set type, measuring from baseline and cap-height
+// output is affected by $baseline-snap config; will snap to nearest baseline if so
+@mixin typeset($font, $fontsize, $lineheight, $leader: 0, $trailer: 0, $snap: $baseline-snap, $use-subdivisions: $baseline-subdivisions) {
+    $context: index($breaks, $current-breakpoint);
+
+    // Lets write some tests first
+    // This way we can disallow unintended values and catch unexpected errors
+
+    // throw error if all values aren't numbers
+    @if type-of($fontsize) != number {
+        @error "#{$fontsize} is not a valid format for the typeset mixin: $fontsize must be a number";
+    }
+    @if type-of($lineheight) != number {
+        @error "#{$lineheight} is not a valid format for the typeset mixin: $lineheight must be a number";
+    }
+    @if type-of($leader) != number {
+        @error "#{$leader} is not a valid format for the typeset mixin: $leader must be a number";
+    }
+    @if type-of($trailer) != number {
+        @error "#{$trailer} is not a valid format for the typeset mixin: $trailer must be a number";
+    }
+
+    // throw error if $font is not a map
+    @if type-of($font) != map {
+        @error "#{$font} is not a valid config for the typeset mixin: $font must be a valid typeface map";
+    } @else if map-has-key($font, cap-height) == false {
+        // throw error if $font has no cap-height
+        @error "#{inspect($font)} map contains no cap-height key: $font must be a valid typeface map";
+    }
+
+    // throw error if incorrect format provided
+    @if unitless($fontsize) == false and unit($fontsize) != "px" and unit($fontsize) != "rem" or type-of($fontsize) != number {
+        @error "#{$fontsize} is not a valid format for the typeset mixin: $fontsize must be provided as unitless, px, or rem";
+    }
+    @if unitless($lineheight) == false and unit($lineheight) != "px" and unit($lineheight) != "rem" {
+        @error "#{$lineheight} is not a valid format for the typeset mixin: $lineheight must be provided as unitless, px, or rem";
+    }
+    @if unitless($leader) == false and unit($leader) != "px" and unit($leader) != "rem" {
+        @error "#{$leader} is not a valid format for the typeset mixin: $leader must be provided as unitless, px, or rem";
+    }
+    @if unitless($trailer) == false and unit($trailer) != "px" and unit($trailer) != "rem" {
+        @error "#{$trailer} is not a valid format for the typeset mixin: $trailer must be provided as unitless, px, or rem";
+    }
+
+    // check min-font-size, if provided
+    @if $min-font-size != false {
+        @if unitless($min-font-size) == false and unit($min-font-size) != "px" and unit($min-font-size) != "rem" {
+            @error "#{$min-font-size} is not a valid format : $min-font-size must be provided as unitless, px, or rem";
+        }
+    }
+    // With our tests for valid input out of the way, we are free to proceed
+
+    // Start by converting all unitless values to rem, and then to pixels
+    // If unitless values provided, convert to rem (remember; 1rem = 1 baseline unit)
+    @if unitless($fontsize) {
+        $fontsize: $fontsize * 1rem;
+    }
+    @if unitless($lineheight) {
+        $lineheight: $lineheight * 1rem;
+    }
+    // only convert leader and trailer if snap is off
+    @if unitless($leader) {
+        $leader: $leader * 1rem;
+    }
+    @if unitless($trailer) {
+        $trailer: $trailer * 1rem;
+    }
+    @if $min-font-size != false {
+        @if unitless($min-font-size) {
+            $min-font-size: $min-font-size * 1rem;
+        }
+        //  Converting min font size to pixels
+        @if unit($min-font-size) == "rem" {
+            $min-font-size: rem-to-px($min-font-size);
+        }
+    }
+
+    @if unit($fontsize) == "rem" {
+        $fontsize: rem-to-px($fontsize);
+    }
+    @if unit($lineheight) == "rem" {
+        $lineheight: rem-to-px($lineheight);
+    }
+    @if unit($leader) == "rem" {
+        $leader: rem-to-px($leader);
+    }
+    @if unit($trailer) == "rem" {
+        $trailer: rem-to-px($trailer);
+    }
+
+    // With universal rem values, it's now easy to convert to px
+    // We will work in px for most of the rest of this mixin, and convert back to rem at the end
+    // if min-font-size has been provided, let's first do a quick cheack against that, and modify our fontsize if required
+    // this can be helpful for accessibility reasons
+    @if $min-font-size != false {
+        @if $fontsize < $min-font-size {
+            $fontsize: $min-font-size;
+        }
+    }
+
+    // We also need to store our cap-height
+    $cap-height: map-get($font, cap-height);
+
+    // Store cap position
+    $cap-position: map-get($font, cap-position);
+
+    // check cap position is non-null, otherwise assign default of 0.5
+    @if $cap-position == null {
+        $cap-position: 0.5;
+    }
+
+    // work out what proportion to shift our type by
+    $cap-offset: (0.5 - $cap-position) * -1;
+
+    // Let's set our font-size in rems
+    $fs-rem: px-to-rem($fontsize);
+
+    // warn about a known chrome bug
+    @if ($fs-rem <= 0.5rem) {
+        @warn "#{$fontsize} calculates to smaller than 0.5rem, may not render baseline correctly in some browsers (known bug in Chrome as of v46)";
+    }
+
+    // set the size
+    font-size: $fs-rem;
+
+    // store a unitless size value for calulating offsets later
+    $fs-calc: no-unit($fontsize);
+
+    // Next, set our linehight as a unitless value
+    // if baseline snap is on, we'll round these values to 1 baseline unit (1rem)
+    @if $snap == true {
+        // set default for subdivisions if not set, or explicitly turned off
+        @if type-of($use-subdivisions) != number {
+            $use-subdivisions: 1;
+        }
+
+        @if $use-subdivisions > 1 and $current-rootsize % $use-subdivisions > 0 {
+            @warn "You have specified a baseline subdivision (#{$use-subdivisions}) for break #{$current-breakpoint} (rootsize #{$current-rootsize}) that will not resolve to whole pixel line-heights (#{$current-rootsize} / #{$use-subdivisions} = #{$current-rootsize / $use-subdivisions}). This will cause severe rounding errors in browsers that will push your type off the grid; it is recommended you review your settings.";
+        }
+        // starting with lineheight, convert to rem and round the value, then convert back to px
+        $lineheight: rem-to-px(round(px-to-rem($lineheight * $use-subdivisions))) / $use-subdivisions;
+    }
+
+    // compute an integer and set the line height
+    $lh-integer: no-unit($lineheight / $fontsize);
+
+    line-height: $lh-integer;
+
+    // we have to correct for a bug with the way webkit safari renders unitless line height :(
+    // It computes line height to the correct value but often when rendered to the screen it rounds 1px incorrectly.
+    // See: https://bugs.webkit.org/show_bug.cgi?id=155286
+    @if $webkit-line-height-fix == true {
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            line-height: px-to-rem($lineheight);
+        }
+    }
+
+    // store a unitless value for calulating offsets later
+    $lh-calc: no-unit($lineheight);
+
+    // Set our leader and trailer values.
+    // first we need to shift our type to sit on the baseline. For this we'll use relative positioning and top
+    // we'll avoid collapsing margins by using padding above, and margin below
+    $type-proportion: $fs-calc * $cap-height; // height in px of type itself (this is the space taken up between the real baseline and cap height)
+    $type-space: 1px * ($lh-calc - $type-proportion) / 2; // extra space below baseline, and above cap height
+
+    // calculate cap-shift. This is the space in pixels that a typeface needs to move to be centered in it's line-height
+    $cap-shift: $fontsize * $cap-offset - 0.75px;
+
+    // initialising a few helper variables for calculating our offset
+    $modulo: 0;
+    $shift: 0;
+
+    // if baseline snap is on, we'll need to shift our type to sit perfectly on the baseline grid
+    @if $snap == true {
+        // set a shift in order to match baseline onto grid
+        // calculate remainder of top value that doesn't sit on grid. we need to correct for this
+        $modulo: ($leader + $lineheight - 2 * $type-space) % $current-rootsize;
+
+        @if ($modulo < $current-rootsize / 2) {
+            $shift: -$modulo;
+        } @else {
+            $shift: $current-rootsize - $modulo;
+        }
+
+        // @debug $current-breakpoint $leader $modulo $current-rootsize / 2 $modulo < $current-rootsize / 2 $shift;
+    }
+
+    // $type-top: $leader;
+    $type-top: $leader - $type-space + $shift - $cap-shift;
+    $type-bottom: $trailer - $type-space + $type-top + $cap-shift;
+
+    @if $snap == true {
+        $type-bottom: rem-to-px(round(px-to-rem($type-bottom)));
+    }
+
+    position: relative;
+
+    @if $type-top == 0 {
+        // exactly 0, don't use units
+        top: 0;
+    } @else {
+        // otherwise, use top
+        top: px-to-rem($type-top);
+    }
+
+    @if $type-bottom == 0 {
+        // exactly 0, don't use units
+        margin-bottom: 0;
+    } @else {
+        // otherwise, use margin
+        margin-bottom: px-to-rem($type-bottom);
+    }
+
+    // Test to validate resulting baseline.
+    // should warn user if baseline math outputs something unexpected
+    // tolerance is 1px by default, can be set in config, see $debug-tolerance variable
+    // TODO: Fix this when used with $use-subdivisions
+    // @if $snap == true  {
+    //     $snap-check: rem-to-px(($fs-rem * $lh-integer + px-to-rem($type-bottom))) % ($current-rootsize / $use-subdivisions);
+    //     @if $snap-check > $debug-tolerance or $snap-check < -$debug-tolerance {
+    //         @warn "baseline grid appears to be calculated off by #{$snap-check} at breakpoint #{$current-breakpoint} ($debug-tolerance: #{$debug-tolerance})"
+    //     }
+    // }
+
+    // apply debugging
+    @if $debug-hover == true {
+        &:hover {
+            @include debug-type($type-top, $type-bottom, $type-space, $debug-cap, $debug-spacing, $cap-shift);
+        }
+    } @else {
+        @include debug-type($type-top, $type-bottom, $type-space, $debug-cap, $debug-spacing, $cap-shift);
+    }
+}
+
+// resets type, negates type rhythm
+@mixin reset-type() {
+    top: auto;
+    margin-bottom: 0;
+
+    @if $debug-allow == true and $debug-type == true {
+        &:before,
+        &:after {
+            display: none;
+            content: none;
+        }
+    }
+}

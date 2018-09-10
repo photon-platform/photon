@@ -1,0 +1,7 @@
+enabled: true
+built_in_css: true
+level_classes:
+  - important
+  - alert
+  - info
+  - question

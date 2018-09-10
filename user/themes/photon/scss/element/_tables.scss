@@ -1,0 +1,14 @@
+table {
+	max-width: 100%;
+}
+
+th,
+td {
+	padding: .5em;
+}
+
+th {
+	font-weight: 700;
+	font-family: $font-display;
+	border-bottom: 2px solid $color-neutral-darker;
+}

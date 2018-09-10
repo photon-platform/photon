@@ -1,0 +1,13 @@
+export PROJECT_PORT="5630"
+export SITE="http://port.local"
+export SERVERPATH='~/port-of-alsea.illumiphi.com'
+
+alias serve="php -S localhost:${PROJECT_PORT} system/router.php"
+alias site="open ${SITE}"
+alias admin="open ${SITE}/admin"
+alias swatch="cd user/themes/photon; scss --watch scss:css"
+
+alias dry-sync="rsync -auzvhP --stats --delete --dry-run user/ illumiphi.com:${SERVERPATH}/user/"
+alias sync="rsync -auzvhP --stats --delete user/ illumiphi.com:${SERVERPATH}/user/"
+
+source ~/.bash_prompt

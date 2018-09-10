@@ -1,0 +1,22 @@
+title: People
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: ✴ People
+          icon: group
+          text: Enter details for this People group
+
+          fields:
+
+            header.people.description:
+              type: text
+              label: description
+              help: a decription of the people group
+              size: medium

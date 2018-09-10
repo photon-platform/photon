@@ -1,0 +1,56 @@
+// default style for an article
+// start with a single column grid
+// top children have named grid areas
+article {
+
+  width: 100%;
+  padding: 1em;
+
+  color: $color-foreground;
+  background-color: #FFF;
+
+  font-size: 1.1em;
+
+  @include article--default;
+
+
+  &.excerpt {
+    cursor: pointer;
+    
+    &:hover {
+      color: $color-background;
+      background-color: $color-1;
+      .more {
+        color: $color-1;
+        background-color: $color-key;
+      }
+      a:hover {
+        color: $color-1;
+        background-color: $color-key;
+
+      }
+    }
+
+    .more {
+      align-self: flex-end;
+
+    }
+  }
+
+  @include media-bp(4) {
+
+    grid-template-areas:
+      ' figure figure '
+      ' header footer'
+      ' main   footer';
+    grid-template-columns: 1fr 18em;
+    > footer {
+      flex-flow: column;
+      align-self: flex-start;
+
+    }
+  }
+
+
+
+}

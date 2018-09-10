@@ -1,0 +1,59 @@
+name: photon ✴ Form
+version: 0.1.0
+description: structure, style and logic for Form componenebts
+icon: asterisk
+author:
+  name: illumiphi
+  email: phi@illumiphi.com
+homepage: https://github.com/i-am-phi/grav-plugin-photon-form
+demo: https://illumiphi.com
+keywords: datatype, photon
+bugs: https://github.com/i-am-phi/grav-plugin-photon-form/issues
+docs: https://github.com/i-am-phi/grav-plugin-photon-form/blob/develop/README.md
+license: MIT
+
+dependencies:
+    - { name: photon, version: '>=0.1.0' }
+
+form:
+  validation: strict
+  fields:
+
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    built_in_css:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_CSS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    built_in_js:
+      type: toggle
+      label: PLUGIN_PHOTON.USE_BUILTIN_JS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+
+    # text_var:
+    #   type: text
+    #   label: PLUGIN_FORM.TEXT_VARIABLE
+    #   help: PLUGIN_FORM.TEXT_VARIABLE_HELP

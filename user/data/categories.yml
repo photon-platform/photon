@@ -1,0 +1,16 @@
+Caprifoliaceae:
+  description: >-
+    The Caprifoliaceae or honeysuckle family are a clade of dicotyledonous flowering plants consisting of about 860 species[2] in 42 genera, with a nearly cosmopolitan distribution. Centres of diversity are found in eastern North America and eastern Asia, while they are absent in tropical and southern Africa. - Wikipedia
+  # figure: images/photon-logo.png
+  featured: true
+Ericaceae:
+  description: >-
+    The Ericaceae are a family of flowering plants, commonly known as the heath or heather family, found most commonly in acid and infertile growing conditions. The family is large, with c. 4250 known species spread across 124 genera, making it the 14th most species-rich family of flowering plants. The many well-known and economically important members of the Ericaceae include the cranberry, blueberry, huckleberry, rhododendron (including azaleas), and various common heaths and heathers (Erica, Cassiope, Daboecia, and Calluna for example).
+    - wikipedia
+  # figure: images/photon-logo.png
+  featured: true
+tools:
+  description: >-
+    a collection of articles on the assortment of integrated tools that make Photon possible
+  # figure: images/photon-logo.png
+  featured: false

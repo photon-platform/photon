@@ -1,0 +1,111 @@
+<% if (config.debug) { %>
+<!--
+<% function showAttributes(obj) { %>
+  <% for(var key in obj) { -%>
+      <%= key %>: <%= typeof obj[key] %>
+  <% } -%>
+<% } -%>
+<pre>
+page
+============================
+      title: <%- page.title %>
+      layout: <%= page.layout %>
+
+       date: <%= page.date %>
+  published: <%= page.published %>
+    updated: <%= page.updated %>
+
+     source: <%= page.source %>
+full_source: <%= page.full_source %>
+
+       path: <%= page.path %>
+  permalink: <%= page.permalink %>
+  canonical: <%= page.canonical_path %>
+       slug: <%= page.slug %>
+  asset_dir: <%= page.asset_dir %>
+
+       prev: <%= page.prev.path %>
+       next: <%= page.next.path %>
+
+  <% if ( page.figure ) { -%>
+     figure:
+       image: <%= page.figure.image %>
+       asset: <%= page.figure.asset %>
+       caption: <%= page.figure.caption %>
+  <% } -%>
+  <% if ( page.gallery ) { -%>
+    gallery: <%= page.gallery.length %>
+  <% } -%>
+
+       tags: <%= page.tags ? page.tags.count() : '' %>
+ categories: <%= page.categories ? page.categories.count() : '' %>
+   comments: <%= page.comments %>
+       lang: <%= page.lang %>
+
+       raw: <%#= page.raw.length %>
+   content: <%#= page.content.length %>
+
+// ======== page objects properties
+<% showAttributes(page); %>
+
+
+<% if ( site.categories ) { %>
+// -------- site.categories properties
+  <% showAttributes( site.categories ); %>
+
+    // -------- site.categories list
+    cat count: <%= site.categories.count() %>
+    cat size: <%= site.categories.size() %>
+    <%  site.categories.each( function(category) { %>
+      - <%= category.name %>
+             count: <%= category.posts.count() %>
+               _id: <%= category._id %>
+            parent: <%= category.parent %>
+              path: <%= category.path %>
+         permalink: <%= category.permalink %>
+             posts: <%= category.posts.count() %>
+              slug: <%= category.slug %>
+
+      <% showAttributes(category); %>
+    <% } ) %>
+<% } %>
+
+<% if (page.categories) { %>
+// -------- page.categories properties
+  <% showAttributes(page.categories); %>
+
+    // -------- page.categories list
+    cat count: <%= page.categories.count() %>
+    cat size: <%= page.categories.size() %>
+    <%  page.categories.each( function(category) { %>
+      - <%= category.name %>
+             count: <%= category.posts.count() %>
+               _id: <%= category._id %>
+            parent: <%= category.parent %>
+              path: <%= category.path %>
+         permalink: <%= category.permalink %>
+             posts: <%= category.posts.count() %>
+              slug: <%= category.slug %>
+
+      <% showAttributes(category); %>
+    <% } ) %>
+<% } %>
+
+<% if (page.tags) { %>
+// -------- page.tags properties
+<% showAttributes(page.tags); %>
+
+    // -------- page.tags list
+    tag count: <%= page.tags.count() %>
+    tag size: <%= page.tags.size() %>
+    <%  page.tags.each( function(tag) { %>
+      - <%= tag.name %>
+        post count: <%= tag.posts.count() %>
+      <% for(var key in tag) { %>
+        <%= key %>: <%= typeof tag[key] -%>
+      <% } %>
+    <% } ) %>
+<% } %>
+</pre>
+-->
+<% } %>

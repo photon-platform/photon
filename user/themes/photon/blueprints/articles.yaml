@@ -1,0 +1,22 @@
+title: Articles
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        articles:
+          type: tab
+          title: ✴ Articles
+          fields:
+            # header.content.items:
+            #   type: text
+            #   label: Collection
+            #   default: '@self.children'
+
+            header.child_type:
+              type: text
+              label: default child type
+              default:  article

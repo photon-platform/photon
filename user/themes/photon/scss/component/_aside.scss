@@ -1,0 +1,70 @@
+// default component for asides
+// in sidebars and footer
+aside {
+
+  padding: 1em;
+  text-align: left;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-content: flex-start;
+
+  h1 {
+    font-variant: small-caps;
+  }
+
+  ul {
+    // list-style: none;
+    margin: 0 1em;
+
+    > li {
+      margin: .4em;
+      width: 100%;
+      > span {
+        font-size: .75em;
+        font-weight: bold;
+        // margin: 0 .5em;
+        padding: .25em ;
+        margin-left: .5em;
+        // color: $color-1;
+        background-color: $color-1;
+        border-radius: 20% 20%;
+      }
+    }
+  }
+
+  p {
+    padding-bottom: .2em;
+  }
+  // for item counts
+
+  // &:last-child {
+  //   // margin-bottom:0;
+  // }
+
+  &.org {
+    font-size: .7em;
+    text-align: center;
+    padding: 0 .5em;
+  }
+
+  &.article-share {
+    padding: 0;
+    h1 {
+      display: none;
+    }
+    ul {
+      font-family: $font-photon-social;
+      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: space-between;
+      a {
+        text-transform: inherit;
+        padding: .7em;
+        font-size: 1.1em;
+      }
+    }
+  }
+}

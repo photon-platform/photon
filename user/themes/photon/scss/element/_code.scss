@@ -1,0 +1,44 @@
+pre,
+code,
+kbd,
+samp {
+
+  // display: block;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  line-height: 1.5;
+
+  color: $color-foreground;
+  background-color: $color-background;
+
+  padding: .1em .25em;
+  // position: static;
+  border-radius: 0;
+
+}
+
+code {
+
+  height: auto;
+
+  // > figure {
+  //   display: block;
+  //   position: static;
+  // }
+
+  pre & {
+    display: block;
+    padding: 1em;
+  }
+
+}
+
+pre {
+
+  display: block;
+  // white-space: pre;
+  // white-space: pre-wrap;
+  // word-break: break-all;
+  // word-wrap: break-word;
+  // margin-bottom: 1em;
+}

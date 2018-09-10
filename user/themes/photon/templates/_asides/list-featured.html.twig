@@ -1,0 +1,10 @@
+{% set options = { items: {'@self.descendants': p.url, '@taxonomy.tag': 'featured' }, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
+{% set self_featured = page.collection(options) %}
+      <aside class="featured-list">
+        <h1>Featured</h1>
+        {% for p in self_featured -%}
+
+        <a  href="{{ p.url }}">{{ p.title }}</a>
+        {% endfor %}
+
+      </aside>

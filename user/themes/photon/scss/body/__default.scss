@@ -1,0 +1,133 @@
+// default body
+// defaults for top level blocks top level sections
+body {
+
+  width: 100%;
+
+  // padding: 1em;
+  background-color: #CCC;
+
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr  21em  1fr;
+  grid-template-areas:  ' header   header  header '
+                        ' .   main    . '
+                        ' .   asides  . '
+                        ' .   footer  . ';
+  justify-content: start;
+  // align-content: center;
+
+  %body-section-default {
+    padding: 0;
+  }
+
+  // default sections
+  > header {
+    @extend %body-section-default;
+    grid-area: header;
+    // grid-column: 1/ -1;
+
+    // background-color: $color-foreground;
+    // color: $color-key-lighter;
+    padding: 1em;
+    // text-align: center;
+    font-size: 1.3em;
+
+    // flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    > h1 {
+      text-align: center;
+      font-size: .9em;
+    }
+    > h2 {
+      display: none;
+    }
+    > nav {
+      div {
+        display: none;
+      }
+    }
+
+  }
+
+  > footer {
+    @extend %body-section-default;
+    grid-area: footer;
+  }
+
+  // > nav {
+  //   // @extend %body-section-default;
+  //   grid-area: nav;
+  // }
+
+  > main {
+    @extend %body-section-default;
+    grid-area: main;
+
+    display: grid;
+    grid-gap: 1em;
+    // padding: 2em;
+
+    grid-template-columns: 1fr;      // justify-content: space-around;
+
+    align-content: start;
+    padding-top: 1em;
+
+    section.form {
+      background-color: white;
+      padding: 1em;
+      width: 100%;
+      flex-flow: column;
+      form {
+        width: 100%;
+      }
+    }
+  }
+
+  > .asides {
+    @extend %body-section-default;
+    grid-area: asides;
+  }
+
+  @include media-bp(1) {
+    grid-template-columns: 1fr 32em   1fr;
+  }
+  @include media-bp(2) {
+    grid-template-columns: 1fr 50em   1fr;
+  }
+  @include media-bp(3) {
+    grid-template-columns: 1fr 16em   52em   1fr;
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-areas:  ".   header main ."
+                          ".   asides main ."
+                          ".   footer main .";
+
+    > header {
+      align-self: flex-start;
+      flex-direction: column;
+      > nav {
+        div {
+          display: block;
+        }
+      }
+    }
+
+  }
+  @include media-bp(4) {
+    grid-template-columns: 1fr 16em   70em   1fr;
+    // grid-template-areas:  ".   header main   main  ."
+    //                       ".   nav    main   main  ."
+    //                       ".   asides main   main  ."
+    //                       ".   footer main   main  .";
+  }
+  @include media-bp(5) {
+    // grid-template-columns: 1fr 16em   68em    16em   1fr;
+  }
+  @include media-bp(6) {
+    // grid-template-columns: 1fr 16em   86em   16em   1fr;
+  }
+
+}

@@ -1,0 +1,34 @@
+
+// FONTS
+@import 'fonts/_Bree-Serif';
+@import 'fonts/_Lato';
+@import 'fonts/_photon-social';
+// @import 'fonts/_Lato';
+
+$font-display: $font-Bree-Serif;
+$font-root: $font-Lato;
+
+$form-font: $font-root;
+
+// COLOR
+$color-key-hue: 44;
+$color-1-hue: 244;
+$color-2-hue: 244;
+
+$saturation: 40;
+
+
+@import 'color/_default';
+
+$color-foreground: #333;
+$color-background: #FFC;
+
+$color-key: #2aabe4;
+
+// $color-key: #570961;
+$color-1: #e1ccb1;
+
+// BREAKPOINT
+@import 'media/var-18em';
+@import 'media/functions';
+@import 'media/mixins';

@@ -1,0 +1,32 @@
+{% block article_main %}
+  <main>
+
+    {% set content = page.content | slice(page.summary | length) %}
+
+    {% if page.header.continue_link is sameas(false) %}
+      {{ content }}
+      {% if not truncate %}
+        {% set show_prev_next = true %}
+      {% endif %}
+
+    {% elseif truncate and page.summary != content %}
+      {{ page.summary }}
+      <p>
+        <a class="btn" href="{{ page.url }}">Continue...</a>
+      </p>
+
+    {% elseif truncate %}
+      {% if page.summary != content %}
+        {{ content|truncate(550) }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+      <p>
+        <a class="btn" href="{{ page.url }}">Continue...</a>
+      </p>
+    {% else %}
+      {{ content }}
+    {% endif %}
+
+  </main>
+{% endblock %}

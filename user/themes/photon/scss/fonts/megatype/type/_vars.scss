@@ -1,0 +1,46 @@
+// // optional: set a minimum size for all typeset typography
+// $min-font-size: false !default;
+//
+// // typographic measure for paragraphs, lists, and headings
+// // $type-measure: 40rem !default;
+//
+// // fix line-height rounding errors in webkit safari
+// $webkit-line-height-fix: false !default;
+//
+//
+// // ===================================
+// // Typefaces
+// // ===================================
+//
+// // Set cap height to set to the baseline.
+// // Here are some cap-height sizes to get you started:
+// // Georgia: 0.66,
+// // Times / Times New Roman: 0.65,
+// // Palatino: 0.52
+// // Lucida Grande: 0.72,
+// // Helvetica: 0.65,
+// // Helvetica Neue: 0.71,
+// // Verdana: 0.76,
+// // Tahoma: 0.76
+// $sans: (
+//     font-family: '"Helvetica Neue", Arial, sans-serif',
+//     regular: normal,
+//     bold: bold,
+//     cap-height: 0.71,
+//     cap-position: 0.525
+// ) !default;
+//
+// $serif: (
+//     font-family: 'Georgia, serif',
+//     regular: normal,
+//     bold: bold,
+//     cap-height: 0.69,
+//     cap-position: 0.525
+// ) !default;
+//
+// $monospace: (
+//     font-family: 'Menlo, Courier, monospace',
+//     regular: 400,
+//     cap-height: 0.68,
+//     cap-position: 0.5
+// ) !default;

@@ -1,0 +1,11 @@
+en:
+  PLUGIN_PHOTON:
+
+    USE_BUILTIN_CSS: use built-in CSS
+    USE_BUILTIN_CSS_HELP: add the CSS file for this component to the head of the document
+
+    USE_BUILTIN_JS: use built-in JS
+    USE_BUILTIN_JS_HELP: add the JS file for this component to the head of the document
+
+    NOTES: Notes
+    NOTES_HELP: Notes about this installation

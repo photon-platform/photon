@@ -1,0 +1,15 @@
+// all sections should extend this default
+
+%section-default {
+
+  display: flex;
+  // this is default and unnecessary but being explicit for now
+  // flex-direction: row;
+
+  width: 100%;
+
+}
+
+section {
+  @extend %section-default;
+}

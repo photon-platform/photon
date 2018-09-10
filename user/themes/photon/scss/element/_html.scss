@@ -1,0 +1,27 @@
+// define all defaults within the HTML element
+// set media queries for root font sizes
+html {
+
+  background-color: $color-background;
+  color: $color-foreground;
+
+  height: 100%;
+
+  max-width: 100%;
+
+  font-family: $font-root;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+
+  // font-size: 16px;
+
+  // //TODO: Set root font-size for each breakpoint
+  // @include media-bp-rootsize(0);
+  // @include media-bp-rootsize(1);
+  // @include media-bp-rootsize(2);
+  // @include media-bp-rootsize(3);
+  // @include media-bp-rootsize(4);
+
+
+}

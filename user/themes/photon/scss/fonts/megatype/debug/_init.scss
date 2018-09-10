@@ -1,0 +1,21 @@
+
+
+@if $debug-allow == true {
+  /*! MEGATYPE debug ***********************************************/
+
+    @if $debug-grid == true {
+        // debug grid - lets grid show through images
+        img { opacity: 0.75; }
+    }
+    @if $debug-breakpoints == true or $debug-type == true {
+        // fade in
+        @keyframes debug-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}

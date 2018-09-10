@@ -1,0 +1,23 @@
+aside.search {
+  > section {
+    flex-flow: column nowrap;
+  }
+}
+.search-result-list {
+  // padding-left: 10px;
+}
+
+.search-result-title {
+  font-weight: 700;
+}
+
+.search-result {
+  font-weight: 300;
+}
+
+.search-keyword {
+  color: $color-2-dark;
+  font-weight: 700;
+  font-style: normal;
+
+}

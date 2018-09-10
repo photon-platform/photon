@@ -1,0 +1,9 @@
+{% if page.header.members %}
+            <aside class="members">
+              <h1>Members:</h1>
+              {% for member in page.header.members %}
+                {% set person = page.find(member.person) %}
+                <a href="{{ member.person }}">{{ person.title }}</a>
+              {% endfor %}
+            </aside>
+{% endif %}

@@ -1,0 +1,22 @@
+title: Reservations
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: ✴ Reservations
+          icon: folder
+          text: Enter details for this person
+
+          fields:
+
+            header.reservations.description:
+              type: text
+              label: Description
+              help: Help for the Description
+              size: medium

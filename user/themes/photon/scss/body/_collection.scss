@@ -1,0 +1,105 @@
+//default - mobile first
+body.collection {
+
+  grid-template-rows: auto auto 1fr;
+
+  > main {
+    // multi-column grid of article excerpts
+    // columns will autosize to a min-size of 20ems
+
+    // grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));      // justify-content: space-around;
+    grid-template-columns: 1fr;      // justify-content: space-around;
+
+
+    > header {
+      background-color: white;
+      padding: 1rem;
+      grid-column: 1 / -1;
+
+      // text-align: center;
+
+      font-size: 1.3em;
+
+      flex-flow: column nowrap;
+
+      // padding: 1em 0;
+      > h1 {
+        display: none;
+      }
+      > h2 {
+        letter-spacing: .25em;
+        padding-left: .25em;
+        text-transform: uppercase;
+
+        padding-top: .5em;
+
+        &::before, &::after {
+          content: '•';
+          margin: 0;
+          padding: 0 .25em;
+        }
+
+      }
+      > figure {
+        grid-column: 1 / -1;
+
+        width: 100%;
+        height: 100%;
+        max-height: 10em;
+
+        // padding: 1em;
+        // margin-top: 1em;
+        overflow: hidden;
+        text-align: center;
+
+
+        > img {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          padding: 0;
+
+          object-fit: cover;
+        }
+      }
+      blockquote {
+        padding: 0;
+        margin: .5em;
+      }
+    }
+
+
+    // articles in the list
+    article {
+
+      // text-align: center;
+
+      grid-column: 1 / -1;
+
+      > figure {
+          //display: none;
+          background-color: $color-key;
+      }
+
+
+    }
+    article.excerpt {
+
+      cursor: pointer;
+
+      @include article-banner;
+      grid-column: 1 / -1;
+
+      > figure {
+//           height: 18em;
+
+        > img {
+
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}
