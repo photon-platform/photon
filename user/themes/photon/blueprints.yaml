@@ -1,15 +1,15 @@
 name: photon ✴
 version: 0.1.0
-description: A theme to bring order to tto the structure, logic and style of your content
+description: A theme to bring order to to the structure, logic and style of your content
 icon: asterisk
 author:
   name: illumiphi
   email: phi@illumiphi.com
-homepage: https://github.com/illumiphi/grav-order-foundation
+homepage: https://github.com/illumiphi/grav-theme-photon
 demo: http://illumiphi.com
-keywords: grav, theme, etc
-bugs: https://github.com/illumiphi/grav-order-foundation/issues
-readme: https://github.com/illumiphi/grav-order-foundation/blob/master/README.md
+keywords: photon, theme
+bugs: https://github.com/illumiphi/grav-theme-photon/issues
+readme: https://github.com/illumiphi/grav-theme-photon/blob/master/README.md
 license: MIT
 
 form:
