@@ -1,6 +1,6 @@
 export PROJECT_PORT="5630"
-export SITE="http://localhost:${PROJECT_PORT}"
-export SERVERPATH=${SERVERPATH}
+export SITE="http://port.local"
+export SERVERPATH='~/port-of-alsea.illumiphi.com'
 
 alias serve="php -S localhost:${PROJECT_PORT} system/router.php"
 alias site="open ${SITE}"

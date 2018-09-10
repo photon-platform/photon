@@ -2,7 +2,7 @@ enabled: true
 route: /admin
 cache_enabled: false
 theme: grav
-logo_text: PHOTON
+logo_text: 'photon ✴'
 content_padding: true
 twofa_enabled: true
 sidebar:

@@ -1,11 +1,19 @@
-email: phi@illumiphi.com
+email: illumiphi@gmail.com
 fullname: phi
 title: architect
 state: enabled
 access:
-  admin:
-    login: true
-    super: true
   site:
-    login: true
-hashed_password: $2y$10$EpavxpIfmuDYeRrX5IAhP.3JY.4EHHHyJKwQCp0bHy5v83162cuui
+    login: 'true'
+  admin:
+    super: 'true'
+    login: 'true'
+  admin-addon-user-manager: {  }
+hashed_password: $2y$10$.v/GFNjUrRKhPWVx33Cu0.QwVssGNI0dGOCOzlcnMke6vVUmoRIFS
+_json:
+  avatar: 'null'
+  state: '"enabled"'
+  hashed_password: '"$2y$10$mgA0PM\/7PKWrpdgOOAFjgu1RDMaYOMH6N0zb39HyafJnRkhuy.PzC"'
+language: en
+twofa_enabled: false
+twofa_secret: QIQ2LU4RHCE7V7ERCTDCH5AVI3TAB6D6
