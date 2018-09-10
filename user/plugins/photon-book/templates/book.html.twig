@@ -11,7 +11,7 @@
   <p>book pages: {{ book_collection.count }}</p>
   {% for p in book_collection -%}
     {% if not (p.url == page.url) -%}
-    {% include "_section/_articles/article.html.twig" with { 'page': p } %}
+    {% include "_articles/article.html.twig" with { 'page': p } %}
 
     {% endif %}
   {% endfor -%}

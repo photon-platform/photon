@@ -1,5 +1,5 @@
-{% extends '_section/_articles/article.html.twig' -%}
-{% use "_section/_articles/_block/article_main_excerpt.html.twig" -%}
+{% extends '_articles/article.html.twig' -%}
+{% use "_articles/_block/article_main_excerpt.html.twig" -%}
 {% set excerpt = true -%}
 {% block article -%}
 
@@ -7,7 +7,7 @@
         {{ block('article_figure') }}
         {{ block('article_header') }}
         {{ block('article_main_excerpt') }}
-        {#% include '_section/asides/list-featured.html.twig' -%#}
+        {#% include '_asides/list-featured.html.twig' -%#}
         {{ block('article_footer') }}
       </article>
 {%- endblock %}

@@ -7,7 +7,7 @@
   {% set showcase_collection = page.collection(options) %}
   <section class="showcase">
     {% for p in showcase_collection %}
-    {% include "_section/_articles/article-excerpt.html.twig" with { 'page': p } %}
+    {% include "_articles/article-excerpt.html.twig" with { 'page': p } %}
     {% endfor %}
   </section>
 
@@ -15,11 +15,11 @@
 
 
 {% block list -%}
-  <p>child pages: {{ page.collection.count() }}</p>
+  <!-- <p>child pages: {{ page.collection.count() }}</p> -->
   {% for p in page.collection -%}
     {% if not (p.url == page.url) -%}
     {% if p.visible -%}
-    {% include "_section/_articles/article-excerpt.html.twig" with { 'page': p } %}
+    {% include "_articles/article-excerpt.html.twig" with { 'page': p } %}
 
     {% endif %}
     {% endif %}

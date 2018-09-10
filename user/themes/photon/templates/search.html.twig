@@ -10,7 +10,7 @@
 
     {% for p in page.collection -%}
       {% if not (p.url == page.url) -%}
-      {% include "_section/_articles/article-excerpt.html.twig" with { 'page': p } %}
+      {% include "_articles/article-excerpt.html.twig" with { 'page': p } %}
 
       {% endif %}
 

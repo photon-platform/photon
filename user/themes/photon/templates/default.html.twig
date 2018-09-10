@@ -5,7 +5,7 @@
 
   <body class="{% block body_template_classes %}{% endblock body_template_classes %}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}">
     {% block header -%}
-    {% include '_section/header.html.twig' %}
+    {% include '_sections/header.html.twig' %}
     {%- endblock header %}
 
     {% block showcase %}{% endblock -%}
@@ -14,18 +14,18 @@
 
     <main>
       {%- block content -%}
-      {%- include '_section/_articles/article.html.twig' -%}
+      {%- include '_articles/article.html.twig' -%}
       {%- endblock content -%}
     </main>
 
     {%- endblock main %}
 
     {% block asides -%}
-      {% include '_section/asides.html.twig' %}
+      {% include '_sections/asides.html.twig' %}
     {%- endblock asides %}
 
     {% block footer -%}
-      {% include '_section/footer.html.twig' %}
+      {% include '_sections/footer.html.twig' %}
     {%- endblock footer %}
 
     <script type="text/x-mathjax-config">
