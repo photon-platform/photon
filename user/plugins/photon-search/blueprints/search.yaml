@@ -1,0 +1,22 @@
+title: Search
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: ✴ Search
+          icon: folder
+          text: Enter details for this person
+
+          fields:
+
+            header.search.description:
+              type: text
+              label: Description
+              help: Help for the Description
+              size: medium

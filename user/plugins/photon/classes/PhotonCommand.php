@@ -268,7 +268,7 @@ class PhotonCommand extends ConsoleCommand
                 if ($value === null || trim($value) === '') {
                     throw new \RuntimeException('Name cannot be empty');
                 }
-                if (false !== $this->gpm->findPackage($value)) {
+                if (false !== $this->gpm->findPackage('photon-' . $value)) {
                     throw new \RuntimeException('Package name exists in GPM');
                 }
 
