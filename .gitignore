@@ -1,10 +1,21 @@
 # Grav Specific
 .sass-cache
 composer.lock
-cache/*
-assets/*
-logs/*
-images/*
+
+.idea
+vendor/
+cache/
+!cache/.gitkeep
+images/
+!images/.gitkeep
+tmp/
+!tmp/.gitkeep
+assets/
+!assets/.gitkeep
+backup/
+!backup/.gitkeep
+logs/
+!logs/.gitkeep
 
 # OS Generated
 .DS_Store*

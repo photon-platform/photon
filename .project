@@ -11,7 +11,6 @@ alias dry-sync="rsync -auzvhP --stats --delete --dry-run user/ illumiphi.com:${S
 alias sync="rsync -auzvhP --stats --delete user/ illumiphi.com:${SERVERPATH}/user/"
 alias full-sync="rsync -auzvhP --stats \
   --exclude .git \
-  --exclude cache \
   --exclude backup \
   --delete . illumiphi.com:${SERVERPATH}/"
 
