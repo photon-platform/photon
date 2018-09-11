@@ -4,17 +4,17 @@ composer.lock
 
 .idea
 vendor/
-cache/
+cache/*
 !cache/.gitkeep
-images/
+images/*
 !images/.gitkeep
-tmp/
+tmp/*
 !tmp/.gitkeep
-assets/
+assets/*
 !assets/.gitkeep
-backup/
+backup/*
 !backup/.gitkeep
-logs/
+logs/*
 !logs/.gitkeep
 
 # OS Generated
