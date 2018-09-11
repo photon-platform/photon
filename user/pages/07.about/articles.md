@@ -1,5 +1,5 @@
 ---
-title: About photon ✴
+title: About
 child_type: article
 featured: false
 show_gallery: true
@@ -10,10 +10,8 @@ content:
     limit: 10
 ---
 
-## About the Port
-
-About photon
+Everything about us
 
 ===
 
-More on photon
+More to come...

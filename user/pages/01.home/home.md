@@ -1,6 +1,6 @@
 ---
 title: Home
-body_classes:
+body_classes: null
 featured: false
 show_gallery: true
 author: phi
