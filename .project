@@ -1,6 +1,6 @@
 export PROJECT_PORT="5630"
 export SITE="http://port.local"
-export SERVERPATH='~/port-of-alsea.illumiphi.com'
+export SERVERPATH='~/starter.photon-platform.net'
 
 alias serve="php -S localhost:${PROJECT_PORT} system/router.php"
 alias site="open ${SITE}"
@@ -9,5 +9,10 @@ alias swatch="cd user/themes/photon; scss --watch scss:css"
 
 alias dry-sync="rsync -auzvhP --stats --delete --dry-run user/ illumiphi.com:${SERVERPATH}/user/"
 alias sync="rsync -auzvhP --stats --delete user/ illumiphi.com:${SERVERPATH}/user/"
+alias full-sync="rsync -auzvhP --stats \
+  --exclude .git \
+  --exclude cache \
+  --exclude backup \
+  --delete . illumiphi.com:${SERVERPATH}/"
 
 source ~/.bash_prompt
