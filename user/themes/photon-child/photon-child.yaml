@@ -4,5 +4,5 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - user/themes/port
+         - user/themes/photon-child
          - user/themes/photon

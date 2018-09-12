@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Port extends Photon
+class PhotonChild extends Photon
 {
     // Access plugin events in this class
 }
