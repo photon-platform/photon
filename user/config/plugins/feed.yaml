@@ -1,0 +1,4 @@
+enabled: true
+description: 'photon ✴ Feeds'
+lang: en-us
+enable_json_feed: true

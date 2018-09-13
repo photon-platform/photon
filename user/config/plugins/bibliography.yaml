@@ -1,0 +1,9 @@
+enabled: true
+style: apa-5th-edition
+locale: en-US
+bibliography_files:
+  user/data/bibliography/atom.json:
+    name: atom.json
+    type: application/json
+    size: 7134
+    path: user/data/bibliography/atom.json

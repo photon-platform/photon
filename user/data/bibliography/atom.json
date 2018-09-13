@@ -1,0 +1,314 @@
+[
+	{
+		"id": "http://zotero.org/users/4453783/items/LGUK3LBZ",
+		"type": "book",
+		"title": "hexo-tag-bootstrap: Bootstrap tag plugins for Freemind",
+		"genre": "JavaScript",
+		"source": "GitHub",
+		"URL": "https://github.com/wzpan/hexo-tag-bootstrap",
+		"note": "original-date: 2014-03-16T12:09:58Z",
+		"shortTitle": "hexo-tag-bootstrap",
+		"author": [
+			{
+				"family": "Pan",
+				"given": "Joseph"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					3
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					18
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/6JU2K2DC",
+		"type": "webpage",
+		"title": "platformio-ide-terminal",
+		"container-title": "Atom",
+		"abstract": "A terminal package for Atom, complete with themes, API and more for PlatformIO IDE. Fork of terminal-plus.",
+		"URL": "https://atom.io/packages/platformio-ide-terminal",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					18
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/C6N7RV2E",
+		"type": "motion_picture",
+		"title": "Hacking the Atom text editor - Nick Tikhonov @ Hack the Burgh",
+		"source": "YouTube",
+		"dimensions": "2953 seconds",
+		"URL": "https://www.youtube.com/watch?v=V-gbOGpDVXE",
+		"author": [
+			{
+				"literal": "Nick Tikhonov"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					17
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/8A7IXEEI",
+		"type": "webpage",
+		"title": "Teletype for Atom",
+		"URL": "https://teletype.atom.io/?utm_source=announcement&utm_medium=email&utm_campaign=atom-teletype-1117",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/LTVERBYV",
+		"type": "book",
+		"title": "language-gfm: GitHub Flavored Markdown in Atom",
+		"publisher": "Atom",
+		"genre": "CoffeeScript",
+		"source": "GitHub",
+		"URL": "https://github.com/atom/language-gfm",
+		"note": "original-date: 2013-08-13T04:32:55Z",
+		"shortTitle": "language-gfm",
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/G6F8AJST",
+		"type": "webpage",
+		"title": "Atom Linter",
+		"container-title": "GitHub",
+		"abstract": "<div>Linter providers for Atom</div>",
+		"URL": "https://github.com/AtomLinter",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/LYK8KGQA",
+		"type": "webpage",
+		"title": "markdown-writer",
+		"URL": "https://atom.io/packages/markdown-writer",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/T2X7DN2B",
+		"type": "webpage",
+		"title": "linter-markdown",
+		"container-title": "Atom",
+		"abstract": "Lint markdown on the fly, using remark-lint",
+		"URL": "https://atom.io/packages/linter-markdown",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/SVISUWNW",
+		"type": "book",
+		"title": "linter-markdown: Lint markdown files within atom",
+		"publisher": "Atom Linter",
+		"genre": "JavaScript",
+		"source": "GitHub",
+		"URL": "https://github.com/AtomLinter/linter-markdown",
+		"note": "original-date: 2015-08-03T23:26:22Z",
+		"shortTitle": "linter-markdown",
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/95EXFK3U",
+		"type": "book",
+		"title": "remark-lint: Markdown code style linter",
+		"genre": "JavaScript",
+		"source": "GitHub",
+		"URL": "https://github.com/wooorm/remark-lint",
+		"note": "original-date: 2015-05-05T19:38:58Z",
+		"shortTitle": "remark-lint",
+		"author": [
+			{
+				"family": "Titus",
+				"given": ""
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					31
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/2A29E634",
+		"type": "webpage",
+		"title": "atom-package-sync",
+		"genre": "catalog",
+		"abstract": "Synchronize packages, settings, keymaps, user styles, init script and snippets automatically across Atom instances. The code is based on the great sync-settings package.",
+		"URL": "https://atom.io/packages/atom-package-sync",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/PUTWVABL",
+		"type": "webpage",
+		"title": "Simple package synchronization across devices for Atom",
+		"container-title": "Atom Discussion",
+		"abstract": "Hello there!   I just released my first package atom-package-sync, and since I don’t have that much experience in writing Atom packages, I would like to know if I could get some feedback about it. It consists of a simple process that automatically keeps in sync all of your settings and installed packages across your devices. It is based on the really great sync-settings package but it stores your information privately in the cloud and is completely automated. I plan to release the source code fo...",
+		"URL": "https://discuss.atom.io/t/simple-package-synchronization-across-devices-for-atom/41057",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/4ZBP8C9T",
+		"type": "webpage",
+		"title": "Load developing package",
+		"container-title": "Atom Discussion",
+		"abstract": "Hi, I'd like to add some functionality to markdown-preview package, so I fork it on Github, then, I found I have no idea where to go. Can there be a load developing package button? (like Chrome extension which provides nice developing experience)",
+		"URL": "https://discuss.atom.io/t/load-developing-package/2554",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/WNAG4CX5",
+		"type": "webpage",
+		"title": "Contributing to Official Atom Packages",
+		"URL": "http://flight-manual.atom.io/hacking-atom/sections/contributing-to-official-atom-packages/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/4453783/items/MLE35B4Y",
+		"type": "webpage",
+		"title": "Load developing package",
+		"container-title": "Atom Discussion",
+		"abstract": "Hi, I'd like to add some functionality to markdown-preview package, so I fork it on Github, then, I found I have no idea where to go. Can there be a load developing package button? (like Chrome extension which provides nice developing experience)",
+		"URL": "https://discuss.atom.io/t/load-developing-package/2554",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					29
+				]
+			]
+		}
+	}
+]
