@@ -12,6 +12,7 @@ alias sync="rsync -auzvhP --stats --delete user/ illumiphi.com:${SERVERPATH}/use
 alias full-sync="rsync -auzvhP --stats \
   --exclude .git \
   --exclude backup \
+  --exclude user/data/tntsearch/grav.index \
   --delete . illumiphi.com:${SERVERPATH}/"
 
 source ~/.bash_prompt
