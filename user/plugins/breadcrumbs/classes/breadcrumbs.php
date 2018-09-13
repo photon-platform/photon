@@ -34,6 +34,19 @@ class Breadcrumbs
     }
 
     /**
+     * Get from page
+     *
+     * @return array
+     */
+    public function getFromPage($page)
+    {
+        if (!$this->breadcrumbs) {
+            $this->buildFromPage($page);
+        }
+        return $this->breadcrumbs;
+    }
+
+    /**
      * Build breadcrumbs.
      *
      * @internal
@@ -72,5 +85,43 @@ class Breadcrumbs
         }
 
         $this->breadcrumbs = array_reverse($hierarchy);
+    }
+
+
+    protected function buildFromPage($page)
+    {
+        $hierarchy = array();
+        $grav = Grav::instance();
+        // $page = $grav['page'];
+
+        // Page cannot be routed.
+        if (!$page) {
+            $this->breadcrumbs = array();
+            return;
+        }
+
+        if (!$page->root()) {
+
+            if ($this->config['include_current']) {
+                $hierarchy[$page->url()] = $page;
+            }
+
+            $page = $page->parent();
+
+            while ($page && !$page->root()) {
+                $hierarchy[$page->url()] = $page;
+                $page = $page->parent();
+            }
+        }
+
+        if ($this->config['include_home']) {
+            $home = $grav['pages']->dispatch('/');
+            if ($home && !array_key_exists($home->url(), $hierarchy)) {
+                $hierarchy[] = $home;
+            }
+        }
+
+        $this->breadcrumbs = array_reverse($hierarchy);
+        
     }
 }

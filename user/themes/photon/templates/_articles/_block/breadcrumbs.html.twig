@@ -5,9 +5,10 @@ Original Code from breadcrumbs.plugin
 
 {% block breadcrumbs -%}
   {% if config.plugins.breadcrumbs.enabled -%}
-    {% set crumbs = breadcrumbs.get() -%}
+    {% set crumbs = breadcrumbs.getFromPage(page) -%}
     {% set breadcrumbs_config = config.plugins.breadcrumbs -%}
     {%- if crumbs | length > 1 or breadcrumbs_config.show_all %}
+          {#{ page.url }#}
           <nav class="breadcrumbs">
             {% for crumb in crumbs -%}
               {% if not loop.last -%}
@@ -17,10 +18,10 @@ Original Code from breadcrumbs.plugin
                   {{ crumb.title }}
                 {%- endif -%}
               {% else -%}
-                {% if breadcrumbs_config.link_trailing -%}
-                  <!-- <a href="{{ crumb.url }}">{{ crumb.title }}</a> -->
+                {% if breadcrumbs_config.link_trailing and not crumb.active -%}
+                  <a href="{{ crumb.url }}">{{ crumb.title }}</a>
                 {%- else -%}
-                  <!-- <span class="active">{{ crumb.title }}</span> -->
+                  <span class="active">{{ crumb.title }}</span>
                 {%- endif -%}
               {% endif -%}
             {% endfor %}
