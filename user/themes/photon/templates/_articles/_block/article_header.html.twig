@@ -1,7 +1,7 @@
 {% block article_header -%}
 
         <header>
-          {%- include '_articles/_block/breadcrumbs.html.twig' %}
+          {%- include '_articles/_block/breadcrumbs.html.twig' with { 'page': page } %}
           <h1>
             {%- if page.active -%}
               {{- page.title -}}
