@@ -17,3 +17,33 @@ alias full-sync="rsync -auzvhP --stats \
   --exclude backup \
   --exclude user/data/tntsearch/grav.index \
   --delete . illumiphi.com:${SERVERPATH}/"
+
+function p() {
+  echo "✴ $1"
+  echo "$# args"
+  for arg in $@
+  do
+    echo "- $arg"
+  done
+
+  case $1 in
+    new)
+      if [ $2 ]
+      then
+        echo "new $2"
+      else
+        echo "new nada"
+      fi
+      ;;
+    acp)
+      git add .
+      if [ $2 ]
+      then
+        git commit -m "$2"
+      else
+        git commit
+      fi
+      ;;
+  esac
+
+}
