@@ -1,3 +1,5 @@
+source ~/.bash_prompt
+
 export PROJECT_PORT="1111"
 export SITE="http://photon.local"
 export SERVERPATH='~/starter.photon-platform.net'
@@ -15,5 +17,3 @@ alias full-sync="rsync -auzvhP --stats \
   --exclude backup \
   --exclude user/data/tntsearch/grav.index \
   --delete . illumiphi.com:${SERVERPATH}/"
-
-source ~/.bash_prompt
