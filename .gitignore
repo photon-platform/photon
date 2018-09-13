@@ -17,6 +17,8 @@ backup/*
 logs/*
 !logs/.gitkeep
 
+user/data/tntsearch/
+
 # OS Generated
 .DS_Store*
 ehthumbs.db
