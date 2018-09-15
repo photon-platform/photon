@@ -1,5 +1,8 @@
-$figcaption-bg-color: rgba($color-foreground, .7);
-$figcaption-color: $color-background;
+
+:root {
+  --figcaption-bg: #{rgba($color-foreground, .7)};
+  --figcaption-color: #{$color-background};
+}
 
 img {
 
@@ -27,12 +30,6 @@ figure {
 
   figcaption {
 
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-
-    background: $figcaption-bg-color;
-    color: $figcaption-color;
-
     width: 100%;
 
     position: absolute;
@@ -42,6 +39,13 @@ figure {
     padding: .75em 1em;
 
     z-index: 2;
+
+    color: var(--figcaption-color);
+    background: var(--figcaption-bg);
+
+    // see hover
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 
   }
 

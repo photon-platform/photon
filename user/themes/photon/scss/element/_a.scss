@@ -9,10 +9,10 @@
 
 a {
 
-  background: transparent;
   background: none;
-  text-decoration: none;
   color: var(--a-color);
+
+  text-decoration: none;
 
   &:link {
     color: var(--a-color);

@@ -344,8 +344,8 @@ aside.search > section {
 
 /* section/footer *****************************/
 footer {
-  flex-direction: column;
   padding: 1em;
+  flex-direction: column;
 }
 
 /* section/header *****************************/
@@ -371,43 +371,32 @@ main {
 /* section/nav *****************************/
 nav {
   flex-wrap: wrap;
-  align-items: stretch;
   align-content: space-around;
   justify-content: center;
-  padding: 0 1em;
-  text-align: center;
-}
-@media (min-width: 72em) {
-  nav {
-    flex-direction: column;
-    justify-content: start;
-    padding: 1em 0;
-  }
 }
 nav a {
   margin: 0 0.25em;
-  letter-spacing: 0.25em;
   padding-left: 0.25em;
-  text-transform: uppercase;
   font-size: 0.9em;
-}
-nav a[href^=http] {
-  background: #a69159;
-  color: white;
-}
-nav a[href^=http]:hover {
-  background: #59a678;
-  color: #a69159;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
 }
 nav.breadcrumbs {
   width: auto;
 }
+@media (min-width: 72em) {
+  nav {
+    padding: 1em 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav a {
+    text-align: center;
+  }
+}
 
 /* section/showcase *****************************/
 .showcase {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -418,9 +407,9 @@ nav.breadcrumbs {
   height: 100vh;
   padding: 0;
   margin-bottom: 0;
+  opacity: 0;
   text-align: center;
   font-size: 1.2em;
-  opacity: 0;
   cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -446,30 +435,23 @@ nav.breadcrumbs {
   grid-column: -2/-1;
   grid-row: -2/-1;
   align-self: flex-end;
+  z-index: 1;
   padding: 1em;
   margin-right: 2em;
+  margin-bottom: 2em;
+  background: white;
 }
 .showcase > article > main > header {
   text-align: left;
 }
 .showcase > article > main > div {
-  text-align: left;
   margin-bottom: 0;
-}
-.showcase > article > main {
-  z-index: 1;
-  background: white;
-  margin-bottom: 2em;
-}
-.showcase > article > main > div {
   font-size: 1em;
   font-weight: 400;
+  text-align: left;
 }
 .showcase > article > footer {
   display: none;
-}
-.showcase > article:hover {
-  color: #36463d;
 }
 /* section/welcome *****************************/
 .welcome {
@@ -480,9 +462,9 @@ nav.breadcrumbs {
 }
 .welcome > h1 {
   grid-column: 1/-1;
-  letter-spacing: 0.25em;
   padding-left: 0.25em;
   padding-top: 1em;
+  letter-spacing: 0.25em;
   text-align: center;
   text-transform: uppercase;
 }

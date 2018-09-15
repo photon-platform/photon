@@ -1,4 +1,6 @@
-$mark-bg-color: $color-key;
+:root{
+	--mark-bg: #{$color-key};
+}
 
 b, strong {
 	font-weight: inherit;
@@ -15,7 +17,7 @@ cite {
 }
 
 mark {
-  background: $color-key;
+  background: var(--mark-bg);
 }
 
 

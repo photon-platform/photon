@@ -1,16 +1,17 @@
 // define all defaults within the HTML element
 
-$html-color: $color-foreground;
-$html-bg-color: $color-background;
+:root{
+  --html-color: #{$color-foreground};
+  --html-bg: #{$color-background};
+}
 
 html {
 
-  color: $html-color;
-  background: $html-bg-color;
-
   height: 100%;
-
   max-width: 100%;
+
+  color: var(--html-color);
+  background: var(--html-bg);
 
   font-family: $font-root;
   font-weight: 400;

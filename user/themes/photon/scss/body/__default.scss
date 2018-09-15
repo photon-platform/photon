@@ -81,7 +81,7 @@ body {
       background: var(--body-form-bg);
 
       flex-flow: column;
-      
+
       form {
         width: 100%;
       }
@@ -118,8 +118,8 @@ body {
         }
       }
     }
-
   }
+
   @include media-bp(4) {
     grid-template-columns: 1fr 16em   70em   1fr;
     // grid-template-areas:  ".   header main   main  ."
@@ -127,11 +127,12 @@ body {
     //                       ".   asides main   main  ."
     //                       ".   footer main   main  .";
   }
+
   @include media-bp(5) {
     // grid-template-columns: 1fr 16em   68em    16em   1fr;
   }
+
   @include media-bp(6) {
     // grid-template-columns: 1fr 16em   86em   16em   1fr;
   }
-
 }

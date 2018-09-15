@@ -1,18 +1,22 @@
+:root {
+  --code-color: #{$color-background};
+  --code-bg: #{$color-foreground};
+}
+
+
 pre,
 code,
 kbd,
 samp {
 
-  // display: block;
   font-family: monospace, monospace;
   font-size: 1em;
   line-height: 1.5;
 
-  color: $color-foreground;
-  background: $color-background;
+  color: var(--code-color);
+  background: var(--code-bg);
 
   padding: .1em .25em;
-  // position: static;
   border-radius: 0;
 
 }
@@ -20,11 +24,6 @@ samp {
 code {
 
   height: auto;
-
-  // > figure {
-  //   display: block;
-  //   position: static;
-  // }
 
   pre & {
     display: block;

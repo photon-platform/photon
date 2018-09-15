@@ -20,11 +20,16 @@
 }
 
 /* element/html *****************************/
+:root {
+  --html-color: #36463d;
+  --html-bg: white;
+}
+
 html {
-  color: #36463d;
-  background: white;
   height: 100%;
   max-width: 100%;
+  color: var(--html-color);
+  background: var(--html-bg);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.35;
@@ -33,11 +38,11 @@ html {
 
 /* element/headings *****************************/
 h4, h3, h2, h1 {
-  display: block;
   font-family: "Bree Serif", serif;
   font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
   font-weight: 400;
   line-height: 1.5;
+  display: block;
 }
 
 h1 {
@@ -82,20 +87,24 @@ li {
 }
 
 /* element/blockquotes *****************************/
+:root {
+  --blockquote-bg: #36463d;
+}
+
 blockquote {
-  display: block;
   margin: 1em auto;
   font-size: 1.2em;
+  display: block;
 }
 blockquote::before {
   content: "";
-  display: block;
   height: 100%;
   width: 0.1em;
-  background: #36463d;
   position: absolute;
   left: 0;
   top: 0;
+  background: var(--blockquote-bg);
+  display: block;
 }
 blockquote > blockquote {
   margin: 0;
@@ -105,8 +114,8 @@ blockquote > blockquote {
 blockquote > blockquote::before {
   content: "• ";
   padding-top: 1em;
-  display: inline;
   background: inherit;
+  display: inline;
 }
 blockquote p {
   margin-bottom: 0;
@@ -115,6 +124,11 @@ blockquote p {
 }
 
 /* element/code *****************************/
+:root {
+  --code-color: white;
+  --code-bg: #36463d;
+}
+
 pre,
 code,
 kbd,
@@ -122,8 +136,8 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
   line-height: 1.5;
-  color: #36463d;
-  background: white;
+  color: var(--code-color);
+  background: var(--code-bg);
   padding: 0.1em 0.25em;
   border-radius: 0;
 }
@@ -148,10 +162,9 @@ pre {
 }
 
 a {
-  background: transparent;
   background: none;
-  text-decoration: none;
   color: var(--a-color);
+  text-decoration: none;
 }
 a:link {
   color: var(--a-color);
@@ -175,6 +188,10 @@ a.active::before, a.active::after {
 }
 
 /* element/inline *****************************/
+:root {
+  --mark-bg: #a69159;
+}
+
 b, strong {
   font-weight: inherit;
   font-weight: bolder;
@@ -189,7 +206,7 @@ cite {
 }
 
 mark {
-  background: #a69159;
+  background: var(--mark-bg);
 }
 
 abbr[title] {
@@ -220,6 +237,11 @@ sup {
 }
 
 /* element/figure *****************************/
+:root {
+  --figcaption-bg: rgba(54, 70, 61, 0.7);
+  --figcaption-color: white;
+}
+
 img {
   display: block;
   border-style: none;
@@ -236,16 +258,16 @@ figure img {
   object-fit: cover;
 }
 figure figcaption {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  background: rgba(54, 70, 61, 0.7);
-  color: white;
   width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
   padding: 0.75em 1em;
   z-index: 2;
+  color: var(--figcaption-color);
+  background: var(--figcaption-bg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 figure:hover > figcaption {
   opacity: 1;

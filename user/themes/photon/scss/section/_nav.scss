@@ -3,43 +3,33 @@ nav {
   @extend %section-default;
 
   flex-wrap: wrap;
-  align-items: stretch;
+
   align-content: space-around;
   justify-content: center;
 
-  // background: $color-neutral-lighter;
-  padding: 0 1em;
-  text-align: center;
-
-  @include media-bp(3) {
-    flex-direction: column;
-    justify-content: start;
-    padding: 1em 0;
-
-  }
-
   a {
     margin: 0 .25em;
-
-    letter-spacing: .25em;
     padding-left: .25em;
-    text-transform: uppercase;
 
     font-size: .9em;
-
-  }
-
-  a[href^="http"] {
-    background: $color-key;
-    color: $color-background;
-    &:hover {
-      background: $color-1;
-      color: $color-key;
-    }
+    letter-spacing: .25em;
+    text-transform: uppercase;
   }
 
   &.breadcrumbs {
     width: auto;
+  }
+
+  @include media-bp(3) {
+
+    padding: 1em 0;
+
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      text-align: center;
+    }
   }
 
 }

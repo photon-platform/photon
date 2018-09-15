@@ -1,26 +1,31 @@
-$blockquote-bg-color: $color-neutral-darker;
+
+:root {
+  --blockquote-bg: #{$color-neutral-darker};
+}
 
 blockquote {
 
-  display: block;
-
   margin: 1em auto;
-  // padding: 1em;
 
   font-size: 1.2em;
+
+  display: block;
 
   // vertical rule
   &::before {
     content: '';
-    display: block;
 
     height: 100%;
     width: .1em;
 
-    background: $blockquote-bg-color;
     position: absolute;
     left: 0;
     top: 0;
+
+    background: var(--blockquote-bg);
+
+    display: block;
+
   }
 
   //nested blockquote
@@ -33,9 +38,10 @@ blockquote {
     &::before {
       content: '• ';
       padding-top: 1em;
-      display: inline;
-      // color: $color-neutral-darker;
+
       background: inherit;
+
+      display: inline;
     }
   }
 
