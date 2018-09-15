@@ -1,3 +1,6 @@
+//TODO: this is not integrated
+
+
 aside.search {
   > section {
     flex-flow: column nowrap;
@@ -16,7 +19,6 @@ aside.search {
 }
 
 .search-keyword {
-  color: $color-2-dark;
   font-weight: 700;
   font-style: normal;
 

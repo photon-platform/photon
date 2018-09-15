@@ -12,21 +12,16 @@ $form-font: $font-root;
 
 // COLOR
 $color-key-hue: 44;
-$color-1-hue: 244;
+$color-1-hue: 144;
 $color-2-hue: 244;
 
-$saturation: 40;
+$saturation: 30;
 
-
+// this generates the color pallete
 @import 'color/_default';
 
-$color-foreground: #333;
-$color-background: #FFC;
-
-$color-key: #2aabe4;
-
-// $color-key: #570961;
-$color-1: #e1ccb1;
+$color-foreground: $color-neutral-darker;
+$color-background: $color-neutral-lighter;
 
 // BREAKPOINT
 @import 'media/var-18em';

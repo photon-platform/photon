@@ -3,7 +3,6 @@
 body.home {
 
   grid-template-areas:  ' header   header  header '
-                        // ' .   nav     . '
                         ' showcase  showcase  showcase '
                         ' .   welcome  . '
                         ' .   featured  . '
@@ -13,28 +12,21 @@ body.home {
                         ' .   footer  . ';
   align-content: center;
   justify-content: center;
-  // grid-template-row: 25em auto 1fr;
   grid-auto-rows: auto;
 
   > header {
-    // background-color: rgba($color-background, $opacity)  ;
-    background-color: white;
     z-index: 10;
-    // flex-direction: row;
-    // align-items: center;
   }
 
   > .showcase {
     @extend %body-section-default;
 
-    // grid-area: showcase;
     //span under header
     grid-row: 1 / 3;
-
     grid-column: 1 / -1;
-    width: 100vw;
-
     grid-column: 2 / -1;
+
+    width: 100vw;
     width: 100%;
 
     height: 100vh;
@@ -59,15 +51,13 @@ body.home {
   }
 
   > main {
+
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1em;
 
     > header {
-      // align-content: flex-start;
-      // align-items: flex-start;
       padding: 1em 0;
-      // text-align: left;
       font-size: 1.5em;
     }
 
@@ -82,10 +72,11 @@ body.home {
 
   @include media-bp(1) {
   }
+
   @include media-bp(2) {
   }
+
   @include media-bp(3) {
-    // grid-template-columns: 1fr 16em   52em   1fr;
     grid-template-rows:  100vh auto;
     grid-template-areas:  "header  header   showcase showcase"
                           ".  welcome welcome ."
@@ -97,8 +88,8 @@ body.home {
       grid-row: 1 / 2;
       grid-column: 1 / -1;
     }
+
     > header {
-      // grid-column: 1 / 2;
       flex-direction: column;
       justify-content: flex-start;
       height: 100%;

@@ -1,3 +1,5 @@
+$blockquote-bg-color: $color-neutral-darker;
+
 blockquote {
 
   display: block;
@@ -7,6 +9,7 @@ blockquote {
 
   font-size: 1.2em;
 
+  // vertical rule
   &::before {
     content: '';
     display: block;
@@ -14,7 +17,7 @@ blockquote {
     height: 100%;
     width: .1em;
 
-    background-color: $color-neutral-darker;
+    background: $blockquote-bg-color;
     position: absolute;
     left: 0;
     top: 0;
@@ -31,8 +34,8 @@ blockquote {
       content: '• ';
       padding-top: 1em;
       display: inline;
-      color: $color-neutral-darker;
-      background-color: inherit;
+      // color: $color-neutral-darker;
+      background: inherit;
     }
   }
 

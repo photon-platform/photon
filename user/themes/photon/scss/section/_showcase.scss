@@ -52,7 +52,7 @@ $opacity: 1;
       padding: 1em;
 
       z-index: 1;
-      background-color: rgba($color-background, $opacity)  ;
+      background: rgba($color-background, $opacity)  ;
     }
 
     > main {
@@ -80,7 +80,7 @@ $opacity: 1;
       // padding: 1em;
 
       z-index: 1;
-      background-color: rgba($color-background, $opacity)  ;
+      background: rgba($color-background, $opacity)  ;
       margin-bottom: 2em;
 
       > div {
@@ -94,14 +94,14 @@ $opacity: 1;
     }
     &:hover {
       color: $color-foreground;
-      // background-color: $color-1;
+      // background: $color-1;
       .more {
         // color: $color-1;
-        // background-color: $color-key;
+        // background: $color-key;
       }
       a:hover {
         // color: $color-1;
-        // background-color: $color-key;
+        // background: $color-key;
 
       }
     }

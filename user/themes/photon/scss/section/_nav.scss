@@ -7,18 +7,15 @@ nav {
   align-content: space-around;
   justify-content: center;
 
-  // background-color: $color-neutral-lighter;
+  // background: $color-neutral-lighter;
   padding: 0 1em;
   text-align: center;
-
-  // font-size: 1.3em;
 
   @include media-bp(3) {
     flex-direction: column;
     justify-content: start;
     padding: 1em 0;
-  
-    // align-self: flex-start;
+
   }
 
   a {
@@ -31,11 +28,12 @@ nav {
     font-size: .9em;
 
   }
+
   a[href^="http"] {
-    background-color: $color-key;
+    background: $color-key;
     color: $color-background;
     &:hover {
-      background-color: $color-1;
+      background: $color-1;
       color: $color-key;
     }
   }
@@ -43,6 +41,5 @@ nav {
   &.breadcrumbs {
     width: auto;
   }
-
 
 }

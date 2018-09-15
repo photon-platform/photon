@@ -1,3 +1,6 @@
+$figcaption-bg-color: rgba($color-foreground, .7);
+$figcaption-color: $color-background;
+
 img {
 
   display: block;
@@ -27,8 +30,8 @@ figure {
     opacity: 0;
     transition: opacity .3s ease-in-out;
 
-    background-color: rgba($color-foreground, .7);
-    color: $color-background;
+    background: $figcaption-bg-color;
+    color: $figcaption-color;
 
     width: 100%;
 

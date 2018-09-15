@@ -1,31 +1,37 @@
 // default anchor tag styling
+
+:root{
+  --a-color: #{$color-key};
+  --a-hover-bg: #{$color-1-light};
+  --a-active-color: #{$color-2-dark};
+}
+
+
 a {
 
-  background-color: transparent;
+  background: transparent;
   background: none;
   text-decoration: none;
-  color: $color-key;
+  color: var(--a-color);
 
   &:link {
-    color: $color-key;
+    color: var(--a-color);
   }
 
   &:visited {
-    color: $color-key;
+    color: var(--a-color);
   }
 
   &:hover {
-    background-color: $color-1;
-    // text-shadow: 2px 2px #000000;
+    background: var(--a-hover-bg);
   }
 
   &:active {
-    color: $color-2-dark;
+    color: var(--a-active-color);
   }
 
   &.active {
-    
-    // text-decoration: underline;
+
     font-weight: 700;
 
     &::before, &::after {

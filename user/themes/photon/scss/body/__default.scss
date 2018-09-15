@@ -1,11 +1,17 @@
 // default body
 // defaults for top level blocks top level sections
+
+:root {
+  --body-bg: #{$color-neutral};
+  --body-header-bg: #{$color-neutral-lighter};
+  --body-form-bg: #{$color-neutral-lighter};
+}
+
 body {
 
   width: 100%;
 
-  // padding: 1em;
-  background-color: #CCC;
+  background: var(--body-bg);
 
   display: grid;
   grid-gap: 1em;
@@ -15,7 +21,6 @@ body {
                         ' .   asides  . '
                         ' .   footer  . ';
   justify-content: start;
-  // align-content: center;
 
   %body-section-default {
     padding: 0;
@@ -25,15 +30,11 @@ body {
   > header {
     @extend %body-section-default;
     grid-area: header;
-    // grid-column: 1/ -1;
 
-    // background-color: $color-foreground;
-    // color: $color-key-lighter;
     padding: 1em;
-    // text-align: center;
     font-size: 1.3em;
 
-    // flex-direction: row;
+    background: var(--body-header-bg);
 
     align-items: center;
     justify-content: space-around;
@@ -42,9 +43,11 @@ body {
       text-align: center;
       font-size: .9em;
     }
+
     > h2 {
       display: none;
     }
+
     > nav {
       div {
         display: none;
@@ -58,29 +61,27 @@ body {
     grid-area: footer;
   }
 
-  // > nav {
-  //   // @extend %body-section-default;
-  //   grid-area: nav;
-  // }
-
   > main {
     @extend %body-section-default;
     grid-area: main;
 
-    display: grid;
-    grid-gap: 1em;
-    // padding: 2em;
-
-    grid-template-columns: 1fr;      // justify-content: space-around;
-
-    align-content: start;
     padding-top: 1em;
 
+    display: grid;
+    grid-gap: 1em;
+
+    grid-template-columns: 1fr;
+
+    align-content: start;
+
     section.form {
-      background-color: white;
-      padding: 1em;
       width: 100%;
+      padding: 1em;
+
+      background: var(--body-form-bg);
+
       flex-flow: column;
+      
       form {
         width: 100%;
       }
@@ -95,9 +96,11 @@ body {
   @include media-bp(1) {
     grid-template-columns: 1fr 32em   1fr;
   }
+
   @include media-bp(2) {
     grid-template-columns: 1fr 50em   1fr;
   }
+
   @include media-bp(3) {
     grid-template-columns: 1fr 16em   52em   1fr;
     grid-template-rows: min-content min-content 1fr;
@@ -107,6 +110,7 @@ body {
 
     > header {
       align-self: flex-start;
+
       flex-direction: column;
       > nav {
         div {

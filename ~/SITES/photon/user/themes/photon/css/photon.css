@@ -9,18 +9,11 @@
   font-style: normal;
 }
 /* component/article *****************************/
-:root {
-  --article-color: #36463d;
-  --article-bg: white;
-  --article-hover-color: white;
-  --article-hover-bg: #36463d;
-}
-
 article {
   width: 100%;
   padding: 1em;
-  color: var(--article-color);
-  background: var(--article-bg);
+  color: #36463d;
+  background-color: white;
   font-size: 1.1em;
   display: grid;
   grid-template-areas: " figure " " header " " main " " footer ";
@@ -174,16 +167,16 @@ article.excerpt {
   cursor: pointer;
 }
 article.excerpt:hover {
-  color: var(--article-hover-color);
-  background: var(--article-hover-bg);
+  color: white;
+  background-color: white;
 }
 article.excerpt:hover .more {
-  color: var(--color-1);
-  background: var(--color-key);
+  color: #59a678;
+  background-color: #a69159;
 }
 article.excerpt:hover a:hover {
-  color: var(--color-1);
-  background: var(--color-key);
+  color: #59a678;
+  background-color: #a69159;
 }
 article.excerpt .more {
   align-self: flex-end;
@@ -223,7 +216,7 @@ aside ul > li > span {
   font-weight: bold;
   padding: 0.25em;
   margin-left: 0.5em;
-  background: #59a678;
+  background-color: #59a678;
   border-radius: 20% 20%;
 }
 aside p {
@@ -267,6 +260,7 @@ aside.search > section {
 }
 
 .search-keyword {
+  color: #393663;
   font-weight: 700;
   font-style: normal;
 }
@@ -392,11 +386,11 @@ nav a {
   font-size: 0.9em;
 }
 nav a[href^=http] {
-  background: #a69159;
+  background-color: #a69159;
   color: white;
 }
 nav a[href^=http]:hover {
-  background: #59a678;
+  background-color: #59a678;
   color: #a69159;
 }
 nav.breadcrumbs {
@@ -440,7 +434,7 @@ nav.breadcrumbs {
   grid-row: -3/-2;
   padding: 1em;
   z-index: 1;
-  background: white;
+  background-color: white;
 }
 .showcase > article > main {
   grid-column: -2/-1;
@@ -458,7 +452,7 @@ nav.breadcrumbs {
 }
 .showcase > article > main {
   z-index: 1;
-  background: white;
+  background-color: white;
   margin-bottom: 2em;
 }
 .showcase > article > main > div {
@@ -525,15 +519,9 @@ nav.breadcrumbs {
 }
 
 /* body/_default *****************************/
-:root {
-  --body-bg: #6e8e7c;
-  --body-header-bg: white;
-  --body-form-bg: white;
-}
-
 body {
   width: 100%;
-  background: var(--body-bg);
+  background-color: #6e8e7c;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr 21em 1fr;
@@ -547,9 +535,9 @@ body > header {
   grid-area: header;
   padding: 1em;
   font-size: 1.3em;
-  background: var(--body-header-bg);
   align-items: center;
   justify-content: space-around;
+  background-color: white;
 }
 body > header > h1 {
   text-align: center;
@@ -566,16 +554,16 @@ body > footer {
 }
 body > main {
   grid-area: main;
-  padding-top: 1em;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
   align-content: start;
+  padding-top: 1em;
 }
 body > main section.form {
-  width: 100%;
+  background-color: white;
   padding: 1em;
-  background: var(--body-form-bg);
+  width: 100%;
   flex-flow: column;
 }
 body > main section.form form {
@@ -626,8 +614,8 @@ body.home > header {
 body.home > .showcase {
   grid-row: 1/3;
   grid-column: 1/-1;
-  grid-column: 2/-1;
   width: 100vw;
+  grid-column: 2/-1;
   width: 100%;
   height: 100vh;
 }
@@ -714,10 +702,10 @@ body.collection > main > header > h1 {
   display: none;
 }
 body.collection > main > header > h2 {
-  padding-left: 0.25em;
-  padding-top: 0.5em;
   letter-spacing: 0.25em;
+  padding-left: 0.25em;
   text-transform: uppercase;
+  padding-top: 0.5em;
 }
 body.collection > main > header > h2::before, body.collection > main > header > h2::after {
   content: "•";

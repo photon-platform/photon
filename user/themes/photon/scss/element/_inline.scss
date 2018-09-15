@@ -1,3 +1,5 @@
+$mark-bg-color: $color-key;
+
 b, strong {
 	font-weight: inherit;
 	// Add the correct font weight in Chrome, Edge, and Safari.
@@ -13,8 +15,7 @@ cite {
 }
 
 mark {
-  background-color: $color-key;
-  color: $color-foreground;
+  background: $color-key;
 }
 
 

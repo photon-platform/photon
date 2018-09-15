@@ -6,15 +6,10 @@
     ' header '
     ' main '
     ' footer ';
-
   grid-template-columns:  1fr;
-
   grid-gap: 1em;
 
-
-
   > figure {
-
     grid-area: figure;
 
     width: 100%;

@@ -5,8 +5,6 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
 
-//   text-align: center;
-
   //logo
   img {
     width: 100%;
@@ -14,10 +12,10 @@ header {
     margin: 0 auto;
     padding: .5em;
   }
+
   > h1 {
-//     width: 100%;
-//     margin: 0 auto;
   }
+
   > aside {
     padding: 0;
   }
