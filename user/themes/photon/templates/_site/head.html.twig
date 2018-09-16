@@ -31,7 +31,6 @@
     {% block stylesheets -%}
         {% do assets.add('theme://css/elements.css',50) -%}
         {% do assets.add('theme://css/photon.css',50) -%}
-        {% do assets.add('theme://css/custom.css',50) -%}
         {{- assets.css() -}}
     {%- endblock %}
 

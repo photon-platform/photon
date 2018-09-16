@@ -23,7 +23,7 @@ body {
   justify-content: start;
 
   %body-section-default {
-    // padding: 0;
+    --section: true;
   }
 
   // default sections
