@@ -95,10 +95,10 @@ textarea {
   // min-height: 3em;
 
   outline: 0 none;
-  border: 1px solid $color-foreground;
+  border: 1px solid var(--color-fg);
 
   text-align: left;
-  color: $color-foreground;
+  color: var(--color-fg);
   background: $color-background;
   appearance: none;
 
@@ -106,7 +106,7 @@ textarea {
   max-width: 100%;
 
   &:focus {
-    color: $color-foreground;
+    color: var(--color-fg);
   }
   // Placeholder text
   &::placeholder {
@@ -140,8 +140,8 @@ select {
   // -webkit-appearance: none;
   // background: url("../images/arrow.svg") no-repeat right yellow;
   // background-size: 25px;
-  color: $color-foreground;
-  border: 2px solid $color-foreground;
+  color: var(--color-fg);
+  border: 2px solid var(--color-fg);
 }
 
 label {

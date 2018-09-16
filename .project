@@ -4,15 +4,17 @@ export PROJECT_PORT="1111"
 export SITE="http://photon.local"
 export SERVERPATH='~/starter.photon-platform.net'
 export PROJECT="~/SITES/photon"
-export THEME="user/themes/photon"
+export THEMES="user/themes/photon"
+export PLUGINS="user/plugins"
 
 
 alias serve="php -S localhost:${PROJECT_PORT} system/router.php"
 alias site="open ${SITE}"
 alias admin="open ${SITE}/admin"
 
-alias swatch="sass --watch \
-  $PROJECT/$THEME/scss:$PROJECT/$THEME/css \
+alias swatch="scss --watch \
+  $THEMES/scss:$THEMES/css \
+  $PLUGINS/photon-event/scss:$PLUGINS/photon-event/assets \
   "
 
 alias dry-sync="rsync -auzvhP --stats --delete --dry-run user/ illumiphi.com:${SERVERPATH}/user/"

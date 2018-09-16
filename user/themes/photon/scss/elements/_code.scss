@@ -2,7 +2,7 @@
 
 :root {
   --code-color: #{$color-background};
-  --code-bg: #{$color-foreground};
+  --code-bg: var(--color-fg);
 }
 
 pre,

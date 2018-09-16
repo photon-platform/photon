@@ -20,8 +20,14 @@ $saturation: 30;
 // this generates the color pallete
 @import '_color/_default';
 
+
 $color-foreground: $color-neutral-darker;
 $color-background: $color-neutral-lighter;
+:root {
+  --color-fg: #{$color-foreground};
+  --color-bg: #{$color-background};
+}
+
 
 // BREAKPOINT
 @import '_media/var-18em';

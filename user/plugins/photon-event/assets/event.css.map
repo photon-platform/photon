@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,6CAA6C;AAI7C,gDAAgD;ACAhD,aAAc;EAEZ,eAAe,EAAE,eAAe;EAChC,YAAY,EAAE,eAAe;EAE7B,qBAAqB,EAAE,eAAe;EACtC,kBAAkB,EAAE,eAAe;;ADJrC,iDAAiD",
+"sources": ["../scss/event.scss","../scss/articles/_event.scss"],
+"names": [],
+"file": "event.css"
+}

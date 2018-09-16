@@ -2,11 +2,11 @@
 // start with a single column grid
 // top children have named grid areas
 :root {
-  --article-color: #{$color-foreground};
+  --article-color: var(--color-fg);
   --article-bg: #{$color-background};
 
   --article-hover-color: #{$color-background};
-  --article-hover-bg: #{$color-foreground};
+  --article-hover-bg: var(--color-fg);
 }
 
 article {

@@ -1,8 +1,8 @@
 
 
 :root {
-  --figcaption-bg: #{rgba($color-foreground, .7)};
-  --figcaption-color: #{$color-background};
+  --figcaption-bg:  var(--color-fg);
+  --figcaption-color: var(--color-bg);
 }
 
 img {

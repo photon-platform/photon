@@ -1,7 +1,7 @@
 // define all defaults within the HTML element
 
 :root{
-  --html-color: #{$color-foreground};
+  --html-color: var(--color-fg);
   --html-bg: #{$color-background};
 }
 
