@@ -1,24 +1,24 @@
+
+
 :root {
   --code-color: #{$color-background};
   --code-bg: #{$color-foreground};
 }
 
-
 pre,
 code,
 kbd,
 samp {
+  padding: .1em .25em;
+
+  color: var(--code-color);
+  background: var(--code-bg);
 
   font-family: monospace, monospace;
   font-size: 1em;
   line-height: 1.5;
 
-  color: var(--code-color);
-  background: var(--code-bg);
-
-  padding: .1em .25em;
   border-radius: 0;
-
 }
 
 code {
@@ -26,8 +26,9 @@ code {
   height: auto;
 
   pre & {
-    display: block;
     padding: 1em;
+
+    display: block;
   }
 
 }

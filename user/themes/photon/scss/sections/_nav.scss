@@ -2,6 +2,8 @@ nav {
 
   @extend %section-default;
 
+  position: relative;
+  
   flex-wrap: wrap;
 
   align-content: space-around;

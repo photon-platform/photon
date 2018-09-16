@@ -1,9 +1,9 @@
 
 // FONTS
-@import 'fonts/_Bree-Serif';
-@import 'fonts/_Lato';
-@import 'fonts/_photon-social';
-// @import 'fonts/_Lato';
+@import '_fonts/_Bree-Serif';
+@import '_fonts/_Lato';
+@import '_fonts/_photon-social';
+// @import '_fonts/_Lato';
 
 $font-display: $font-Bree-Serif;
 $font-root: $font-Lato;
@@ -18,12 +18,12 @@ $color-2-hue: 244;
 $saturation: 30;
 
 // this generates the color pallete
-@import 'color/_default';
+@import '_color/_default';
 
 $color-foreground: $color-neutral-darker;
 $color-background: $color-neutral-lighter;
 
 // BREAKPOINT
-@import 'media/var-18em';
-@import 'media/functions';
-@import 'media/mixins';
+@import '_media/var-18em';
+@import '_media/functions';
+@import '_media/mixins';

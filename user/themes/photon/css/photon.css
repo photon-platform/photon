@@ -1,5 +1,8 @@
 @charset "UTF-8";
+/* photon ✴ Theme Components and Templates*/
+/* Bree Serif - 400 */
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+/* Lato */
 @import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i,700,900");
 @font-face {
   font-family: "photon-social";
@@ -8,7 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* component/article *****************************/
+/* articles/article *****************************/
 :root {
   --article-color: #36463d;
   --article-bg: white;
@@ -51,11 +54,13 @@ article > header {
   flex-flow: column;
 }
 article > header > nav {
+  position: relative;
   flex-flow: row wrap;
   justify-content: flex-start;
   padding: 0;
 }
 article > header > nav a {
+  position: relative;
   margin: 0;
   margin-left: -0.25em;
 }
@@ -143,32 +148,37 @@ article > .article-gallery a > figure > figcaption {
   text-align: center;
 }
 article nav.sibling {
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  position: relative;
   padding: 1em;
+  display: grid;
+  grid-template-areas: " prev next ";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
 }
 article nav.sibling > a {
-  width: 50%;
+  width: 100%;
 }
 article nav.sibling > a.prev {
-  text-align: left;
+  grid-area: prev;
   align-self: flex-start;
+  text-align: left;
 }
 article nav.sibling > a.prev:before {
   content: "<";
-  padding-right: 0.5em;
-  float: left;
   height: 100%;
+  float: left;
+  padding-right: 0.5em;
 }
 article nav.sibling > a.next {
-  text-align: right;
+  grid-area: next;
   align-self: flex-end;
+  text-align: right;
 }
 article nav.sibling > a.next:before {
   content: ">";
-  padding-left: 0.5em;
-  float: right;
   height: 100%;
+  float: right;
+  padding-left: 0.5em;
 }
 article.excerpt {
   cursor: pointer;
@@ -199,7 +209,7 @@ article.excerpt .more {
   }
 }
 
-/* component/aside *****************************/
+/* asides/aside *****************************/
 aside {
   padding: 1em;
   text-align: left;
@@ -253,7 +263,7 @@ aside.article-share ul a {
   font-size: 1.1em;
 }
 
-/* component/search *****************************/
+/* asides/search *****************************/
 aside.search > section {
   flex-flow: column nowrap;
 }
@@ -271,13 +281,13 @@ aside.search > section {
   font-style: normal;
 }
 
-/* section/_default *****************************/
+/* sections/_default *****************************/
 .welcome, .showcase, nav, main, header, footer, .featured, .asides, section {
   display: flex;
   width: 100%;
 }
 
-/* section/asides *****************************/
+/* sections/asides *****************************/
 .asides {
   padding: 0.5em;
   flex-wrap: wrap;
@@ -289,7 +299,7 @@ aside.search > section {
   }
 }
 
-/* section/featured *****************************/
+/* sections/featured *****************************/
 .featured {
   display: grid;
   grid-gap: 1em;
@@ -342,13 +352,13 @@ aside.search > section {
   justify-content: right;
 }
 
-/* section/footer *****************************/
+/* sections/footer *****************************/
 footer {
   padding: 1em;
   flex-direction: column;
 }
 
-/* section/header *****************************/
+/* sections/header *****************************/
 header {
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -368,8 +378,9 @@ main {
   flex-flow: column nowrap;
 }
 
-/* section/nav *****************************/
+/* sections/nav *****************************/
 nav {
+  position: relative;
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
@@ -395,7 +406,7 @@ nav.breadcrumbs {
   }
 }
 
-/* section/showcase *****************************/
+/* sections/showcase *****************************/
 .showcase {
   display: grid;
   grid-template-columns: 1fr;
@@ -453,7 +464,8 @@ nav.breadcrumbs {
 .showcase > article > footer {
   display: none;
 }
-/* section/welcome *****************************/
+/* sections/welcome *****************************/
+/* the welcome panel */
 .welcome {
   padding: 2em;
   display: grid;
@@ -506,7 +518,7 @@ nav.breadcrumbs {
   text-align: right;
 }
 
-/* body/_default *****************************/
+/* templates/_default *****************************/
 :root {
   --body-bg: #6e8e7c;
   --body-header-bg: white;
@@ -521,9 +533,6 @@ body {
   grid-template-columns: 1fr 21em 1fr;
   grid-template-areas: " header   header  header " " .   main    . " " .   asides  . " " .   footer  . ";
   justify-content: start;
-}
-body.home > .categories, body.home > .featured, body.home > .welcome, body.home > .showcase, body > .asides, body > main, body > footer, body > header {
-  padding: 0;
 }
 body > header {
   grid-area: header;
@@ -595,7 +604,7 @@ body > .asides {
     grid-template-columns: 1fr 16em 70em 1fr;
   }
 }
-/* body/home *****************************/
+/* templates/home *****************************/
 body.home {
   grid-template-areas: " header   header  header " " showcase  showcase  showcase " " .   welcome  . " " .   featured  . " " .   categories  . " " .   main    . " " .   asides  . " " .   footer  . ";
   align-content: center;
@@ -609,7 +618,6 @@ body.home > .showcase {
   grid-row: 1/3;
   grid-column: 1/-1;
   grid-column: 2/-1;
-  width: 100vw;
   width: 100%;
   height: 100vh;
 }
@@ -678,8 +686,8 @@ body.home > main > article > footer > nav {
     height: 100%;
   }
 }
-/* body/article *****************************/
-/* body/archive *****************************/
+/* templates/article *****************************/
+/* templates/archive *****************************/
 body.collection {
   grid-template-rows: auto auto 1fr;
 }
@@ -687,8 +695,8 @@ body.collection > main {
   grid-template-columns: 1fr;
 }
 body.collection > main > header {
-  padding: 1rem;
   grid-column: 1/-1;
+  padding: 1rem;
   font-size: 1.3em;
   flex-flow: column nowrap;
 }
@@ -703,7 +711,6 @@ body.collection > main > header > h2 {
 }
 body.collection > main > header > h2::before, body.collection > main > header > h2::after {
   content: "•";
-  margin: 0;
   padding: 0 0.25em;
 }
 body.collection > main > header > figure {
@@ -718,11 +725,9 @@ body.collection > main > header > figure > img {
   width: 100%;
   height: 100%;
   max-width: 100%;
-  padding: 0;
   object-fit: cover;
 }
 body.collection > main > header blockquote {
-  padding: 0;
   margin: 0.5em;
 }
 body.collection > main article {

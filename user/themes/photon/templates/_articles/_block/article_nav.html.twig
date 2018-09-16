@@ -1,12 +1,23 @@
 {% block article_nav -%}
-  {% if not page.isFirst or not page.isLast -%}
+  {# reverse  #}
+  {% set prevPage = page.nextSibling -%}
+  {% set nextPage = page.prevSibling -%}
+
+  {% if nextPage.url or prevPage.url -%}
         <nav class="sibling">
-          {% if not page.isFirst -%}
-          <a href="{{ page.nextSibling.url }}" class="prev">Prev</a>
+          {{ dump( nextPage.url ) }}
+          {{ dump( prevPage.url ) }}
+
+          {% if prevPage.url -%}
+           <a href="{{ prevPage.url }}" class="prev"
+             data-tooltip="{{ prevPage.title }}"
+             title="{{ prevPage.title }}" >Prev</a>
           {%- endif %}
 
-          {% if not page.isLast -%}
-            <a href="{{ page.prevSibling.url }}" class="next">Next</a>
+          {% if nextPage.url -%}
+            <a href="{{ nextPage.url }}" class="next"
+              data-tooltip="{{ nextPage.title }}"
+              title="{{ nextPage.title }}" >Next</a>
           {%- endif %}
 
         </nav>

@@ -1,44 +1,48 @@
-//Photon Theme Index
-@import "config";
+/* photon ✴ Theme Components and Templates*/
+@import "_config";
 // set defaults from simplest to most complex
 
 
+@import 'articles/__mixins/_mixins';
+/* articles/article *****************************/
+@import 'articles/article';
 
-@import 'component/__mixins/_mixins';
-/* component/article *****************************/
-@import 'component/article';
-/* component/aside *****************************/
-@import 'component/aside';
-/* component/search *****************************/
-@import 'component/search';
 
-/* section/_default *****************************/
-@import 'section/_default';
-/* section/asides *****************************/
-@import 'section/asides';
-/* section/featured *****************************/
-@import 'section/featured';
-/* section/footer *****************************/
-@import 'section/footer';
-/* section/header *****************************/
-@import 'section/header';
+/* asides/aside *****************************/
+@import 'asides/aside';
+/* asides/search *****************************/
+@import 'asides/search';
+
+
+/* sections/_default *****************************/
+@import 'sections/_default';
+/* sections/asides *****************************/
+@import 'sections/asides';
+/* sections/featured *****************************/
+@import 'sections/featured';
+/* sections/footer *****************************/
+@import 'sections/footer';
+/* sections/header *****************************/
+@import 'sections/header';
 /* on/main *****************************/
-@import 'section/main';
-/* section/nav *****************************/
-@import 'section/nav';
-/* section/showcase *****************************/
-@import 'section/showcase';
-/* section/welcome *****************************/
-@import 'section/welcome';
+@import 'sections/main';
+/* sections/nav *****************************/
+@import 'sections/nav';
+/* sections/showcase *****************************/
+@import 'sections/showcase';
+/* sections/welcome *****************************/
+@import 'sections/welcome';
 
-/* body/_default *****************************/
-@import 'body/_default';
-/* body/home *****************************/
-@import 'body/home';
-/* body/article *****************************/
-@import 'body/article';
-/* body/archive *****************************/
-@import 'body/collection';
+
+/* templates/_default *****************************/
+@import 'templates/_default';
+/* templates/home *****************************/
+@import 'templates/home';
+/* templates/article *****************************/
+@import 'templates/article';
+/* templates/archive *****************************/
+@import 'templates/collection';
+
 
 /* Print *****************************/
 @import 'print/_default';

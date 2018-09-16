@@ -1,8 +1,9 @@
+/* the welcome panel */
+
 .welcome {
   @extend %section-default;
 
   padding: 2em;
-
 
   display: grid;
   grid-gap: 1em;

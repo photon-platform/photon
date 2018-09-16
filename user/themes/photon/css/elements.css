@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* photon ✴ Theme Elements*/
+/* Bree Serif - 400 */
 @import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+/* Lato */
 @import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i,700,900");
 @font-face {
   font-family: "photon-social";
@@ -9,7 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* element/_default *****************************/
+/* elements/_index *****************************/
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@
   transition: background-color 0.5s;
 }
 
-/* element/html *****************************/
+/* elements/html *****************************/
 :root {
   --html-color: #36463d;
   --html-bg: white;
@@ -36,7 +38,7 @@ html {
   text-align: left;
 }
 
-/* element/headings *****************************/
+/* elements/headings *****************************/
 h4, h3, h2, h1 {
   font-family: "Bree Serif", serif;
   font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
@@ -61,7 +63,7 @@ h4 {
   font-size: 1.1em;
 }
 
-/* element/blocks *****************************/
+/* elements/blocks *****************************/
 p, div,
 dd, dt,
 details, summary {
@@ -69,7 +71,7 @@ details, summary {
   font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
 }
 
-/* element/lists *****************************/
+/* elements/lists *****************************/
 li, ol, ul {
   margin-left: 0.5em;
 }
@@ -86,7 +88,7 @@ li {
   font-feature-settings: "kern" 1, "onum" 1, "liga" 1;
 }
 
-/* element/blockquotes *****************************/
+/* elements/blockquotes *****************************/
 :root {
   --blockquote-bg: #36463d;
 }
@@ -123,7 +125,7 @@ blockquote p {
   overflow: visible;
 }
 
-/* element/code *****************************/
+/* elements/code *****************************/
 :root {
   --code-color: white;
   --code-bg: #36463d;
@@ -133,12 +135,12 @@ pre,
 code,
 kbd,
 samp {
+  padding: 0.1em 0.25em;
+  color: var(--code-color);
+  background: var(--code-bg);
   font-family: monospace, monospace;
   font-size: 1em;
   line-height: 1.5;
-  color: var(--code-color);
-  background: var(--code-bg);
-  padding: 0.1em 0.25em;
   border-radius: 0;
 }
 
@@ -146,15 +148,15 @@ code {
   height: auto;
 }
 pre code {
-  display: block;
   padding: 1em;
+  display: block;
 }
 
 pre {
   display: block;
 }
 
-/* element/a *****************************/
+/* elements/a *****************************/
 :root {
   --a-color: #a69159;
   --a-hover-bg: #9cc9ae;
@@ -183,11 +185,10 @@ a.active {
 }
 a.active::before, a.active::after {
   content: "•";
-  margin: 0;
   padding: 0 0.5em;
 }
 
-/* element/inline *****************************/
+/* elements/inline *****************************/
 :root {
   --mark-bg: #a69159;
 }
@@ -236,21 +237,21 @@ sup {
   top: -0.5em;
 }
 
-/* element/figure *****************************/
+/* elements/figure *****************************/
 :root {
   --figcaption-bg: rgba(54, 70, 61, 0.7);
   --figcaption-color: white;
 }
 
 img {
-  display: block;
   border-style: none;
+  display: block;
 }
 
 figure {
-  display: block;
   position: relative;
   height: auto;
+  display: block;
 }
 figure img {
   max-width: 100%;
@@ -273,7 +274,7 @@ figure:hover > figcaption {
   opacity: 1;
 }
 
-/* element/tables *****************************/
+/* elements/tables *****************************/
 table {
   max-width: 100%;
 }
@@ -289,7 +290,7 @@ th {
   border-bottom: 2px solid #36463d;
 }
 
-/* element/forms *****************************/
+/* elements/forms *****************************/
 button,
 input,
 optgroup,

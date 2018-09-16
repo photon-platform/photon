@@ -26,9 +26,8 @@ body.home {
     grid-column: 1 / -1;
     grid-column: 2 / -1;
 
-    width: 100vw;
+    // width: 100vw;
     width: 100%;
-
     height: 100vh;
 
   }
@@ -41,13 +40,11 @@ body.home {
   > .featured {
     @extend %body-section-default;
     grid-area: featured;
-
   }
 
   > .categories {
     @extend %body-section-default;
     grid-area: categories;
-
   }
 
   > main {

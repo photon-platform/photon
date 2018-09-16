@@ -1,23 +1,22 @@
 
+
 :root {
   --figcaption-bg: #{rgba($color-foreground, .7)};
   --figcaption-color: #{$color-background};
 }
 
 img {
-
-  display: block;
   border-style: none;
 
+  display: block;
 }
 
 figure {
 
-  display: block;
   position: relative;
-
   height: auto;
 
+  display: block;
 
   img {
 
@@ -56,5 +55,4 @@ figure {
     }
 
   }
-
 }
