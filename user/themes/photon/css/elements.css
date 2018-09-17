@@ -26,7 +26,7 @@
 /* elements/html *****************************/
 :root {
   --html-color: var(--color-fg);
-  --html-bg: white; }
+  --html-bg: var(--color-bg); }
 
 html {
   height: 100%;
@@ -111,7 +111,7 @@ blockquote {
 
 /* elements/code *****************************/
 :root {
-  --code-color: white;
+  --code-color: var(--color-bg);
   --code-bg: var(--color-fg); }
 
 pre,
@@ -230,6 +230,9 @@ figure {
     opacity: 1; }
 
 /* elements/tables *****************************/
+:root {
+  --table-border-color: var(--color-fg); }
+
 table {
   max-width: 100%; }
 
@@ -240,7 +243,7 @@ td {
 th {
   font-weight: 700;
   font-family: "Bree Serif", serif;
-  border-bottom: 2px solid #36463d; }
+  border-bottom: 2px solid var(--table-border-color); }
 
 /* elements/forms *****************************/
 button,

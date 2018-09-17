@@ -1,40 +1,40 @@
 {% set page_title = header.title ~ ' | ' ~ site.title %}
 
   <head>
-    {% block head -%}
+    {% block head %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if header.description -%}
+    {% if header.description %}
     <meta name="description" content="{{ header.description }}">
-    {% else -%}
+    {% else %}
     <meta name="description" content="{{ site.description }}">
-    {% endif -%}
+    {% endif %}
     {% if header.robots %}
     <meta name="robots" content="{{ header.robots }}">
-    {% endif -%}
+    {% endif %}
+
     <link rel="icon"  href="/images/favicon.png">
+
     <title>{{ page_title }}</title>
-    <!-- rss -->
+
     <link rel="alternate" href="{{ page.url ~ '.rss' }}" title="{{ page_title }}" type="application/atom+xml">
 
-    <!-- opengraph -->
     {% block opengraph -%}
     <meta property="og:title" content="{{ page_title }}">
     <meta property="og:description" content="{{ page.summary|striptags }}">
     <meta property="og:image" content="{{ page.featured_image }}">
-
     <meta property="og:url" content="{{ page.url }}">
     <meta name="twitter:card" content="{{ page.featured_image }}">
     {% endblock  %}
 
-    {% block stylesheets -%}
+    {% block stylesheets %}
         {% do assets.add('theme://css/elements.css',50) -%}
         {% do assets.add('theme://css/photon.css',50) -%}
-        {{- assets.css() -}}
-    {%- endblock %}
+        {{ assets.css() }}
+    {% endblock %}
 
-    {% block javascripts -%}
+    {% block javascripts %}
         {% do assets.add('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 101) -%}
 
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 -%}
@@ -47,8 +47,8 @@
         {% do assets.addJs('theme://js/showcase.js', {'priority':300, 'pipeline':false, 'loading':'async', 'group':'bottom'}) -%}
 
 
-        {{- assets.js() -}}
-    {%- endblock %}
+        {{ assets.js() }}
+    {% endblock %}
 
-  {% endblock head -%}
+  {% endblock head %}
   </head>

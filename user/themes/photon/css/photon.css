@@ -17,8 +17,8 @@
 /* articles/article *****************************/
 :root {
   --article-color: var(--color-fg);
-  --article-bg: white;
-  --article-hover-color: white;
+  --article-bg: var(--color-bg);
+  --article-hover-color: var(--color-bg);
   --article-hover-bg: var(--color-fg); }
 
 article {
@@ -358,7 +358,7 @@ nav {
       grid-row: -3 / -2;
       padding: 1em;
       z-index: 1;
-      background: white; }
+      background: var(--color-bg); }
     .showcase > article > main {
       grid-column: -2 / -1;
       grid-row: -2 / -1;
@@ -367,7 +367,7 @@ nav {
       padding: 1em;
       margin-right: 2em;
       margin-bottom: 2em;
-      background: white; }
+      background: var(--color-bg); }
       .showcase > article > main > header {
         text-align: left; }
       .showcase > article > main > div {
@@ -423,8 +423,8 @@ nav {
 /* templates/_default *****************************/
 :root {
   --body-bg: #6e8e7c;
-  --body-header-bg: white;
-  --body-form-bg: white; }
+  --body-header-bg: var(--color-bg);
+  --body-form-bg: var(--color-bg); }
 
 body {
   width: 100%;

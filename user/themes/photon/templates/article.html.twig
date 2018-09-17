@@ -1,8 +1,12 @@
 {% extends 'default.html.twig' %}
-{% use "_articles/article.html.twig" %}
+{% block template -%}
+{{ parent() }}
+<!-- user/themes/photon/templates/article.html.twig -->
+{%- endblock template %}
+
 {% block body_template_classes %}{{ parent() }} article{% endblock body_template_classes %}
 
 {# TODO: this is exactly what default does - but this is a good pattern #}
 {% block content %}
-  {{ block('article') }}
+  {{ parent() }}
 {% endblock content %}

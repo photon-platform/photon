@@ -1,5 +1,10 @@
 {% extends 'default.html.twig' %}
 {% use "_sections/pagination.html.twig" %}
+{% block template -%}
+{{ parent() }}
+<!-- user/themes/photon/templates/collection.html.twig -->
+{%- endblock template %}
+
 {% block body_template_classes %}{{ parent() }} collection{% endblock body_template_classes %}
 
     {% block content %}

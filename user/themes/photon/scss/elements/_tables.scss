@@ -1,4 +1,7 @@
-$table-border-color: $color-neutral-darker;
+
+:root {
+	--table-border-color: var(--color-fg);
+}
 
 table {
 	max-width: 100%;
@@ -12,5 +15,5 @@ td {
 th {
 	font-weight: 700;
 	font-family: $font-display;
-	border-bottom: 2px solid $table-border-color;
+	border-bottom: 2px solid var(--table-border-color);
 }

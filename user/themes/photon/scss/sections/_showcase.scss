@@ -1,8 +1,3 @@
-
-
-$opacity: 1;
-
-
 .showcase {
 
   @extend %section-default;
@@ -53,7 +48,7 @@ $opacity: 1;
 
       z-index: 1;
 
-      background: rgba($color-background, $opacity);
+      background: var(--color-bg);
     }
 
     > main {
@@ -68,7 +63,7 @@ $opacity: 1;
       margin-right: 2em;
       margin-bottom: 2em;
 
-      background: rgba($color-background, $opacity)  ;
+      background: var(--color-bg);
 
       > header {
         text-align: left;

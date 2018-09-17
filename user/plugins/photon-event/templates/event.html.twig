@@ -1,4 +1,8 @@
 {% extends 'article.html.twig' %}
+{% block template -%}
+{{ parent() }}
+<!-- user/plugins/photon-organization/templates/event.html.twig -->
+{%- endblock %}
 {% block body_template_classes %}{{ parent() }} event{% endblock body_template_classes %}
 
 {% block content %}

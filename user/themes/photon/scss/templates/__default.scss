@@ -3,8 +3,8 @@
 
 :root {
   --body-bg: #{$color-neutral};
-  --body-header-bg: #{$color-neutral-lighter};
-  --body-form-bg: #{$color-neutral-lighter};
+  --body-header-bg: var(--color-bg);
+  --body-form-bg: var(--color-bg);
 }
 
 body {

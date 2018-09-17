@@ -2,7 +2,7 @@
 
 :root{
   --html-color: var(--color-fg);
-  --html-bg: #{$color-background};
+  --html-bg: var(--color-bg);
 }
 
 html {

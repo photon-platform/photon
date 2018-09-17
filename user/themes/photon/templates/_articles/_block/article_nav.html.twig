@@ -1,8 +1,7 @@
 {% block article_nav -%}
-  {# reverse  #}
+  {# reverse  -#}
   {% set prevPage = page.nextSibling -%}
   {% set nextPage = page.prevSibling -%}
-
   {% if nextPage.url or prevPage.url -%}
         <nav class="sibling">
           {{ dump( nextPage.url ) }}
@@ -21,5 +20,5 @@
           {%- endif %}
 
         </nav>
-  {% endif %}
+  {%- endif %}
 {%- endblock %}

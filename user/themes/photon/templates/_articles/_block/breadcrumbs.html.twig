@@ -2,13 +2,11 @@
 Original Code from breadcrumbs.plugin
 - still need it for breadcrumbs.get
 #}
-
 {% block breadcrumbs -%}
   {% if config.plugins.breadcrumbs.enabled -%}
     {% set crumbs = breadcrumbs.getFromPage(page) -%}
     {% set breadcrumbs_config = config.plugins.breadcrumbs -%}
-    {%- if crumbs | length > 1 or breadcrumbs_config.show_all %}
-          {#{ page.url }#}
+    {%- if crumbs | length > 1 or breadcrumbs_config.show_all -%}
           <nav class="breadcrumbs">
             {% for crumb in crumbs -%}
               {% if not loop.last -%}
@@ -29,5 +27,5 @@ Original Code from breadcrumbs.plugin
           </nav>
 
     {%- endif -%}
-  {% endif -%}
-{%- endblock -%}
+  {%- endif -%}
+{%- endblock %}

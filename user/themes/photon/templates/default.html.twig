@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+{% block template -%}
+<!-- user/themes/photon/templates/default.html.twig -->
+{%- endblock %}
 
 {% include '_site/head.html.twig' %}
 
@@ -13,8 +16,8 @@
     {% block main -%}
 
     <main>
-      {%- block content -%}
-      {%- include '_articles/article.html.twig' -%}
+      {% block content -%}
+      {% include ["_articles/#{ page.template }.html.twig", "_articles/article.html.twig"]  -%}
       {%- endblock content -%}
     </main>
 
@@ -28,6 +31,11 @@
       {% include '_sections/footer.html.twig' %}
     {%- endblock footer %}
 
+
+    {% block bottom -%}
+
+    {{- assets.js('bottom') -}}
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: {
@@ -36,8 +44,6 @@
       })
     </script>
 
-    {% block bottom -%}
-    {{- assets.js('bottom') -}}
     {%- endblock %}
 
   </body>

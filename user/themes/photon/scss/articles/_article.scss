@@ -3,9 +3,9 @@
 // top children have named grid areas
 :root {
   --article-color: var(--color-fg);
-  --article-bg: #{$color-background};
+  --article-bg: var(--color-bg);
 
-  --article-hover-color: #{$color-background};
+  --article-hover-color: var(--color-bg);
   --article-hover-bg: var(--color-fg);
 }
 
