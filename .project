@@ -1,3 +1,6 @@
+# photon ✴
+# v0.1.1
+
 source ~/.bash_profile
 
 export PROJECT_PORT="1111"
