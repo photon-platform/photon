@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,oDAAoD;AAIpD,uDAAuD;ACAvD,oBAAqB;EAEnB,eAAe,EAAE,eAAe;EAChC,YAAY,EAAE,eAAe;EAE7B,qBAAqB,EAAE,eAAe;EACtC,kBAAkB,EAAE,eAAe;;ADJrC,wDAAwD;AEDtD,wBAAO;EACL,MAAM,EAAE,IAAI",
+"sources": ["../scss/organization.scss","../scss/articles/_organization.scss","../scss/templates/_organization.scss"],
+"names": [],
+"file": "organization.css"
+}

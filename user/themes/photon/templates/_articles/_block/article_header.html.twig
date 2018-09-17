@@ -1,14 +1,16 @@
 {% block article_header -%}
-        <header>
-          {% include '_articles/_block/breadcrumbs.html.twig' with { 'page': page } %}
+  <header>
+    {% include '_articles/_block/breadcrumbs.html.twig' with { 'article': article } %}
 
-          <h1>
-            {%- if page.active -%}
-              {{- page.title -}}
-            {%- else -%}
-              <a href="{{ page.url }}">{{ page.title }}</a>
-            {%- endif -%}
-          </h1>
-          <time class="nicetime" title="{{ page.date|date("Y-m-d") }}" datetime="{{ page.date }}">{{ page.date|date("M d Y") }}</time>
-        </header>
+    <h1>
+      {%- if article.active -%}
+        {{- article.title -}}
+      {%- else -%}
+        <a href="{{ article.url }}">{{ article.title }}</a>
+      {%- endif -%}
+    </h1>
+    <time class="nicetime"
+      title="{{ article.date|date("Y-m-d") }}"
+      datetime="{{ article.date }}">{{ article.date|date("M d Y") }}</time>
+  </header>
 {%- endblock %}

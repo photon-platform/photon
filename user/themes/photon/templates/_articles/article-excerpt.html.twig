@@ -3,7 +3,7 @@
 {% set excerpt = true -%}
 {% block article -%}
       <!-- user/themes/photon/templates/_articles/article-excerpt.html.twig -->
-      <article class="{{ page.template }} excerpt" data-url="{{ page.url }}">
+      <article class="{{ article.template }} excerpt" data-url="{{ article.url }}">
         {{ block('article_figure') }}
         {{ block('article_header') }}
         {{ block('article_main_excerpt') }}

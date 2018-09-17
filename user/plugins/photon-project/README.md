@@ -3,7 +3,7 @@
 
 **This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
 
-The **Project** Plugin is for [Grav CMS](http://github.com/getgrav/grav). structure, style and logic for Project content
+The **Project** Plugin is for [Grav CMS](http://github.com/getgrav/grav). project stemplates and styles
 
 ## Installation
 

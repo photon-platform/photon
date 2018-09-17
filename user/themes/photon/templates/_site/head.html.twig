@@ -2,6 +2,7 @@
 
   <head>
     {% block head %}
+    <title>{{ page_title }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +17,9 @@
 
     <link rel="icon"  href="/images/favicon.png">
 
-    <title>{{ page_title }}</title>
-
     <link rel="alternate" href="{{ page.url ~ '.rss' }}" title="{{ page_title }}" type="application/atom+xml">
 
-    {% block opengraph -%}
+    {% block opengraph %}
     <meta property="og:title" content="{{ page_title }}">
     <meta property="og:description" content="{{ page.summary|striptags }}">
     <meta property="og:image" content="{{ page.featured_image }}">
@@ -29,26 +28,168 @@
     {% endblock  %}
 
     {% block stylesheets %}
-        {% do assets.add('theme://css/elements.css',50) -%}
-        {% do assets.add('theme://css/photon.css',50) -%}
-        {{ assets.css() }}
+        {% do assets.add('theme://css/elements.css', {priority:100, group:'photon'} ) -%}
+        {% do assets.add('theme://css/photon.css', {priority:50, group:'photon'} ) -%}
     {% endblock %}
+    {{ assets.css() }}
+    <!--
+    photon -->
+    {{ assets.css('photon') }}
+
 
     {% block javascripts %}
-        {% do assets.add('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 101) -%}
+        {% do assets.add( 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+          {'priority':101, 'loading':'defer'} ) %}
 
-        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 -%}
-            {% do assets.add('https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js') -%}
-            {% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') -%}
-        {% endif -%}
-        {% do assets.add('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js', 103) -%}
+        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+            {% do assets.add('https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
+              {'priority':101, 'loading':'defer'} ) %}
+            {% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
+              {'priority':101, 'loading':'defer'} ) %}
+        {% endif %}
+        {% do assets.add('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js',
+          {'priority':101, 'loading':'defer'} ) %}
 
-        {% do assets.addJs('theme://js/article.js', {'priority':200, 'pipeline':false, 'loading':'async', 'group':'bottom'}) -%}
-        {% do assets.addJs('theme://js/showcase.js', {'priority':300, 'pipeline':false, 'loading':'async', 'group':'bottom'}) -%}
+        {% do assets.addJs('theme://js/article.js',
+          {'priority':200, 'pipeline':false, 'loading':'defer', 'group':'photon' }) %}
+        {% do assets.addJs('theme://js/showcase.js',
+          {'priority':300, 'pipeline':false, 'loading':'defer', 'group':'photon' }) %}
 
-
-        {{ assets.js() }}
     {% endblock %}
+
+    {{ assets.js() }}
+    <!--
+    photon -->
+    {{ assets.js('photon') }}
+
+    {% block schema %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url }}"
+      },
+      "headline": "{{ page_title }}",
+      "image": [
+        "{{ page.featured_image }}"
+       ],
+      "datePublished": "{{ page.date }}",
+      "dateModified": "{{ page.modified }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.author }}"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/images/logo.png"
+        }
+      },
+      "description": "{{ page.summary|striptags }}"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Restaurant",
+      "@id": "<%- config.organization.id %>",
+      "url": "<%- config.organization.url %>",
+      "name": "<%- config.organization.name %>",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%- config.url %><%- url_for(config.organization.logo) %>"
+      },
+      "image": [
+        "<%- config.url %><%- url_for(config.organization.image) %>"
+       ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "<%- config.organization.address.streetAddress %>",
+        "addressLocality": "<%- config.organization.address.addressLocality %>",
+        "addressRegion": "<%- config.organization.address.addressRegion %>",
+        "postalCode": "<%- config.organization.address.postalCode %>",
+        "addressCountry": "<%- config.organization.address.addressCountry %>"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": <%- config.organization.geo.lat %>,
+        "longitude": <%- config.organization.geo.long %>
+      },
+      "telephone": "<%- config.organization.telephone %>",
+      "servesCuisine": "<%- config.organization.servesCuisine %>",
+      "priceRange": "<%- config.organization.priceRange %>",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "<%- config.organization.reservationURL %>",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        },
+        "result": {
+          "@type": "FoodEstablishmentReservation",
+          "name": "Reserve table"
+        }
+      },
+      <%  var hours = config.organization.hours  -%>
+      "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Monday",
+            "opens":  "<%- hours.Monday.opens %>",
+            "closes":  "<%- hours.Monday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Tuesday",
+            "opens":  "<%- hours.Tuesday.opens %>",
+            "closes":  "<%- hours.Tuesday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Wednesday",
+            "opens":  "<%- hours.Wednesday.opens %>",
+            "closes":  "<%- hours.Wednesday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Thursday",
+            "opens":  "<%- hours.Thursday.opens %>",
+            "closes":  "<%- hours.Thursday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Friday",
+            "opens":  "<%- hours.Friday.opens %>",
+            "closes":  "<%- hours.Friday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Saturday",
+            "opens":  "<%- hours.Saturday.opens %>",
+            "closes":  "<%- hours.Saturday.closes %>"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "http://schema.org/Sunday",
+            "opens":  "<%- hours.Sunday.opens %>",
+            "closes":  "<%- hours.Sunday.closes %>"
+          }
+      ]
+    }
+    </script>
+
+    {% endblock schema %}
+
 
   {% endblock head %}
   </head>

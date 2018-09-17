@@ -1,5 +1,5 @@
-{% set share_url = page.permalink -%}
-{% set share_description = page.summary -%}
+{% set share_url = article.permalink -%}
+{% set share_description = article.summary -%}
 {% set share_image = config.url + url_for(config.logo) %}
 
           <aside class="article-share">
@@ -9,6 +9,6 @@
               <li><a target="_blank" href="https://twitter.com/home?status={{ share_url }}" >t</a></li>
               <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ article.title|url_encode }}" >i</a></li>
               <li><a target="_blank" href="https://pinterest.com/pin/create/button/?url={{ share_url }}&media={{ share_image }}&description={{ share_description|striptags|url_encode }}" >p</a></li>
-              <li><a target="_blank" href="{{ page.url ~ '.rss' }}" >r</a></li>
+              <li><a target="_blank" href="{{ article.url ~ '.rss' }}" >r</a></li>
             </ul>
           </aside>

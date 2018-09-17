@@ -1,4 +1,5 @@
 en:
   PLUGIN_PHOTON_PERSON:
-    TEXT_VARIABLE: Text Variable
-    TEXT_VARIABLE_HELP: Text to add to the top of a page
+
+    DESCRIPTION: description
+    DESCRIPTION_HELP: add a description for Person

@@ -1,12 +1,12 @@
 {% block article_figure -%}
-  {% set header_image = page.header.header_image | defined(true) -%}
-  {% set featured_image = page.header.featured_image -%}
+  {% set header_image = article.header.header_image | defined(true) -%}
+  {% set featured_image = article.header.featured_image -%}
     <figure>
     {%- if header_image -%}
       {% if featured_image -%}
-        {% set header_image_media = page.media.images[featured_image] -%}
+        {% set header_image_media = article.media.images[featured_image] -%}
       {% else -%}
-        {% set header_image_media = page.media.images | first -%}
+        {% set header_image_media = article.media.images | first -%}
       {% endif -%}
       {{ header_image_media.html('', '', '') }}
     {%- endif -%}

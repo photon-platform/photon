@@ -1,7 +1,7 @@
 {% block article_gallery -%}
-{% if page.header.show_gallery == 1 %}
+{% if article.header.show_gallery == 1 %}
       <div class="article-gallery">
-        {% for image in page.media.images -%}
+        {% for image in article.media.images -%}
         <!-- <div >
           <div >
             {{ image.lightbox().cropZoom(200,200).html('Sample Image') }}

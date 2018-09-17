@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* photon ✴ project Components and Templates */
+/* articles/project *****************************/
+article.project {
+  --article-color: var(--color-fg);
+  --article-bg: var(--color-bg);
+  --article-hover-color: var(--color-bg);
+  --article-hover-bg: var(--color-fg); }
+
+/* templates/project *****************************/
+
+/*# sourceMappingURL=project.css.map */

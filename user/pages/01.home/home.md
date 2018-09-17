@@ -1,10 +1,9 @@
 ---
 title: Home
-body_classes: null
+child_type: article
 featured: false
 show_gallery: true
-author: phi
-child_type: article
+author: /home
 content:
     items: '@root.children'
 ---

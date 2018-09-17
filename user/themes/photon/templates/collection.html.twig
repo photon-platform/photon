@@ -1,28 +1,26 @@
 {% extends 'default.html.twig' %}
 {% use "_sections/pagination.html.twig" %}
-{% block template -%}
+{% block template %}
 {{ parent() }}
 <!-- user/themes/photon/templates/collection.html.twig -->
-{%- endblock template %}
+{% endblock template %}
 
 {% block body_template_classes %}{{ parent() }} collection{% endblock body_template_classes %}
 
-    {% block content %}
+{% block content %}
+<main>
+  {{ parent() }}
 
-      {{ parent() }}
+  {% block list %}
+  <p>page count: {{ page.children.count() }}</p>
 
-      {% block list -%}
-      <p>page count: {{ page.children.count() }}</p>
+  {% for article in page.children %}
+    {% if not (article.url == page.url) -%}
+      {% include "_articles/article-excerpt.html.twig" with { 'article': article } %}
+    {% endif %}
+  {% endfor %}
+  {% endblock list %}
 
-      {% for p in page.children -%}
-        {% if not (p.url == page.url) -%}
-        {% include "_articles/article-excerpt.html.twig" with { 'page': p } %}
-
-        {% endif %}
-
-      {% endfor -%}
-      {%- endblock list %}
-
-      {{ block('pagination') }}
-
-    {% endblock content %}
+  {{ block('pagination') }}
+</main>
+{% endblock content %}

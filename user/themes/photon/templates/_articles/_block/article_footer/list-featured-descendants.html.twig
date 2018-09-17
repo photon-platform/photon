@@ -1,12 +1,12 @@
-{% set options = { items: {'@self.descendants': p.url }, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
+{% set options = { items: {'@self.descendants': article.url }, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
 {% set self_featured = page.collection(options) -%}
-            <aside class="featured-list">
-              <h1>Featured</h1>
-              {% for p in self_featured -%}
-                {% for tag in p.taxonomy.tag -%}
-                  {% if tag == 'featured' -%}
-                  <a  href="{{ p.url }}">{{ p.title }}</a>
-                  {%- endif %}
-                {%- endfor %}
-              {%- endfor %}
-            </aside>
+  <aside class="featured-list">
+    <h1>Featured</h1>
+    {% for p in self_featured -%}
+      {% for tag in p.taxonomy.tag -%}
+        {% if tag == 'featured' -%}
+        <a  href="{{ p.url }}">{{ p.title }}</a>
+        {%- endif %}
+      {%- endfor %}
+    {%- endfor %}
+  </aside>

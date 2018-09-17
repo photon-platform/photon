@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* photon ✴ person Components and Templates */
+/* articles/person *****************************/
+article.person {
+  --article-color: var(--color-fg);
+  --article-bg: var(--color-bg);
+  --article-hover-color: var(--color-bg);
+  --article-hover-bg: var(--color-fg); }
+
+/* templates/person *****************************/
+
+/*# sourceMappingURL=person.css.map */

@@ -1,8 +1,8 @@
-{% if page.taxonomy.category -%}
-          <aside class="article-categories">
-            <h1>Categories:</h1>
-            {% for category in page.taxonomy.category %}
-              <a href="/search/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
-            {% endfor -%}
-          </aside>
+{% if article.taxonomy.category -%}
+  <aside class="article-categories">
+    <h1>Categories:</h1>
+    {% for category in article.taxonomy.category %}
+      <a href="/search/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+    {% endfor -%}
+  </aside>
 {%- endif %}

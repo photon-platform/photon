@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* photon ✴ organization Components and Templates */
+/* articles/organization *****************************/
+article.organization {
+  --article-color: var(--color-fg);
+  --article-bg: var(--color-bg);
+  --article-hover-color: var(--color-bg);
+  --article-hover-bg: var(--color-fg); }
+
+/* templates/organization *****************************/
+body.organization > main {
+  --test: none; }
+
+/*# sourceMappingURL=organization.css.map */

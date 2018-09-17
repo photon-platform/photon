@@ -17,7 +17,7 @@
 
     <main>
       {% block content -%}
-      {% include ["_articles/#{ page.template }.html.twig", "_articles/article.html.twig"]  -%}
+      {% include ["_articles/#{ page.template }.html.twig", "_articles/article.html.twig"] with { 'article': page } %}
       {%- endblock content -%}
     </main>
 

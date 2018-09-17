@@ -1,7 +1,7 @@
-{% if page.taxonomy.tag %}
+{% if article.taxonomy.tag %}
             <aside class="article-tags">
               <h1>Tags:</h1>
-              {% for tag in page.taxonomy.tag %}
+              {% for tag in article.taxonomy.tag %}
                 <a href="/search/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
               {% endfor %}
             </aside>

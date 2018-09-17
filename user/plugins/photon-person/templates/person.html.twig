@@ -1,2 +1,8 @@
-{% extends 'article.html.twig' %}
+{% extends 'collection.html.twig' %}
 {% block body_template_classes %}{{ parent() }} person{% endblock body_template_classes %}
+
+{% block content %}
+
+  {{ parent() }}
+
+{% endblock content %}

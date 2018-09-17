@@ -215,6 +215,15 @@ class PhotonCommand extends ConsoleCommand
                   $component_folder . DS . $type . '.yaml',
                   $component_folder . DS . $folder_name . '.yaml');
                 rename(
+                  $component_folder . DS . 'scss' . DS . $type . '.scss',
+                  $component_folder . DS . 'scss' . DS . $filename . '.scss');
+                rename(
+                  $component_folder . DS . 'scss/articles' . DS . '_' . $type . '.scss',
+                  $component_folder . DS . 'scss/articles' . DS . '_' . $filename . '.scss');
+                rename(
+                  $component_folder . DS . 'scss/templates' . DS . '_' . $type . '.scss',
+                  $component_folder . DS . 'scss/templates' . DS . '_' . $filename . '.scss');
+                rename(
                   $component_folder . DS . 'assets' . DS . $type . '.css',
                   $component_folder . DS . 'assets' . DS . $filename . '.css');
                 rename(
@@ -226,6 +235,12 @@ class PhotonCommand extends ConsoleCommand
                 rename(
                   $component_folder . DS . 'templates' . DS . $type . '.html.twig',
                   $component_folder . DS . 'templates' . DS . $filename . '.html.twig');
+                rename(
+                  $component_folder . DS . 'templates/_articles' . DS . $type . '.html.twig',
+                  $component_folder . DS . 'templates/_articles' . DS . $filename . '.html.twig');
+                rename(
+                  $component_folder . DS . 'templates/_articles' . DS . $type . '-excerpt.html.twig',
+                  $component_folder . DS . 'templates/_articles' . DS . $filename . '-excerpt.html.twig');
             } else {
                 $bpname = $this->inflector->hyphenize($this->component['bpname']);
                 rename(
@@ -233,8 +248,6 @@ class PhotonCommand extends ConsoleCommand
                   $component_folder . DS . $bpname . '.yaml');
             }
         }
-
-
 
         $this->output->writeln('');
         $this->output->writeln('<green>SUCCESS</green> ' . $type . ' <magenta>' . $name . '</magenta> -> Created Successfully');

@@ -1,18 +1,18 @@
 {% block article_footer -%}
-        <footer>
-          {% if not excerpt -%}
-          {% include '_articles/_block/article_nav.html.twig' %}
-          {% include '_articles/_block/article_footer/list-featured-descendants.html.twig' %}
-          {% endif -%}
+  <footer>
+    {% if not excerpt -%}
+      {% include '_articles/_block/article_nav.html.twig' %}
+      {% include '_articles/_block/article_footer/list-featured-descendants.html.twig' %}
+    {% endif -%}
 
-          {% include '_articles/_block/article_footer/aside_categories.html.twig' %}
-          {% include '_articles/_block/article_footer/aside_tags.html.twig' %}
-          {% include '_articles/_block/article_footer/aside_members.html.twig' %}
-          {% include '_articles/_block/article_footer/aside_share.html.twig' %}
-          {% if excerpt %}
-          <nav>
-            <a class="more" href="{{ page.url }}">More ></a>
-          </nav>
-        {% endif -%}
-        </footer>
+    {% include '_articles/_block/article_footer/aside_categories.html.twig' %}
+    {% include '_articles/_block/article_footer/aside_tags.html.twig' %}
+    {% include '_articles/_block/article_footer/aside_members.html.twig' %}
+    {% include '_articles/_block/article_footer/aside_share.html.twig' %}
+    {% if excerpt %}
+      <nav>
+        <a class="more" href="{{ article.url }}">More ></a>
+      </nav>
+    {% endif -%}
+  </footer>
 {%- endblock %}

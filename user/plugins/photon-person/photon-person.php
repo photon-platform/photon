@@ -10,23 +10,23 @@ use Grav\Common\Page\Page;
 use Grav\Common\Page\Pages;
 use Grav\Common\Taxonomy;
 
-
 /**
  * Class PhotonPersonPlugin
  * @package Grav\Plugin
  */
 class PhotonPersonPlugin extends Plugin
 {
-  public static function getSubscribedEvents()
-  {
-      return [
-          'onPluginsInitialized' => ['onPluginsInitialized', 0],
-          'onGetPageTemplates' => ['onGetPageTemplates', 0]
-      ];
-  }
 
-  public function onPluginsInitialized()
-  {
+    public static function getSubscribedEvents()
+    {
+      return [
+        'onPluginsInitialized' => ['onPluginsInitialized', 0],
+        'onGetPageTemplates' => ['onGetPageTemplates', 0]
+      ];
+    }
+
+    public function onPluginsInitialized()
+    {
 
       if ( $this->isAdmin() ) {
 
@@ -38,7 +38,6 @@ class PhotonPersonPlugin extends Plugin
         return;
       }
 
-
       $this->enable([
         'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
         'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
@@ -46,58 +45,58 @@ class PhotonPersonPlugin extends Plugin
 
       return;
 
-  }
+    }
 
-  /**
-   * Add blueprint directory to page templates.
-   */
-  public function onGetPageTemplates(Event $event)
-  {
-      $types = $event->types;
-      $locator = Grav::instance()['locator'];
-      $types->scanBlueprints($locator->findResource('plugin://' . $this->name . '/blueprints'));
-      $types->scanTemplates($locator->findResource('plugin://' . $this->name . '/templates'));
-  }
+    // called when saving page in admin
+    public function onAdminSave(Event $event)
+    {
+      // placeholder
+    }
 
-  // called when saving page in admin
-  public function onAdminSave(Event $event)
-  {
-    // placeholder
-  }
 
-  /**
-   * Add current directory to twig lookup paths.
-   */
-  public function onTwigTemplatePaths()
-  {
+    /** Add blueprint directories for admin templates.     */
+    public function onGetPageTemplates(Event $event)
+    {
+        $types = $event->types;
+        $locator = Grav::instance()['locator'];
+        $types->scanBlueprints($locator->findResource('plugin://' . $this->name . '/blueprints'));
+        $types->scanTemplates($locator->findResource('plugin://' . $this->name . '/templates'));
+    }
+
+    /**  Add current directory to twig lookup paths     */
+    public function onTwigTemplatePaths()
+    {
       $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
-  }
+    }
 
 
-  public function onTwigSiteVariables()
-	{
-		// setup
-		$page = 			$this->grav['page'];
-		$pages = 			$this->grav['pages'];
-		// $collection = $pages->all()->ofType('event');
-		$twig = 			$this->grav['twig'];
-		$assets = 		$this->grav['assets'];
+    public function onTwigSiteVariables()
+    {
+      // setup
+      $page = 			$this->grav['page'];
+      $pages = 			$this->grav['pages'];
+      // $collection = $pages->all()->ofType('event');
+      $twig = 			$this->grav['twig'];
+      $assets = 		$this->grav['assets'];
 
-		// only load the vars if this datatype page
-		if ($page->template() == 'person')
-		{
+      // only load the vars if this datatype page
+      if ($page->template() == 'person')
+      {
 
-      // scripts
-      $js = 'plugin://photon-person/assets/person.js';
-      $assets->addJs($js);
+        // styles
+        if ($this->config->get('plugins.photon-person.built_in_css')) {
+          $css = 'plugin://photon-person/assets/person.css';
+          $assets->addCss($css);
+        }
 
-      // styles
-      $css = 'plugin://photon-person/assets/person.css';
-      $assets->addCss($css);
+        // scripts
+        if ($this->config->get('plugins.photon-person.built_in_js')) {
+          $js = 'plugin://photon-person/assets/person.js';
+          $assets->addJs($js);
+        }
 
-		}
 
+      }
+    }
 
-
-	}
 }

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,+CAA+C;AAI/C,kDAAkD;ACAlD,eAAgB;EAEd,eAAe,EAAE,eAAe;EAChC,YAAY,EAAE,eAAe;EAE7B,qBAAqB,EAAE,eAAe;EACtC,kBAAkB,EAAE,eAAe;;ADHrC,mDAAmD",
+"sources": ["../scss/project.scss","../scss/articles/_project.scss"],
+"names": [],
+"file": "project.css"
+}

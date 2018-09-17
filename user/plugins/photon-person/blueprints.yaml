@@ -1,15 +1,15 @@
 name: photon ✴ Person
 version: 0.1.0
-description: structure, style and logic for representing groups of people - cards, directories, etc.
+description: templates and styles for person content
 icon: asterisk
 author:
   name: illumiphi
   email: phi@illumiphi.com
-homepage: https://github.com/0-am-phi/grav-plugin-photon-person
-demo: http://illumiphi.com
-keywords: grav, plugin, etc
-bugs: https://github.com/0-am-phi/grav-plugin-photon-person/issues
-docs: https://github.com/0-am-phi/grav-plugin-photon-person/blob/develop/README.md
+homepage: https://github.com/i-am-phi/grav-plugin-photon-person
+demo: https://illumiphi.com
+keywords: datatype, photon
+bugs: https://github.com/i-am-phi/grav-plugin-photon-person/issues
+docs: https://github.com/i-am-phi/grav-plugin-photon-person/blob/develop/README.md
 license: MIT
 
 dependencies:
@@ -18,6 +18,7 @@ dependencies:
 form:
   validation: strict
   fields:
+
     enabled:
       type: toggle
       label: PLUGIN_ADMIN.PLUGIN_STATUS
@@ -32,7 +33,6 @@ form:
     built_in_css:
       type: toggle
       label: PLUGIN_PHOTON.USE_BUILTIN_CSS
-      help: PLUGIN_PHOTON.USE_BUILTIN_CSS_HELP
       highlight: 1
       default: 1
       options:
@@ -44,7 +44,6 @@ form:
     built_in_js:
       type: toggle
       label: PLUGIN_PHOTON.USE_BUILTIN_JS
-      help: PLUGIN_PHOTON.USE_BUILTIN_JS_HELP
       highlight: 1
       default: 1
       options:
@@ -53,7 +52,8 @@ form:
       validate:
         type: bool
 
-    notes:
-      type: text
-      label: PLUGIN_PHOTON.NOTES
-      help: PLUGIN_PHOTON.NOTES_HELP
+
+    # text_var:
+    #   type: text
+    #   label: PLUGIN_PERSON.TEXT_VARIABLE
+    #   help: PLUGIN_PERSON.TEXT_VARIABLE_HELP

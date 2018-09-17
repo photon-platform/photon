@@ -1,0 +1,5 @@
+ 1522  history
+ 1523  history | tail
+ 1524  history | tail 5
+ 1525  history | tail -n 5
+ 1526  history | tail -n 5 > test-history

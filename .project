@@ -15,6 +15,9 @@ alias admin="open ${SITE}/admin"
 alias swatch="scss --watch \
   $THEMES/scss:$THEMES/css \
   $PLUGINS/photon-event/scss:$PLUGINS/photon-event/assets \
+  $PLUGINS/photon-organization/scss:$PLUGINS/photon-organization/assets \
+  $PLUGINS/photon-person/scss:$PLUGINS/photon-person/assets \
+  $PLUGINS/photon-project/scss:$PLUGINS/photon-project/assets \
   "
 
 alias dry-sync="rsync -auzvhP --stats --delete --dry-run user/ illumiphi.com:${SERVERPATH}/user/"

@@ -4,7 +4,7 @@ Original Code from breadcrumbs.plugin
 #}
 {% block breadcrumbs -%}
   {% if config.plugins.breadcrumbs.enabled -%}
-    {% set crumbs = breadcrumbs.getFromPage(page) -%}
+    {% set crumbs = breadcrumbs.getFromPage(article) -%}
     {% set breadcrumbs_config = config.plugins.breadcrumbs -%}
     {%- if crumbs | length > 1 or breadcrumbs_config.show_all -%}
           <nav class="breadcrumbs">

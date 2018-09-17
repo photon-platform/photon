@@ -8,5 +8,7 @@ article.event {
   --article-hover-bg: var(--color-fg); }
 
 /* templates/event *****************************/
+body.event > main {
+  --test: none; }
 
 /*# sourceMappingURL=event.css.map */
