@@ -1,4 +1,3 @@
-{% block article_gallery -%}
 {% if article.header.show_gallery == 1 %}
       <div class="article-gallery">
         {% for image in article.media.images -%}
@@ -20,4 +19,3 @@
 
       </div>
 {%- endif  %}
-{%- endblock %}

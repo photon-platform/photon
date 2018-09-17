@@ -1,8 +1,6 @@
-{% block article_main -%}
-        <main>
-          <div>
-            {{ article.summary }}
-          </div>
-          {{ article.content | slice(article.summary | length) }}
-        </main>
-{%- endblock %}
+  <main>
+    <div>
+      {{ article.summary }}
+    </div>
+    {{ article.content | slice(article.summary | length) }}
+  </main>

@@ -1,4 +1,4 @@
-{% extends 'collection.html.twig' %}
+{% extends 'default.html.twig' %}
 {% block template %}
 {{ parent() }}
 <!-- user/themes/photon/templates/home.html.twig -->
@@ -6,7 +6,7 @@
 
 {% block body_template_classes %}{{ parent() }} home{% endblock body_template_classes %}
 
-{% block showcase -%}
+{% block showcase %}
 
   {% set options = { items: {'@taxonomy.tag': 'showcase' }, 'limit': 5, 'order': {'by': 'date', 'dir': 'desc'}, 'pagination': true } -%}
   {% set showcase_collection = page.collection(options) %}
@@ -16,16 +16,18 @@
     {% endfor %}
   </section>
 
-{% endblock showcase -%}
+{% endblock showcase %}
 
+{% block content %}
+  {{ parent() }}
 
-{% block list -%}
   <!-- <p>child pages: {{ page.collection.count() }}</p> -->
-  {% for article in page.collection -%}
-    {% if not (article.url == page.url) -%}
-      {% if article.visible -%}
-        {% include "_articles/article-excerpt.html.twig" with { 'article': article } %}
+  {% for article in page.collection %}
+    {% if not (article.url == page.url) %}
+      {% if article.visible %}
+        {% include ["_articles/article-excerpt.html.twig"] with { 'article': article } %}
       {% endif %}
     {% endif %}
-  {% endfor -%}
-{% endblock list -%}
+  {% endfor %}
+
+{% endblock content %}

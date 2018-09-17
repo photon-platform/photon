@@ -8,7 +8,6 @@
 {% block body_template_classes %}{{ parent() }} collection{% endblock body_template_classes %}
 
 {% block content %}
-<main>
   {{ parent() }}
 
   {% block list %}
@@ -22,5 +21,4 @@
   {% endblock list %}
 
   {{ block('pagination') }}
-</main>
 {% endblock content %}

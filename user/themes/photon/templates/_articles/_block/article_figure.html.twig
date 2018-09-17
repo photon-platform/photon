@@ -1,4 +1,3 @@
-{% block article_figure -%}
   {% set header_image = article.header.header_image | defined(true) -%}
   {% set featured_image = article.header.featured_image -%}
     <figure>
@@ -11,4 +10,3 @@
       {{ header_image_media.html('', '', '') }}
     {%- endif -%}
     </figure>
-{%- endblock %}

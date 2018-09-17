@@ -9,11 +9,11 @@
   <body class="{% block body_template_classes %}{% endblock body_template_classes %}{% if page.header.body_classes %} {{ page.header.body_classes }}{% endif %}">
     {% block header -%}
     {% include '_sections/header.html.twig' %}
-    {%- endblock header %}
+    {% endblock header %}
 
-    {% block showcase %}{% endblock -%}
+    {% block showcase %}{% endblock %}
 
-    {% block main -%}
+    {% block main %}
 
     <main>
       {% block content -%}
@@ -21,7 +21,7 @@
       {%- endblock content -%}
     </main>
 
-    {%- endblock main %}
+    {% endblock main %}
 
     {% block asides -%}
       {% include '_sections/asides.html.twig' %}

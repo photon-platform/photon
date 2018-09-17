@@ -1,4 +1,3 @@
-{% block article_header -%}
   <header>
     {% include '_articles/_block/breadcrumbs.html.twig' with { 'article': article } %}
 
@@ -13,4 +12,3 @@
       title="{{ article.date|date("Y-m-d") }}"
       datetime="{{ article.date }}">{{ article.date|date("M d Y") }}</time>
   </header>
-{%- endblock %}
