@@ -1,13 +1,9 @@
-{% extends '_articles/article.html.twig' -%}
-{% use "_articles/_block/article_main_excerpt.html.twig" -%}
+
 {% set excerpt = true -%}
-{% block article -%}
-      <!-- user/plugins/photon-organization/templates/_articles/organization-excerpt.html.twig -->
-      <article class="{{ page.template }} excerpt" data-url="{{ page.url }}">
-        {{ block('article_figure') }}
-        {{ block('article_header') }}
-        {{ block('article_main_excerpt') }}
-        {#% include '_asides/list-featured.html.twig' -%#}
-        {{ block('article_footer') }}
-      </article>
-{%- endblock %}
+  <!-- user/plugins/photon-event/templates/_articles/event-excerpt.html.twig -->
+  <article class="{{ article.template }} excerpt" data-url="{{ article.url }}">
+    {% include "_articles/_block/article_figure.html.twig" with { 'article': article } %}
+    {% include "_articles/_block/article_header.html.twig" with { 'article': article } %}
+    {% include "_articles/_block/article_main_excerpt.html.twig" with { 'article': article } %}
+    {% include "_articles/_block/article_footer.html.twig" with { 'article': article } %}
+  </article>

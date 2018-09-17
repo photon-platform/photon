@@ -1,18 +1,9 @@
-{% use "_articles/_block/article_figure.html.twig" -%}
-{% use "_articles/_block/article_header.html.twig" -%}
-{% use "_articles/_block/article_main.html.twig" -%}
-{% use "_articles/_block/article_footer.html.twig" -%}
-{% use "_articles/_block/article_nav.html.twig" -%}
-{% use "_articles/_block/article_gallery.html.twig" -%}
 
-{% block article -%}
-      <!-- user/plugins/photon-{{ page.template }}/templates/_articles/{{ page.template }}.html.twig -->
-      <article class="{{ page.template }}" data-url="{{ page.url }}">
-        {{ block('article_figure') }}
-        {{ block('article_header') }}
-        {{ block('article_main') }}
-        {{ block('article_footer') }}
-        {#{ block('article_nav') }#}
-        {{ block('article_gallery') }}
-      </article>
-{%- endblock %}
+<!-- user/plugins/photon-{{ page.template }}/templates/_articles/{{ page.template }}.html.twig -->
+<article class="{{ article.template }}" data-url="{{ article.url }}">
+  {% include "_articles/_block/article_figure.html.twig" with { 'article': article } %}
+  {% include "_articles/_block/article_header.html.twig" with { 'article': article } %}
+  {% include "_articles/_block/article_main.html.twig" with { 'article': article } %}
+  {% include "_articles/_block/article_footer.html.twig" with { 'article': article } %}
+  {% include "_articles/_block/article_gallery.html.twig" with { 'article': article } %}
+</article>
