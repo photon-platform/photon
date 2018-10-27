@@ -1,0 +1,17 @@
+color:
+  key:
+    hue: 44
+  1:
+    hueOffset: -150
+  2:
+    hueOffset: 120
+  saturation: 41
+  lightness:
+    lighter: 90
+    light: 75
+    mid: 62
+    dark: 44
+    darker: 15
+font: Lato
+font_display: Montserrat
+font_code: monospace

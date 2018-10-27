@@ -1,0 +1,16 @@
+title: ✴ ORG
+
+form:
+  validation: loose
+  fields:
+
+    content:
+      type: section
+      title: ✴ ORG
+      underline: true
+
+      fields:
+        name:
+          type: text
+          label: Name
+          help: select this page to be featured in home pages and banners
