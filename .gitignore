@@ -1,25 +1,3 @@
-# plugins/admin
-# plugins/admin-addon-revisions
-# plugins/admin-addon-user-manager
-# plugins/admin-power-tools
-# plugins/adminstyles
-# plugins/core-service-manager
-# plugins/data-manager
-# plugins/diagrams
-# plugins/email
-# plugins/error
-# plugins/featherlight
-# plugins/feed
-# plugins/form
-# plugins/ganalytics
-# plugins/git-sync
-# plugins/highlight
-# plugins/login
-# plugins/markdown-notices
-# plugins/problems
-# plugins/sitemap
-# plugins/taxonomylist
-# plugins/tntsearch
 data/tntsearch
 
 # OS Generated
