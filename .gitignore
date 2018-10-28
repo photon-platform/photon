@@ -1,4 +1,5 @@
 data/tntsearch
+accounts/*.yaml
 
 # OS Generated
 .DS_Store*

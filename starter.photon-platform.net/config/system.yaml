@@ -18,7 +18,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: photon
+  theme: photon-child
   order:
     by: default
     dir: asc
