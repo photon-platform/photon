@@ -9,8 +9,8 @@ color:
   lightness:
     lighter: 90
     light: 75
-    mid: 62
-    dark: 44
+    mid: 50
+    dark: 33
     darker: 15
 font: Lato
 font_display: Montserrat

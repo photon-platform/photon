@@ -14,3 +14,10 @@ form:
           type: text
           label: Name
           help: select this page to be featured in home pages and banners
+
+        contact:
+          type: markdown
+          label: Contact Info
+          help: this will appear in the header - can use markdown
+          validate:
+            type: textarea

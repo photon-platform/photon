@@ -1,6 +1,7 @@
 ---
 title: Types
 ---
+
 graphs
 
 ===
