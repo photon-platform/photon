@@ -1,11 +1,17 @@
+# v1.0.13
+##  11/26/2018
+
+1. [](#feature)
+    * Prepare for admin v1.9.x
+
 # v1.0.12
-##  010/10/2018
+##  10/10/2018
 
 1. [](#bugfix)
     * Ensure order is numeric when adding javascript asset
 
 # v1.0.11
-##  010/10/2018
+##  10/10/2018
 
 1. [](#bugfix)
     * Add beta version in dependency util

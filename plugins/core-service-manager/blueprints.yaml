@@ -1,5 +1,5 @@
 name: Core Service Manager
-version: 1.0.12
+version: 1.0.13
 description: Adds a service manager layer to the Grav API.
 icon: plug
 author:

@@ -25,6 +25,7 @@
 
 namespace Grav\Plugin;
 
+use Grav\Common\Grav;
 use Grav\Common\Plugin;
 use Grav\Common\Utils;
 use Twelvetone\Common\ServiceManager;
@@ -126,7 +127,18 @@ class CoreServiceManagerPlugin extends Plugin
     public function onAdminTwigTemplatePaths($event)
     {
         if ($this->config->get("plugins.core-service-manager.override_admin_twigs", true)) {
-            $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/templates-grav']);
+            $grav = Grav::instance();
+            $plugins = $grav['plugins'];
+            $plugin = $plugins->get('admin');
+            if ($plugin) {
+                $version = $plugin->blueprints()->version;
+                $version = preg_replace('/-beta.*$/', '', $version);
+                if (version_compare($version, '1.9.0') < 0) {
+                    $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/templates-grav-1_9']);
+                } else {
+                    $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/templates-grav']);
+                }
+            }
         }
         $event['paths'] = array_merge($event['paths'], [__DIR__ . '/admin/templates-twelvetone']);
 
