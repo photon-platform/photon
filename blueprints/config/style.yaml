@@ -93,29 +93,74 @@ form:
                 min: 0
                 max: 100
 
+            color.foreground:
+              type: text
+              label: Foreground Color
+              default: "#333"
+
+            color.background:
+              type: text
+              label: Background Color
+              default: "#CCC"
+
+
         _fonts:
           type: column
           fields:
 
-            font:
-              type: select
-              label: Font
-              classes: fancy
-              style: vertical
-              default: 'Lato'
-              config-options@: fonts
+            _fonts_section:
+              type: section
+              title: Fonts
+              underline: true
+
+              fields:
+
+                font:
+                  type: select
+                  label: Font
+                  classes: fancy
+                  style: vertical
+                  default: 'Lato'
+                  config-options@: fonts
 
 
-            font_display:
-              type: select
-              label: Display Font
-              classes: fancy
-              style: vertical
-              default: 'Lato'
-              config-options@: fonts
+                font_display:
+                  type: select
+                  label: Display Font
+                  classes: fancy
+                  style: vertical
+                  default: 'Lato'
+                  config-options@: fonts
 
-            font_code:
-              type: text
-              label: Code Font
-              style: vertical
-              default: monospace
+                font_code:
+                  type: text
+                  label: Code Font
+                  style: vertical
+                  default: monospace
+
+            _sizes:
+              type: section
+              title: Sizes
+              underline: true
+
+              fields:
+
+                header_height:
+                  type: text
+                  label: Header Height
+                  style: vertical
+                  default: 9em
+
+                fitz:
+                  type: text
+                  label: Fitz
+                  help: incremental measure for general margin and padding
+                  style: vertical
+                  default: .5em
+
+                col:
+                  type: text
+                  label: Column
+                  help: incremental measure for general column
+                  style: vertical
+                  default: 18em
