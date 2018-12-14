@@ -2,54 +2,59 @@
 @import '../../photon/scss/_media/var-18em';
 @import '../../photon/scss/_media/functions';
 @import '../../photon/scss/_media/mixins';
+// @import 'articles/article';
+// @import 'articles/article-excerpt';
 
 /* color *****************************/
-@import 'color';
+// @import 'color';
 
 /* fonts *****************************/
-@import 'fonts';
+// @import 'fonts';
 
-// this generates the color pallete
-$color-foreground: $color-neutral-darker;
-$color-background: $color-neutral-lighter;
-
-
-:root {
-  --color-fg: #{$color-foreground};
-  --color-bg: #{$color-background};
-  --color-key: #{$color-key};
-
-  --header-height: 4em;
-
-}
 
 
 body {
-  --bg: #EEE;
+  // --bg: #FFF;
+
+  > header {
+     // flex-direction: row;
+     --color-bg: none;
+     --color-fg: white;
+
+  }
+
+  > .asides {
+    --color-bg: none;
+    --color-fg: white;
+
+    // flex-direction: row;
+    // justify-content: space-around;
+    // align-items: flex-start;
+  }
 
   @include media-bp(3) {
-    display: flex;
+    // display: flex;
 
     > header {
-      flex-direction: row;
-      height: var(--header-height);
+      // flex-direction: row;
+      // height: var(--header-height);
 
       > .logo {
         img {
-          height:8em;
+          // height:4em;
         }
       }
       > nav {
 
         // padding: 1em 0;
 
-        flex-flow: row wrap;
-        justify-content: center;
+        // flex-flow: row wrap;
+        // justify-content: center;
 
         a {
-          flex-flow: row;
+          // flex-flow: row;
 
-          text-align: center;
+          // text-align: center;
         }
 
       }
@@ -61,33 +66,33 @@ body {
 body.home {
 
   @include media-bp(3) {
-    display: flex;
+    // display: flex;
 
     > header {
-      flex-direction: row;
+      // flex-direction: row;
 
       > .logo {
         img {
-          height:8em;
+          // height:8em;
         }
       }
       > nav {
 
         // padding: 1em 0;
 
-        flex-flow: row wrap;
-        justify-content: center;
+        // flex-flow: row wrap;
+        // justify-content: center;
 
         a {
-          flex-flow: row;
-          text-align: center;
+          // flex-flow: row;
+          // text-align: center;
         }
 
       }
     }
 
     > .showcase {
-      height: calc(100vh - var(--header-height) - (var(--fitz-2) * 3));
+      // height: calc(100vh - var(--header-height) - (var(--fitz-2) * 3));
 
     }
 

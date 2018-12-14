@@ -1,29 +1,8 @@
 @charset "UTF-8";
 /* photon ✴ Theme Components and Templates */
 /* color *****************************/
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,");
-@import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i,700,900");
-:root { --color-fg: #473d3a; --color-bg: white; --color-key: #696699; --color: var(--color-fg); --bg: var(--color-bg); }
-
 /* fonts *****************************/
-/* Lato */
-@font-face { font-family: 'photon-social'; src: url("../fonts/photon-social.eot?20845125"); src: url("../fonts/photon-social.eot?20845125#iefix") format("embedded-opentype"), url("../fonts/photon-social.woff?20845125") format("woff"), url("../fonts/photon-social.ttf?20845125") format("truetype"), url("../fonts/photon-social.svg?20845125#photon-social") format("svg"); font-weight: normal; font-style: normal; }
-:root { --font: Lato, sans-serif; --font-display: Crimson Text, serif; --font-form: var(--font); --font-social: photon-social, sans-serif; --bullett: '✴'; }
-
-:root { --color-fg: #473d3a; --color-bg: white; --color-key: #696699; --header-height: 4em; }
-
-body { --bg: #EEE; }
-@media (min-width: 72em) { body { display: flex; }
-  body > header { flex-direction: row; height: var(--header-height); }
-  body > header > .logo img { height: 8em; }
-  body > header > nav { flex-flow: row wrap; justify-content: center; }
-  body > header > nav a { flex-flow: row; text-align: center; } }
-
-@media (min-width: 72em) { body.home { display: flex; }
-  body.home > header { flex-direction: row; }
-  body.home > header > .logo img { height: 8em; }
-  body.home > header > nav { flex-flow: row wrap; justify-content: center; }
-  body.home > header > nav a { flex-flow: row; text-align: center; }
-  body.home > .showcase { height: calc(100vh - var(--header-height) - (var(--fitz-2) * 3)); } }
+body > header { --color-bg: none; --color-fg: white; }
+body > .asides { --color-bg: none; --color-fg: white; }
 
 /*# sourceMappingURL=photon-child.css.map */
