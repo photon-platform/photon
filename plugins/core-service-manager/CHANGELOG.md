@@ -1,3 +1,15 @@
+# v1.0.15
+##  12/11/2018
+
+1. [](#bugfix)
+    * Avoid conflict with PEAR module constants
+    
+# v1.0.14
+##  12/11/2018
+
+1. [](#bugfix)
+    * Check for defined constants
+    
 # v1.0.13
 ##  11/26/2018
 
