@@ -11,7 +11,6 @@ figure:
 taxonomy:
     tag:
         - featured
-show_gallery: true
 ---
 
 - develop
