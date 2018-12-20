@@ -1,18 +1,14 @@
 ---
 title: Portfolio
-subtitle: 'Creative Works'
+subtitle: ' Collection of Creative Works'
 author: /home
 content:
     items: '@self.children'
+child_type: article
 show_gallery: true
 ---
 
-The collected work of Jill Moser 
+> creatives works as defined by schema.org
 
 ===
 
-Jill's work is organized by years
-
-select categories of Painting, Drawings, Prints, Collaborations
-
-each section has featured and showcase items
