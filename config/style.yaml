@@ -4,13 +4,13 @@ color:
   1:
     hueOffset: -120
   2:
-    hueOffset: 150
+    hueOffset: 180
   saturation: 21
   lightness:
-    lighter: 81
-    light: 65
-    mid: 48
-    dark: 36
+    lighter: 93
+    light: 66
+    mid: 47
+    dark: 33
     darker: 19
   foreground: '#333'
   background: '#FFF'
