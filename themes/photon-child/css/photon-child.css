@@ -15,7 +15,8 @@ article > footer > aside ul, article > footer > aside li { margin: 0; }
 article.excerpt .article-share { display: none; }
 article.excerpt .more { align-self: flex-end; }
 
-article.showcase { font-size: 1.4em; }
+@media (min-width: 72em) { article.showcase { font-size: 1.2em; } }
+@media (min-width: 108em) { article.showcase { font-size: 1.4em; } }
 
 /* color *****************************/
 /* fonts *****************************/
