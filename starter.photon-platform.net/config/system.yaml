@@ -2,7 +2,7 @@ absolute_urls: false
 param_sep: ':'
 wrapped_site: false
 reverse_proxy_setup: false
-force_ssl: false
+force_ssl: true
 force_lowercase_urls: true
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
@@ -81,7 +81,7 @@ cache:
   cli_compatibility: false
   lifetime: 604800
   gzip: false
-  allow_webserver_gzip: false
+  allow_webserver_gzip: true
 twig:
   cache: true
   debug: true
