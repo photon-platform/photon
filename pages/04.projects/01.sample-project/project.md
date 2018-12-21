@@ -5,20 +5,20 @@ author: /home
 content:
     items: '@self.children'
 child_type: article
+figure:
+    image: heic1323a.jpg
+    title: 'Variable star RS Puppis'
+    caption: 'This Hubble image shows RS Puppis, a type of variable star known as a Cepheid variable. As variable stars go, Cepheids have comparatively long periods — RS Puppis, for example, varies in brightness by almost a factor of five every 40 or so days. RS Puppis is unusual; this variable star is shrouded by thick, dark clouds of dust enabling a phenomenon known as a light echo to be shown with stunning clarity. These Hubble observations show the ethereal object embedded in its dusty environment, set against a dark sky filled with background galaxies.'
 taxonomy:
     tag:
         - showcase
-        - featured
 project:
     notes: 'new notes'
-show_gallery: true
-show_collection: true
-featured: false
 ---
 
-### goals
-
-structure - logic - style
+- develop
+- publish
+- manage
 
 ===
 

@@ -1,6 +1,6 @@
 ---
 title: 'Make the Universe Great Again'
-subtitle: 'Shine Light in the Dark Places'
+subtitle: 'Shine Your Light'
 author: /home
 content:
     items: '@self.children'
@@ -12,9 +12,9 @@ figure:
 taxonomy:
     tag:
         - showcase
-show_gallery: true
 ---
 
-this is the only recourse
+- when we allow our deepest creative expression to radiate out into the world, the world is a better place
+- let the photon ✴ PLATFORM help you
 
 ===

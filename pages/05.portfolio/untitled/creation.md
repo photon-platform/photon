@@ -10,9 +10,6 @@ data:
     date: 2009-01-01
     colspan: 1
     rowspan: 1
-categories:
-  - paintings
-tags:
 ---
 70" x 70"<br/>oil on canvas<br/>2009
 <!-- more -->

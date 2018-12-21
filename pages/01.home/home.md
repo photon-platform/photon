@@ -1,7 +1,6 @@
 ---
 title: Welcome
 subtitle: 'photon ✴ Starter Site'
-media_order: 'phi-logo-dark.svg,phi-logo-dark.svg.png'
 author: /home
 content:
     items: '@root.children'
@@ -13,4 +12,7 @@ figure:
 menu: Home
 ---
 
-This is a starter skeleton for the photon ✴ PLATFORM
+- This is a starter skeleton for the<br>photon ✴ PLATFORM
+
+
+===
