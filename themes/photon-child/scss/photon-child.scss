@@ -2,8 +2,10 @@
 @import '../../photon/scss/_media/var-18em';
 @import '../../photon/scss/_media/functions';
 @import '../../photon/scss/_media/mixins';
-// @import 'articles/article';
-// @import 'articles/article-excerpt';
+
+@import 'articles/article';
+@import 'articles/article-excerpt';
+@import 'articles/article-showcase';
 
 /* color *****************************/
 // @import 'color';

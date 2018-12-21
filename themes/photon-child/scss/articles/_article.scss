@@ -32,9 +32,10 @@ article {
   > figure {
 
     background: none;
+    max-height: 40vh;
 
     > img {
-
+      // object-fit: contain;
     }
 
     > figcaption {
@@ -57,7 +58,7 @@ article {
     }
 
     > time {
-
+      display: none;
     }
   }
 
@@ -68,13 +69,34 @@ article {
     margin: 0 auto;
 
 
-    > div {
+    > .summary {
+      > * {
+        margin-bottom: var(--fitz);
+      }
+      > ul {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0;
+          padding: 0;
+          &::after {
+            display: block;
+            content: "•";
+          }
+          &:last-child::after {
+            display: none;
+            content: "";
+          }
+        }
 
+      }
 
     }
 
-    p, ol, ul, h1, h2 {
-
+     h1, h2, h3, h4 {
+        text-align: center;
     }
   }
 
@@ -153,6 +175,7 @@ article {
 
   .breadcrumbs {
     a {
+
     }
   }
 
