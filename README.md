@@ -27,17 +27,21 @@ This Starter project is not a standalone website. It is just the `user` folder f
 Setting up Grav can mean setting up a lot of prerequisites. So follow the guidance [here](https://learn.getgrav.org/basics/installation).
 
 When you have a working Grav site on your local environment, you can remove the `user` folder and install this project in its place.
+Since the Grav code is a fixed set of code across all projects. We can leave it out of the repo.
 
-from the commandline in your Grav project:
+From the commandline in your Grav project directory:
 
 ```
 rm -rf user
-git clone
+git clone --recurse-submodules https://github.com/photon-platform/photon.git user
 
-Since the Grav code is a fixed set of code across all projects. We can leave it out of repo.
+```
+
+`--recurse-submodules` is important because the photon theme and many photon plugins as managed as separate git repositories and are then include in this repo as a submodule.
+
+and make sure you specify the `user` folder at the end of the command
 
 Keep in mind that the photon PLATFORM is concieved as an entire system. So, we are setting the configuration for an entire Linux development environment, that will be ready to support many simulatneous Grav projects, as well as all the tools necessary
-
 
 
 
