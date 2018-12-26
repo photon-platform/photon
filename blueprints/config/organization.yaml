@@ -21,3 +21,28 @@ form:
           help: this will appear in the header - can use markdown
           validate:
             type: textarea
+
+        facebook:
+          type: text
+          label: facebook
+          help: user name
+
+        twitter:
+          type: text
+          label: twitter
+          help: user name
+
+        linkedin:
+          type: text
+          label: linkedin
+          help: user name
+
+        youtube:
+          type: text
+          label: youtube
+          help: just the channel name
+
+        github:
+          type: text
+          label: github
+          help: user name
