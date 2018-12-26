@@ -18,8 +18,6 @@ article.excerpt .more { align-self: flex-end; }
 @media (min-width: 72em) { article.showcase { font-size: 1.2em; } }
 @media (min-width: 108em) { article.showcase { font-size: 1.4em; } }
 
-/* color *****************************/
-/* fonts *****************************/
 body > header { --color-bg: none; --color-fg: white; }
 body > .asides { --color-bg: none; --color-fg: white; }
 
