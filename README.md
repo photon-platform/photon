@@ -77,8 +77,6 @@ photon uses a set of CSS variables to configure a number of important attributes
 
 CSS styles in the photon THEME use these variables, allowing changes to be made without recompiling the css
 
-`blueprints/config/style.yaml`
-[blueprints/config/style.yaml](blueprints/config/style.yaml)
 [`blueprints/config/style.yaml`](blueprints/config/style.yaml)
 contains the form specifications for the style variables of the site.
 
