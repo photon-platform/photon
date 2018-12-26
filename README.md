@@ -17,6 +17,9 @@ for more about the **photon ✴ PLATFORM**, visit us at https://photon-platform.
 <!-- code_chunk_output -->
 
 * [Setup](#setup)
+* [photon ✴ THEME](#photon-theme)
+* [photon ✴ PLUGINS](#photon-plugins)
+* [About the photon ✴ PLATFORM](#about-the-photon-platform)
 
 <!-- /code_chunk_output -->
 
@@ -34,8 +37,8 @@ From the commandline in your Grav project directory:
 ```
 rm -rf user
 git clone --recurse-submodules https://github.com/photon-platform/photon.git user
-
 ```
+
 
 `--recurse-submodules` is important because the photon theme and many photon plugins as managed as separate git repositories and are then include in this repo as a submodule.
 
