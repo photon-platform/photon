@@ -43,17 +43,16 @@ rm -rf user
 git clone --recurse-submodules https://github.com/photon-platform/photon.git user
 ```
 
-
 `--recurse-submodules` is important because the **photon THEME** and many photon plugins as managed as separate git repositories and are then include in this repo as a submodule.
 
 And make sure you specify the `user` folder at the end of the command
 
-
+Eventually, we will configure a true skeleton project for submission to Grav Package Manager (GPM)
 
 
 ## photon ✴ THEME
 
-`themes/photon`
+[`themes/photon`](themes/photon)
 
 The **photon THEME** is a git submodule in this repo until it is be submitted to the Grav Package Manager. You can find the Github repo here:
 https://github.com/photon-platform/grav-theme-photon
@@ -80,7 +79,7 @@ CSS styles in the photon THEME use these variables, allowing changes to be made 
 [`blueprints/config/style.yaml`](blueprints/config/style.yaml)
 contains the form specifications for the style variables of the site.
 
-`config/style.yaml`
+[`config/style.yaml`](config/style.yaml)
 stores the settings
 
 
