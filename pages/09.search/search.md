@@ -1,5 +1,7 @@
 ---
 title: Search
+subtitle: 'Full site search'
+author: /home
 content:
     items: '@root.descendants'
     order:
@@ -7,8 +9,13 @@ content:
         dir: desc
     pagination: true
     limit: 0
+child_type: article
+figure:
+    image: heic1406a.jpg
 ---
 
-Enter your search criteria in the box below:
+- Find what you are looking for
 
 ===
+
+Enter your search criteria in the box below:

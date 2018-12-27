@@ -1,5 +1,6 @@
 ---
 title: Projects
+subtitle: current projects and activities
 author: /home
 content:
     items: '@self.children'
@@ -10,6 +11,6 @@ figure:
     caption: 'This new Hubble image reveals the gigantic Pinwheel galaxy, one of the best known examples of "grand design spirals", and its supergiant star-forming regions in unprecedented detail. The image is the largest and most detailed photo of a spiral galaxy ever taken with Hubble.'
 ---
 
-current projects and activities
+- Organize the things you are working on
 
 ===

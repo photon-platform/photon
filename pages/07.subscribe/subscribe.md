@@ -5,8 +5,11 @@ author: /home
 content:
     items: '@self.children'
 child_type: article
+figure:
+    image: heic0822a.jpg
 ---
 
+- don't miss an update
 
 ===
 

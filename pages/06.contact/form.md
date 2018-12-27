@@ -1,5 +1,12 @@
 ---
 title: Contact
+subtitle: 'Get in touch with us'
+author: /home
+content:
+    items: '@self.children'
+child_type: article
+figure:
+    image: heic0715a.jpg
 visible: true
 form:
     name: contact-form
@@ -55,4 +62,8 @@ form:
             display: thankyou
 ---
 
-We look forward to hearing from you
+- We look forward to hearing from you
+
+===
+
+FIll out the form below and we will get in touch as soon as possible

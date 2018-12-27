@@ -16,3 +16,6 @@ menu: Home
 
 
 ===
+
+You can find instructions for setup up this site on the github repo:
+https://github.com/photon-platform/photon
