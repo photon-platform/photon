@@ -8,27 +8,34 @@
 
 You can view a demo of this starter site at https://starter.photon-platform.net
 
-for more about the **photon ✴ PLATFORM**, visit us at https://photon-platform.net
 
 > The photon ✴ PLATFORM is an integrated suite of open source software and cloud-based systems for the development, publishing and management of content.
+
+for more about the **photon ✴ PLATFORM**, visit us at https://photon-platform.net
+
+[![Intro to photon PLATFORM](http://img.youtube.com/vi/6IAWM3BeO_U/0.jpg)](http://www.youtube.com/watch?v=6IAWM3BeO_U)
+
 
 **TOC**
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
 * [Setup](#setup)
-* [photon ✴ THEME](#photon-theme)
+* [THEMES](#themes)
+	* [photon THEME](#photon-theme)
+	* [photon CHILD theme](#photon-child-theme)
 	* [Theme Configuration](#theme-configuration)
-	* [Child theme](#child-theme)
-* [photon ✴ PLUGINS](#photon-plugins)
+* [PLUGINS](#plugins)
 	* [Core Grav Plugins](#core-grav-plugins)
+	* [photon PLUGINS](#photon-plugins)
+* [PAGES](#pages)
 * [About the photon ✴ PLATFORM](#about-the-photon-platform)
 
 <!-- /code_chunk_output -->
 
 ## Setup
 
-This Starter project is not a standalone website. It is just the `user` folder for a Grav installation.
+This STARTER project is not a standalone website. It is just the `user` folder for a Grav installation.
 
 Setting up Grav can mean setting up a lot of prerequisites. So follow the installation guidance [here](https://learn.getgrav.org/basics/installation).
 
@@ -50,13 +57,31 @@ And make sure you specify the `user` folder at the end of the command
 Eventually, we will configure a true skeleton project for submission to Grav Package Manager (GPM)
 
 
-## photon ✴ THEME
+## THEMES
+[`themes`](themes)
+There are two themes in the starter project
 
-[`themes/photon`](themes/photon)
+### photon THEME
+
+
+
+[`themes/photon`](https://github.com/photon-platform/grav-theme-photon)
 
 The **photon THEME** is a git submodule in this repo until it is be submitted to the Grav Package Manager. You can find the Github repo here:
 https://github.com/photon-platform/grav-theme-photon
 Check the Theme's README.md for more info.
+
+
+### photon CHILD theme
+
+[`themes/photon-child`](themes/photon-child)
+
+Grav provides the ability to have a child theme that can inherit and override the templates and styles within the parent theme.
+
+
+topics:
+
+- customizing the theme
 
 ### Theme Configuration
 
@@ -75,19 +100,9 @@ contains the form specifications for the style variables of the site.
 stores the settings
 
 
-### Child theme
 
-[`themes/photon-child`](themes/photon-child)
-
-Grav provides the ability to have a child theme that can inherit and override the templates and styles within the parent theme.
-
-
-topics:
-
-- customizing the theme
-
-
-## photon ✴ PLUGINS
+## PLUGINS
+[`plugins`](plugins)
 
 see the README.md in the plugins folder for more on the current set of plugins
 
@@ -96,8 +111,16 @@ see the README.md in the plugins folder for more on the current set of plugins
 all photon PLUGINS are set in the starter site as git submodules
 
 ### Core Grav Plugins
-
+Come with the standard install
 [COMMAND](https://github.com/photon-platform/grav-plugin-photon)
 
+
+
+
+### photon PLUGINS
+
+
+## PAGES
+[`plugins`](plugins)
 
 ## About the photon ✴ PLATFORM
