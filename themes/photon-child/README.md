@@ -1,7 +1,9 @@
-# Port Theme
+<a href="https://photon-platform.net/">
+    <img src="https://photon-platform.net/images/photon-logo-bg.png" alt="photon" title="photon" align="right" height="120" />
+</a>
 
-The **Port** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this theme.
+# `photon ✴ THEME: child`
 
-## Description
 
-photon ✴ child theme for the Port of Alsea
+
+This is a GRAV child theme, intended to inherit for a photon THEME parent
