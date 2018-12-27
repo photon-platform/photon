@@ -13,7 +13,8 @@ You can view a demo of this starter site at https://starter.photon-platform.net
 
 for more about the **photon ✴ PLATFORM**, visit us at https://photon-platform.net
 
-[![Intro to photon PLATFORM](http://img.youtube.com/vi/6IAWM3BeO_U/0.jpg)](http://www.youtube.com/watch?v=6IAWM3BeO_U)
+Be sure to check out our video series on Youtube:
+[Introduction to photon PLATFORM](https://www.youtube.com/playlist?list=PLruFHGFsvC_yEkLoYGsBavfg8qmymMQOQ)
 
 
 **TOC**
@@ -29,6 +30,7 @@ for more about the **photon ✴ PLATFORM**, visit us at https://photon-platform.
 	* [Core Grav Plugins](#core-grav-plugins)
 	* [photon PLUGINS](#photon-plugins)
 * [PAGES](#pages)
+	* [Page Data Types](#page-data-types)
 * [About the photon ✴ PLATFORM](#about-the-photon-platform)
 
 <!-- /code_chunk_output -->
@@ -121,6 +123,21 @@ Come with the standard install
 
 
 ## PAGES
-[`plugins`](plugins)
+[`pages`](pages)
+
+the `pages` folder contains the content for the system.
+
+The content is stored in folders and files.
+
+
+### Page Data Types
+
+- article
+- calendar
+- event
+- person
+- organization
+- search
+
 
 ## About the photon ✴ PLATFORM
