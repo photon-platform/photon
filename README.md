@@ -56,15 +56,7 @@ Eventually, we will configure a true skeleton project for submission to Grav Pac
 
 The **photon THEME** is a git submodule in this repo until it is be submitted to the Grav Package Manager. You can find the Github repo here:
 https://github.com/photon-platform/grav-theme-photon
-
-Check the theme README for more on
-
-topics:
-
-
-
-
-
+Check the Theme's README.md for more info.
 
 ### Theme Configuration
 
