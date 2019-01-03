@@ -7,6 +7,10 @@ content:
 child_type: article
 figure:
     image: heic0822a.jpg
+taxonomy:
+  tag:
+    - featured
+    
 ---
 
 - don't miss an update

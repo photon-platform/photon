@@ -10,7 +10,6 @@ figure:
     youtube: 6IAWM3BeO_U
 taxonomy:
     tag:
-        - featured
 ---
 
 - develop
