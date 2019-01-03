@@ -46,3 +46,13 @@ form:
           type: text
           label: github
           help: user name
+
+        owa_siteid:
+          type: text
+          label: OWA Site ID
+          help: providd by the OWA site
+
+        google_search:
+          type: text
+          label: Google Search Console
+          help: user name
