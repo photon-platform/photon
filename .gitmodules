@@ -34,3 +34,6 @@
 [submodule "plugins/photon-subscribe"]
 	path = plugins/photon-subscribe
 	url = https://github.com/photon-platform/grav-plugin-photon-subscribe.git
+[submodule "plugins/photon-home"]
+	path = plugins/photon-home
+	url = https://github.com/photon-platform/grav-plugin-photon-home.git
