@@ -110,6 +110,16 @@ class CoreServiceManagerPlugin extends Plugin
 
         ServiceManager::getInstance()->registerService("asset", [
             "type" => "js",
+            "url" => 'plugin://core-service-manager/assets/modal.js'
+        ]);
+
+        ServiceManager::getInstance()->registerService("asset", [
+            "type" => "css",
+            "url" => 'plugin://core-service-manager/assets/modal.css'
+        ]);
+
+        ServiceManager::getInstance()->registerService("asset", [
+            "type" => "js",
             "url" => 'plugin://core-service-manager/assets/ajax_action.js'
         ]);
 

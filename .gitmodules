@@ -37,3 +37,6 @@
 [submodule "plugins/photon-home"]
 	path = plugins/photon-home
 	url = https://github.com/photon-platform/grav-plugin-photon-home.git
+[submodule "blueprints"]
+	path = blueprints
+	url = https://github.com/photon-platform/photon-blueprints.git

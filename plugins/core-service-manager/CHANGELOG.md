@@ -1,3 +1,9 @@
+# v1.0.16
+##  2/09/2019
+
+1. [](#bugfix)
+    * Register asset 'modal.js'. Fixes 'Modal is not defined'
+    
 # v1.0.15
 ##  12/11/2018
 
