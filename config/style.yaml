@@ -1,0 +1,22 @@
+color:
+  key:
+    hue: 44
+  1:
+    hueOffset: -120
+  2:
+    hueOffset: 180
+  saturation: 21
+  lightness:
+    lighter: 93
+    light: 66
+    mid: 47
+    dark: 33
+    darker: 19
+  foreground: '#333'
+  background: '#FFF'
+font: Montserrat
+font_display: Montserrat
+font_code: monospace
+header_height: 10em
+fitz: .5em
+col: 18em

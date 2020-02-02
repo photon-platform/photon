@@ -1,0 +1,7 @@
+data/tntsearch
+data/notifications/
+accounts/*.yaml
+
+node_modules
+*.swp
+tags

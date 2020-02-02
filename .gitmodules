@@ -1,0 +1,42 @@
+[submodule "themes/photon"]
+	path = themes/photon
+	url = https://github.com/photon-platform/grav-theme-photon.git
+[submodule "plugins/photon"]
+	path = plugins/photon
+	url = https://github.com/photon-platform/grav-plugin-photon.git
+[submodule "plugins/photon-breadcrumbs"]
+	path = plugins/photon-breadcrumbs
+	url = https://github.com/photon-platform/grav-plugin-photon-breadcrumbs.git
+[submodule "plugins/photon-creation"]
+	path = plugins/photon-creation
+	url = https://github.com/photon-platform/grav-plugin-photon-creation.git
+[submodule "plugins/photon-event"]
+	path = plugins/photon-event
+	url = https://github.com/photon-platform/grav-plugin-photon-event.git
+[submodule "plugins/photon-form"]
+	path = plugins/photon-form
+	url = https://github.com/photon-platform/grav-plugin-photon-form.git
+[submodule "plugins/photon-organization"]
+	path = plugins/photon-organization
+	url = https://github.com/photon-platform/grav-plugin-photon-organization.git
+[submodule "plugins/photon-person"]
+	path = plugins/photon-person
+	url = https://github.com/photon-platform/grav-plugin-photon-person.git
+[submodule "plugins/photon-portfolio"]
+	path = plugins/photon-portfolio
+	url = https://github.com/photon-platform/grav-plugin-photon-portfolio.git
+[submodule "plugins/photon-project"]
+	path = plugins/photon-project
+	url = https://github.com/photon-platform/grav-plugin-photon-project.git
+[submodule "plugins/photon-search"]
+	path = plugins/photon-search
+	url = https://github.com/photon-platform/grav-plugin-photon-search.git
+[submodule "plugins/photon-subscribe"]
+	path = plugins/photon-subscribe
+	url = https://github.com/photon-platform/grav-plugin-photon-subscribe.git
+[submodule "plugins/photon-home"]
+	path = plugins/photon-home
+	url = https://github.com/photon-platform/grav-plugin-photon-home.git
+[submodule "blueprints"]
+	path = blueprints
+	url = https://github.com/photon-platform/photon-blueprints.git

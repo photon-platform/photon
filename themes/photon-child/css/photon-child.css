@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* photon ✴ Theme Components and Templates */
+article > figure { background: none; max-height: 40vh; }
+article > figure:empty { display: none; }
+article > header > time { display: none; }
+article > .content { width: 100%; max-width: 36em; margin: 0 auto; }
+article > .content > .summary > * { margin-bottom: var(--fitz); }
+article > .content > .summary > ul { list-style: none; text-align: center; margin: 0; padding: 0; }
+article > .content > .summary > ul li { margin: 0; padding: 0; }
+article > .content > .summary > ul li::after { display: block; content: "•"; }
+article > .content > .summary > ul li:last-child::after { display: none; content: ""; }
+article > .content h1, article > .content h2, article > .content h3, article > .content h4 { text-align: center; }
+article > footer > aside ul, article > footer > aside li { margin: 0; }
+
+article.excerpt .article-share { display: none; }
+article.excerpt .more { align-self: flex-end; }
+
+@media (min-width: 72em) { article.showcase { font-size: 1.2em; } }
+@media (min-width: 108em) { article.showcase { font-size: 1.4em; } }
+
+body > header { --color-bg: none; --color-fg: white; }
+body > .asides { --color-bg: none; --color-fg: white; }
+
+/*# sourceMappingURL=photon-child.css.map */

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+export PROJECT=starter
+export LOCAL="http://$PROJECT.local"
+export SERVER="https://$PROJECT.photon-platform.net"
+export SERVER_DIR="~/$PROJECT.photon-platform.net"
+export PROJECT_DIR="/home/phi/SITES/$PROJECT"
+export THEMES_DIR="$PROJECT_DIR/user/themes"
+export PLUGINS_DIR="$PROJECT_DIR/user/plugins"
+export PORT="1111"
+
+alias swatch="sass --watch \
+  $THEMES_DIR/photon/scss:$THEMES_DIR/photon/css \
+  $THEMES_DIR/photon-child/scss:$THEMES_DIR/photon-child/css \
+  $PLUGINS_DIR/photon-event/scss:$PLUGINS_DIR/photon-event/assets \
+  $PLUGINS_DIR/photon-organization/scss:$PLUGINS_DIR/photon-organization/assets \
+  $PLUGINS_DIR/photon-person/scss:$PLUGINS_DIR/photon-person/assets \
+  $PLUGINS_DIR/photon-project/scss:$PLUGINS_DIR/photon-project/assets \
+  $PLUGINS_DIR/photon-search/scss:$PLUGINS_DIR/photon-search/assets \
+  "
