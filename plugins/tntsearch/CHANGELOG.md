@@ -1,5 +1,45 @@
+# v3.2.0
+## 06/08/2020
+
+1. [](#new)
+    * Added support for CLI `bin/plugin index` to index only a single language (`--language=en`)
+1. [](#improved)
+    * Renamed CLI classes to avoid class name conflicts
+1. [](#bugfix)
+    * Fixed non-routable and non-published pages showing up in search results
+    * Fixed indexing in multi-language sites
+    * Use CLI command directly in scheduler command to work [#95](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/95) 
+
+# v3.1.1
+## 02/12/2020
+
+1. [](#improved)
+    * Search with JS disabled [#75](https://github.com/trilbymedia/grav-plugin-tntsearch/pull/75)
+    * Added RU 🇷🇺 language [#74](https://github.com/trilbymedia/grav-plugin-tntsearch/pull/74) 
+    * Various JS dependency updates & recompiled production JS
+1. [](#bugfix)
+    * Added missing `search_object_type` to blueprint
+
+# v3.1.0
+## 02/11/2020
+
+1. [](#new)
+    * Require Grav v1.6.21 
+    * Upgraded to TNTSearch version 2.2 (PHP 7.4 fixes)
+1. [](#improved)
+    * Code cleanup
+1. [](#bugfix)
+    * Fixed Grav initialization in CLI
+    * Work around inconsistencies in page content if page template uses `grav.page` instead of `page`
+
+# v3.0.1
+## 02/03/2020
+
+1. [](#bugfix)
+    * Fixed an issue indexing via Admin with Grav 1.7
+
 # v3.0.0
-## 04/14/2018
+## 04/14/2019
 
 1. [](#new)
     * Added new Grav Scheduler integration
