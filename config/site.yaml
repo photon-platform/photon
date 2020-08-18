@@ -1,4 +1,4 @@
-title: 'photon ✴ STARTER'
+title: photon STARTER
 default_lang: en
 author:
   name: phi
@@ -6,8 +6,9 @@ author:
 taxonomies:
   - category
   - tag
+  - photon
 metadata:
-  description: 'My Grav Site'
+  description: This is a template site for creating new photon WEBS
 summary:
   enabled: true
   format: short
