@@ -1,13 +1,11 @@
 ---
 title: Contact
 subtitle: 'Get in touch with us'
-author: /home
 content:
     items: '@self.children'
-child_type: article
-figure:
-    image: heic0715a.jpg
-visible: true
+taxonomy:
+    photon:
+        - footer
 form:
     name: contact-form
     fields:

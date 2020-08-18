@@ -1,13 +1,11 @@
 ---
 title: News
 subtitle: 'latest news and announcements'
-author: /home
 content:
-  items: '@self.children'
-child_type: article
+    items: '@self.children'
 taxonomy:
-  tag:
-    - featured
+    photon:
+        - header
 ---
 
 - Latest news

@@ -1,7 +1,6 @@
 ---
 title: Search
 subtitle: 'Full site search'
-author: /home
 content:
     items: '@root.descendants'
     order:
@@ -9,9 +8,11 @@ content:
         dir: desc
     pagination: true
     limit: 0
-child_type: article
 figure:
     image: heic1406a.jpg
+taxonomy:
+    photon:
+        - header
 ---
 
 - Find what you are looking for

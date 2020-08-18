@@ -1,16 +1,11 @@
 ---
 title: Subscribe
 subtitle: 'Newsletter and RSS'
-author: /home
 content:
     items: '@self.children'
-child_type: article
-figure:
-    image: heic0822a.jpg
 taxonomy:
-  tag:
-    - featured
-    
+    photon:
+        - footer
 ---
 
 - don't miss an update
