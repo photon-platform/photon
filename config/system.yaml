@@ -22,7 +22,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: photon-child
+  theme: photon
   order:
     by: default
     dir: asc
