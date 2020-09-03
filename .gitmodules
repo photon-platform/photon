@@ -40,3 +40,6 @@
 [submodule "blueprints"]
 	path = blueprints
 	url = https://github.com/photon-platform/photon-blueprints.git
+[submodule "plugins/photon-post"]
+	path = plugins/photon-post
+	url = https://github.com/photon-platform/grav-plugin-photon-post
