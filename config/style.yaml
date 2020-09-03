@@ -5,17 +5,17 @@ color:
     hueOffset: -120
   2:
     hueOffset: 180
-  saturation: 21
+  saturation: 44
   lightness:
-    lighter: 93
+    lighter: 75
     light: 66
-    mid: 47
+    mid: 44
     dark: 33
     darker: 19
   foreground: '#333'
-  background: '#FFF'
+  background: 'hsla(255,100%,100%,.5)'
 font: Montserrat
-font_display: Montserrat
+font_display: Lato
 font_code: monospace
 header_height: 10em
 fitz: .5em
