@@ -1,12 +1,10 @@
 ---
 title: Mission
 subtitle: stated intentions
-author:
-collection:
-  name: Articles
-  showCount: true
-  showMenu: true
 content:
+    name: Articles
+    showCount: true
+    showMenu: true
     items: '@self.children'
 taxonomy:
     photon:
