@@ -18,7 +18,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: photon-child
+  theme: photon
   order:
     by: default
     dir: asc
@@ -91,7 +91,7 @@ twig:
   undefined_filters: true
   umask_fix: false
 assets:
-  css_pipeline: false
+  css_pipeline: true
   css_pipeline_include_externals: true
   css_pipeline_before_excludes: true
   css_minify: true
