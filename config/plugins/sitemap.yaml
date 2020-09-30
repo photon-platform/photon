@@ -2,3 +2,7 @@ enabled: true
 route: /sitemap
 changefreq: daily
 priority: 1
+ignore_external: true
+ignores:
+  - /search
+  - /search/.*
