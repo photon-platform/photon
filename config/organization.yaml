@@ -1,9 +1,13 @@
 name: photon
 contact: "**SHINE**\r\n\r\n**YOUR**\r\n\r\n**LIGHT**"
-facebook: phi.architect
-twitter: phi_am_i
-linkedin: iamphi
+facebook: phiarchitect
+twitter: phi_architect
+linkedin: phiarchitect
 youtube: UCYzRQS16EBmsbKuyKMFHSFQ
 github: photon-platform
-owa_siteid: d1039be9b72f9820624ec26ad1c2722a
-google_search: bYQ6W9XS6CPkwqqn-S3jJUoVhwgwF7U6YHQrWQlkwgE
+owa:
+  siteId: d1039be9b72f9820624ec26ad1c2722a
+  trackPageView: true
+  trackCLicks: false
+  trackDomStream: false
+google_search: 
