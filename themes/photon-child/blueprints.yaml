@@ -1,0 +1,13 @@
+name: photon ✴ THEME Child
+version: 0.1.0
+description: child theme for the default photon ✴ THEME
+icon: asterisk
+author:
+  name: i-am-phi
+  email: phi@illumiphi.com
+homepage: https://github.com/i-am-phi/grav-theme-port
+demo: http://illumiphi.com
+keywords: grav, theme, etc
+bugs: https://github.com/i-am-phi/grav-theme-port/issues
+readme: https://github.com/i-am-phi/grav-theme-port/blob/develop/README.md
+license: MIT

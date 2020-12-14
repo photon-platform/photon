@@ -1,0 +1,46 @@
+article.excerpt {
+
+  // cursor: pointer;
+  // transition: box-shadow .5s,
+    // background .5s;
+
+  > * {
+    // padding:0;
+  }
+
+  > header {
+
+    > h1 {
+      // line-height: 1.25;
+      // margin-top: -.25em;
+    }
+
+  }
+
+  > figure {
+    // width: var(--col);
+    // height: var(--col);
+    > img {
+      // object-fit: contain;
+    }
+  }
+
+  .article-share {
+    display: none;
+  }
+
+  &:hover {
+    // --color-bg: var(--color-key-lighter);
+
+    // box-shadow: .5em .5em .7em rgba(0,0,0,.4);
+    .more {
+    }
+
+    a:hover {
+    }
+  }
+
+  .more {
+    align-self: flex-end;
+  }
+}

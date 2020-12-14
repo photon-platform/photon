@@ -1,0 +1,6 @@
+{% extends '_site/head-base.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+{% do assets.add('theme://css/photon-child.css', {priority:40, group:'photon'} ) %}
+{% endblock stylesheets %}
