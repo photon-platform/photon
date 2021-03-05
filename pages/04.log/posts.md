@@ -1,5 +1,5 @@
 ---
-title: News
+title: Log
 subtitle: 'latest news and announcements'
 content:
     title: Posts
