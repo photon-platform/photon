@@ -1,9 +1,9 @@
 ---
-title: Contact
-subtitle: 'Get in touch with us'
+title: Send a Message
+subtitle: Let us know who you are
 taxonomy:
     photon:
-        - header
+        - footer
 form:
     name: contact-form
     fields:
@@ -30,6 +30,9 @@ form:
             type: textarea
             validate:
                 required: true
+        - 
+            name: confirmation
+            type: honeypot
     buttons:
         -
             type: submit
@@ -40,9 +43,9 @@ form:
     process:
         -
             email:
-                from: '{{ config.plugins.email.from }}'
+                from: '{{ config.organization.email }}'
                 to:
-                    - '{{ config.plugins.email.from }}'
+                    - '{{ config.organization.email }}'
                     - '{{ form.value.email }}'
                 subject: '[CONTACT] {{ form.value.name|e }}'
                 body: '{% include ''forms/data.html.twig'' %}'
@@ -58,7 +61,13 @@ form:
             display: thankyou
 ---
 
-- We look forward to hearing from you
+We are 
+- happy to answer questions
+- eager to hear feedback
+- interested in collaboration
+
+We look forward to hearing from you
+
 
 ===
 
