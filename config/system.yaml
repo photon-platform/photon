@@ -60,7 +60,7 @@ pages:
   append_url_extension: ''
   expires: 604800
   cache_control: null
-  last_modified: false
+  last_modified: true
   etag: false
   vary_accept_encoding: false
   redirect_default_route: false
