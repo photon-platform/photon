@@ -19,7 +19,8 @@ article.showcase {
   // }
   //
 
-
+  font-size: 1.4em;
+  
   > * {
     // padding:0;
   }
@@ -29,7 +30,7 @@ article.showcase {
     // height:100%;
 
     > img {
-      // object-fit: contain;
+      object-fit: contain;
     }
 
     &:empty {
@@ -62,12 +63,5 @@ article.showcase {
 
   .more {
     // align-self: flex-end;
-  }
-
-  @include media-bp(3) {
-    font-size: 1.2em;
-  }
-  @include media-bp(5) {
-    font-size: 1.4em;
   }
 }

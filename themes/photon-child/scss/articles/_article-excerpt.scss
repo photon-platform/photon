@@ -21,11 +21,11 @@ article.excerpt {
     // width: var(--col);
     // height: var(--col);
     > img {
-      // object-fit: contain;
+      object-fit: contain;
     }
   }
 
-  .article-share {
+  .article-share, .article-tags, .article-categories {
     display: none;
   }
 
